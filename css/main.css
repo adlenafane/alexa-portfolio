@@ -302,7 +302,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-header {
+header nav {
   padding-top: 5vh;
   height: 40px;
   position: fixed;
@@ -332,86 +332,72 @@ header {
   top: calc(-40px - 5vh);
 }
 
+.Links {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+    justify-self: flex-end;
+
+    padding-left: 3vw;
+    right: 3vw;
+    bottom: 5vh;
+}
+
 .Fullscreen {
     width: 100vw;
     height: 100vh;
 }
 
 .Screen {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(8, 12.5vw);
+    grid-template-rows: 20vh 13.3vh 16.7vh 16.7vh 13.3vh 20vh;
 }
 
-.title {
-    display: flex;
-    flex: 1;
-    align-self: center;
-    font-size: 13vh;
+.Subtitle {
+    grid-column-start: 1;
+    grid-column-end: 7;
+    grid-row-start: 5;
+    grid-row-end: 5;
+    align-self: end;
+
+    padding-left: 3vw;
 }
+
+.Title {
+    grid-column-start: 1;
+    grid-column-end: 9;
+    grid-row-start: 6;
+    grid-row-end: 6;
+
+    font-size: 13vh;
+    line-height: 1;
+    padding-left: 3vw;
+    padding-bottom: 5vw;
+}
+
 
 /*
-    Page 1
+    Home
 */
 
-.Home .Row-1 {
-    height: 66.6vh;
+.Credentials {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 4;
 
-    display: flex;
-    flex-direction: row;
-    align-content: stretch;
-    align-items: stretch;
-    flex-wrap: nowrap;
-}
-
-.Home .Row-2 {
-    display: flex;
-    flex-direction: column;
-    height: 33.3vh;
-}
-
-.Row--half {
-    height: 50vh;
-}
-
-.Home .Row-subtitle {
-    height: 13.3vh;
-    padding-left: 3vw;
-
-    display: flex;
-    align-items: flex-end;
-}
-
-.Home .Row-title {
-    display: flex;
-
-    height: 20vh;
-    padding-left: 3vw;
-    padding-bottom: 5vh;
-}
-
-.Home .Row--half {
     background-color: #5A71FF;
 }
 
-.Col--quarter {
-    width: 25%;
-    height: 100%;
-}
+.Project {
+    grid-column-start: 3;
+    grid-column-end: 9;
+    grid-row-start: 1;
+    grid-row-end: 5;
 
-.Col--three-quarter {
-    width: 75%;
     background-color: #ada9a1;
-    height: 100%;
-}
-
-.Col--links {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    display: flex;
-    flex-direction: column;
-    padding-right: 3vw;
-    padding-bottom: 5vh;
 }
 
 .Icon {
@@ -434,77 +420,69 @@ header {
 }
 
 /*
-    Page 2
+    About
 */
 
-.Screen.About {
-    flex-direction: row;
-}
+.Description {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 5;
 
-.About .Col-1, .About .Col-2 {
-    width: 25vw;
-    height: 100vh;
+    align-items: stretch;
+    display: flex;
     flex-direction: column;
+    justify-content: space-between;
 }
 
-.About .Col-3 {
-    width: 12.5vw;
-    height: 100vh;
-}
-
-.About .Col-4 {
-    width: 37.5vw;
-    height: 100vh;
-}
-
-.About .Row-subtitle {
-    height: 80vh;
-    padding-left: 3vw;
-
-    display: flex;
-    align-items: flex-end;
-}
-
-.About .Row-title {
-    height: 20vh;
-    padding-left: 3vw;
-
-    display: flex;
-    align-items: flex-end;
-}
-
-.About .Description {
-    padding-top: 20vh;
-    margin-bottom: 50px;
-    font-size: 4.4vh;
-    line-height: 1;
+.Description__Text {
+    font-size: 32px;
     color: #4a4a4a;
     letter-spacing: 1.3px;
 }
 
-a.Resume {
+.Resume {
+    align-self: flex-start;
+
     border-radius: 45px;
     border: solid 1px #303346;
-    padding: 2.7vh 2vw;
-    font-size: 26px;
+    padding: 2.5vh 1.5vw;
+    font-size: 22px;
     font-family: 'Lato', sans-serif;
     letter-spacing: 3.5px;
-    text-align: center;
     color: #303346;
     cursor: pointer;
+    text-align: center;
 
     transition: all 0.3s ease-in-out;
 }
 
-a.Resume:hover {
+.Resume:hover {
     background-color: #303346;
     color: white;
 }
 
-a.Resume i {
-    /*font-size: 24px;*/
+.About .Picture-1 {
+    grid-column-start: 6;
+    grid-column-end: 9;
+    grid-row-start: 1;
+    grid-row-end: 3;
+
+    background-color: #e5eaeb;
 }
 
+.About .Picture-2 {
+    grid-column-start: 6;
+    grid-column-end: 9;
+    grid-row-start: 3;
+    grid-row-end: 7;
+
+    background-color: #5a71ff;
+}
+
+/*
+    About
+*/
 
 .About .Col-4 .Row-1 {
     display: flex;
@@ -518,12 +496,18 @@ a.Resume i {
     height: 66.6vh;
 }
 
-.Transition .Row-1 {
-    height: 80vh;
-    padding-left: 3vw;
 
-    display: flex;
-    align-items: flex-end;
+/*
+    Transition
+*/
+
+.Transition__text {
+    grid-column-start: 1;
+    grid-column-end: 8;
+    grid-row-start: 5;
+    grid-row-end: 5;
+    align-self: end;
+    padding-left: 3vw;
 
     color: #5a71ff;
     font-size: 36px;
@@ -534,61 +518,21 @@ a.Resume i {
     Process
 */
 
+.SmallPicture {
+    grid-column-start: 6;
+    grid-column-end: 6;
+    grid-row-start: 1;
+    grid-row-end: 3;
 
-.Screen.Process {
-    flex-direction: row;
-}
-
-.Process .Col-1 {
-    width: 37.5vw;
-    height: 100vh;
-}
-
-.Process .Col-2 {
-    width: 25vw;
-    height: 100vh;
-}
-
-.Process .Col-3 {
-    width: 12.5vw;
-    height: 100vh;
-}
-
-.Process .Col-4 {
-    width: 25vw;
-    height: 100vh;
-}
-
-.Process .Row-navigation {
-    height: 66.4vh;
-}
-
-.Process .Row-subtitle {
-    height: 13.3vh;
-    padding-left: 3vw;
-
-    display: flex;
-    align-items: flex-end;
-}
-
-.Process .Row-title {
-    display: flex;
-
-    height: 20vh;
-    padding-left: 3vw;
-}
-
-.Process .Row-SmallPicture {
-    height: 33.4vh;
     background-color: #e5eaeb;
 }
 
-.Process .Col-4 .Row-empty {
-    height: 33.4vh;
-}
+.LargePicture {
+    grid-column-start: 7;
+    grid-column-end: 9;
+    grid-row-start: 3;
+    grid-row-end: 7;
 
-.Process .Row-LargePicture {
-    height: 66.6vh;
     background-color: #e5eaeb;
 }
 
@@ -597,52 +541,28 @@ a.Resume i {
     Articles
 */
 
+/*
+    Testimonials
+*/
 
-.Articles .Row-articles {
-    height: 66.4vh;
-    /*padding-left: 3vw;
-    padding-top: 5vw;*/
+.Quote__wrapper {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 5;
 
-    display: flex;
-}
-
-.Articles .Row-subtitle {
-    height: 13.3vh;
-    padding-left: 3vw;
-
-    display: flex;
-    align-items: flex-end;
-}
-
-.Articles .Row-title {
-    display: flex;
-
-    height: 20vh;
-    padding-left: 3vw;
-}
-
-.Articles .title {
-    padding-bottom: 5vh;
-}
-
-.Testimonials .Row-testimonials {
-    height: 66.4vh;
-    /*padding-left: 3vw;
-    padding-top: 5vw;*/
-
-    display: flex;
-}
-
-.Testimonials .Col-quote {
-    width: 50vw;
     background-color: #5a71ff;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.Testimonials .Col-logo {
-    width: 50vw;
+.Logo__wrapper {
+    grid-column-start: 5;
+    grid-column-end: 9;
+    grid-row-start: 1;
+    grid-row-end: 5;
+
     background-color: #d8d8d8;
     display: flex;
     justify-content: center;
@@ -680,36 +600,19 @@ a.Resume i {
     background-color: #303346;
 }
 
-.Testimonials .Logo-Wrapper {
+.Testimonials .Logo {
     padding-top: 20vh;
 }
 
-.Testimonials .Logo-Wrapper img {
+.Testimonials .Logo img {
     max-height: 30vh;
     width: auto;
 }
 
-.Testimonials .Row-subtitle {
-    height: 13.3vh;
-    padding-left: 3vw;
+/*
+    Faq
+*/
 
-    display: flex;
-    align-items: flex-end;
-}
 
-.Testimonials .Row-title {
-    display: flex;
-
-    height: 20vh;
-    padding-left: 3vw;
-}
-
-.Testimonials .title {
-    padding-bottom: 5vh;
-}
-
-.Fullscreen--gray {
-    background-color: #e5eaeb;
-}
 
 
