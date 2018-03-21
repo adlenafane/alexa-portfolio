@@ -400,6 +400,27 @@ header nav {
     background-color: #ada9a1;
 }
 
+.GoToProject {
+    grid-column-start: 7;
+    grid-column-end: 9;
+    grid-row-start: 4;
+    grid-row-end: 5;
+
+    display: flex;
+    align-items: flex-end;
+}
+
+.GoToProject a {
+    flex: 1;
+
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    background-color: white;
+    text-align: center;
+    text-decoration: none;
+    color: #4a4a4a;
+}
+
 .Icon {
     width: 48px;
     height: 48px;
@@ -484,18 +505,6 @@ header nav {
     About
 */
 
-.About .Col-4 .Row-1 {
-    display: flex;
-    background-color: #e5eaeb;
-    height: 33.4vh;
-}
-
-.About .Col-4 .Row-2 {
-    display: flex;
-    background-color: #5A71FF;
-    height: 66.6vh;
-}
-
 
 /*
     Transition
@@ -536,6 +545,94 @@ header nav {
     background-color: #e5eaeb;
 }
 
+.Pagination {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+
+    background-color: #5a71ff;
+    color: white;
+    font-size: 48px;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.Page {
+    padding-right: 1vw;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+}
+
+.Page .TotalPages {
+    opacity: .5;
+}
+
+.Arrow {
+    justify-items: center;
+    text-align: center;
+
+    font-size: 24px;
+}
+
+.Arrow--left {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+
+.Arrow--right {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+
+.Step {
+    grid-column-start: 4;
+    grid-column-end: 6;
+    grid-row-start: 2;
+    grid-row-end: 3;
+
+    font-size: 18px;
+    color: #303346;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    letter-spacing: 0.2vw;
+}
+
+.StepCount {
+    position: relative;
+}
+
+.StepCount:after {
+    content: '';
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: -7px;
+    height: 4px;
+    background-color: #303346;
+}
+
+.StepContent {
+    grid-column-start: 4;
+    grid-column-end: 6;
+    grid-row-start: 3;
+    grid-row-end: 5;
+}
+
+.StepContent ul {
+    padding-left: 1em;
+    margin: 0;
+
+    font-size: 24px;
+    line-height: 1.83;
+    letter-spacing: 1.3px;
+}
 
 /*
     Articles
