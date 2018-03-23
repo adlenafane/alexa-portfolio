@@ -1,3 +1,13 @@
+// Slide page per page
+$(document).ready(function() {
+    $('#fullpage').fullpage({
+        menu: '#menu',
+        scrollBar: true,
+        fixedElements: '.Header, .Links',
+        slidesNavigation: true,
+    });
+});
+
 // Hide Header on on scroll down
 var didScroll;
 var lastScrollTop = 0;

@@ -18,7 +18,7 @@ html {
 }
 
 body {
-    overflow-x: hidden;
+    overflow-x: hidden !important;
 }
 
 /*
@@ -301,6 +301,17 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0;
 }
 
+/*
+    Fullpage.js
+*/
+
+.fp-controlArrow {
+    display: none;
+}
+
+/*
+    Global
+*/
 
 header nav {
   padding-top: 5vh;
@@ -310,13 +321,14 @@ header nav {
   transition: top 0.2s ease-in-out;
   width: 100%;
   text-align: center;
+  z-index: 1;
 }
 
-.internal-link + .internal-link {
+.Link__internal + .Link__internal {
     padding-left: 12px;
 }
 
-.internal-link {
+.Link__internal {
     color: white;
     text-decoration: none;
     font-family: Lato;
@@ -324,8 +336,12 @@ header nav {
     font-weight: bold;
 }
 
-.internal-link:hover {
+.Link__internal:hover {
     opacity: 0.5;
+}
+
+.Link__internal.active {
+    color: #5A71FF;
 }
 
 .nav-up {
@@ -371,8 +387,7 @@ header nav {
     grid-row-start: 6;
     grid-row-end: 6;
 
-    font-size: 13vh;
-    line-height: 1;
+    font-size: 10vh;
     padding-left: 3vw;
     padding-bottom: 5vw;
 }
@@ -400,9 +415,33 @@ header nav {
     background-color: #ada9a1;
 }
 
+.Project__Grid {
+    display: grid;
+    grid-template-columns: repeat(6, 12.5vw);
+    grid-template-rows: 20vh 13.3vh 16.7vh 16.7vh;
+}
+
+.Project__background {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: inherit;
+
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.Project__background--1 {
+    background-image: url('https://images.unsplash.com/photo-1503844281047-cf42eade5ca5?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=ec224d4e2d53871f65b3a3ee1bae0638&auto=format&fit=crop&w=1355&q=80');
+}
+.Project__background--2 {
+    background-image: url('https://images.unsplash.com/photo-1482786951817-f26b90cfb79c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=810e368c2d908a4dc4afb845fb4da35e&auto=format&fit=crop&w=1350&q=80');
+}
+
 .GoToProject {
-    grid-column-start: 7;
-    grid-column-end: 9;
+    grid-column-start: 5;
+    grid-column-end: 7;
     grid-row-start: 4;
     grid-row-end: 5;
 
@@ -419,6 +458,17 @@ header nav {
     text-align: center;
     text-decoration: none;
     color: #4a4a4a;
+}
+
+.Home .fp-slidesNav {
+    grid-column-start: 5;
+    grid-column-end: 7;
+    grid-row-start: 4;
+    grid-row-end: 5;
+}
+
+.Home .fp-slidesNav ul li a span {
+    background: white;
 }
 
 .Icon {

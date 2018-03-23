@@ -18,6 +18,8 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/brands.css" integrity="sha384-IiIL1/ODJBRTrDTFk/pW8j0DUI5/z9m1KYsTm/RjZTNV8RHLGZXkUDwgRRbbQ+Jh" crossorigin="anonymous">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/fontawesome.css" integrity="sha384-q3jl8XQu1OpdLgGFvNRnPdj5VIlCvgsDQTQB6owSOHWlAurxul7f+JpUOVdAiJ5P" crossorigin="anonymous">
 
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.6/jquery.fullpage.min.css" />
+
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
     </head>
@@ -26,14 +28,14 @@
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
         <![endif]-->
 
-        <header>
-            <nav>
-                <a class="internal-link" href="">WORK</a>
-                <a class="internal-link" href="">ABOUT</a>
-                <a class="internal-link" href="">PROCESS</a>
-                <a class="internal-link" href="">ARTICLES</a>
-                <a class="internal-link" href="">TESTIMONIALS</a>
-                <a class="internal-link" href="">FAQ</a>
+        <header class="Header">
+            <nav id="menu">
+                <a class="Link__internal" data-menuanchor="work" href="#work">WORK</a>
+                <a class="Link__internal" data-menuanchor="about" href="#about">ABOUT</a>
+                <a class="Link__internal" data-menuanchor="process" href="#process">PROCESS</a>
+                <a class="Link__internal" data-menuanchor="articles" href="#articles">ARTICLES</a>
+                <a class="Link__internal" data-menuanchor="testimonials" href="#testimonials">TESTIMONIALS</a>
+                <a class="Link__internal" data-menuanchor="faq" href="#faq">FAQ</a>
             </nav>
         </header>
 
@@ -52,117 +54,136 @@
             </a>
         </nav>
 
-        <!-- Screen 1 - Home - Work -->
-        <div class="Fullscreen">
-            <div class="Screen Home">
+        <div id="fullpage">
+            <!-- Screen 1 - Home - Work -->
+            <div data-anchor="work" class="Fullscreen Screen Home section">
                 <h3 class="Subtitle">ALEXA GUÉGUEN</h3>
                 <h2 class="Title">ux strategist</h2>
-                <div class="Project"></div>
-                <div class="GoToProject">
-                    <a href="">
-                        Discover the project
-                    </a>
-                </div>
                 <div class="Credentials"></div>
-            </div>
-        </div>
 
-
-        <!-- Screen 2 - About -->
-        <div class="Fullscreen">
-            <div class="Screen About">
-                <h3 class="Subtitle">IN ONE SENTENCE</h3>
-                <h2 class="Title">about</h2>
-                <div class="Description">
-                    <div class="Description__Text">Ex-artistic director in advertising, now focused on searching painful problems to resolve them methodically.</div>
-                    <a class="Resume">
-                        <i class="fas fa-arrow-down"></i> My Resume
-                    </a>
-                </div>
-                <div class="Picture-1"></div>
-                <div class="Picture-2"></div>
-            </div>
-        </div>
-
-
-        <!-- Screen 3 - Transition -->
-        <div class="Fullscreen Fullscreen--gray">
-            <div class="Screen Transition">
-                <div class="Transition__text">
-                    It's funny to pitch creative ideas to sell more,<br>but it's funnier to create solutions that make people life better.
-                </div>
-            </div>
-        </div>
-
-
-        <!-- Screen 4 - Process -->
-        <div class="Fullscreen">
-            <div class="Screen Process">
-                <h2 class="Title">process</h2>
-                <h3 class="Subtitle">METHODOLOGY IS EVERYTHING</h3>
-                <div class="SmallPicture"></div>
-                <div class="LargePicture"></div>
-                <div class="Pagination">
-                    <div class="Page">
-                        <span class="CurrentPage">1</span><span class="TotalPages">/5</span>
+                <div class="Project">
+                    <div class="slide fp-auto-height">
+                        <div class="Project__Grid Project__background Project__background--1">
+                            <div class="GoToProject">
+                                <a href="">
+                                    Discover the project A
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="Arrow Arrow--left"><</div>
-                <div class="Arrow Arrow--right">></div>
-                <div class="Step">
-                    <span class="StepCount">Step one:</span><span> Ausculation</span>
-                </div>
-                <div class="StepContent">
-                    <ul>
-                        <li>Kickoff Meeting</li>
-                        <li>Problem definition</li>
-                        <li>KPI definition</li>
-                        <li>KPIs listing</li>
-                        <li>Planning...</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-
-        <!-- Screen 5 - Articles -->
-        <div class="Fullscreen">
-            <div class="Screen Articles">
-                <h2 class="Title">articles</h2>
-                <h3 class="Subtitle">SHARING IS CARING</h3>
-        </div>
-
-
-        <!-- Screen 6 - Testimonials -->
-        <div class="Fullscreen">
-            <div class="Screen Testimonials">
-                <h2 class="Title">testimonials</h2>
-                <h3 class="Subtitle">MAGIC HAPPENS WHEN PEOPLE WORK TOGETHER</h3>
-                <div class="Quote__wrapper">
-                    <div class="Quote">« It's funny to pitch creative ideas to sell more, but it's funnier to create solutions that make people life better. »</div>
-                    <div class="Client">
-                        <span>Client name</span>
-                    </div>
-                </div>
-                <div class="Logo__wrapper">
-                    <div class="Logo">
-                        <img src="./img/Logo-nokia.png">
+                    <div class="slide fp-auto-height">
+                        <div class="Project__Grid Project__background Project__background--2">
+                            <div class="GoToProject">
+                                <a href="">
+                                    Discover the project B
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
 
 
-        <!-- Screen 7 - FAQ -->
-        <div class="Fullscreen">
-            <div class="Screen Faq">
-                <h2 class="Title">frequently asked questions</h2>
-                <h3 class="Subtitle">TO LET YOU KNOW ME A BIT</h3>
+            <!-- Screen 2 - About -->
+            <div data-anchor="about" class="Fullscreen section">
+                <div class="Screen About">
+                    <h3 class="Subtitle">IN ONE SENTENCE</h3>
+                    <h2 class="Title">about</h2>
+                    <div class="Description">
+                        <div class="Description__Text">Ex-artistic director in advertising, now focused on searching painful problems to resolve them methodically.</div>
+                        <a class="Resume">
+                            <i class="fas fa-arrow-down"></i> My Resume
+                        </a>
+                    </div>
+                    <div class="Picture-1"></div>
+                    <div class="Picture-2"></div>
+                </div>
             </div>
+
+
+            <!-- Screen 3 - Transition -->
+            <div data-anchor="transition" class="Fullscreen section Fullscreen--gray">
+                <div class="Screen Transition">
+                    <div class="Transition__text">
+                        It's funny to pitch creative ideas to sell more,<br>but it's funnier to create solutions that make people life better.
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Screen 4 - Process -->
+            <div data-anchor="process" class="Fullscreen section">
+                <div class="Screen Process">
+                    <h2 class="Title">process</h2>
+                    <h3 class="Subtitle">METHODOLOGY IS EVERYTHING</h3>
+                    <div class="SmallPicture"></div>
+                    <div class="LargePicture"></div>
+                    <div class="Pagination">
+                        <div class="Page">
+                            <span class="CurrentPage">1</span><span class="TotalPages">/5</span>
+                        </div>
+                    </div>
+                    <div class="Arrow Arrow--left"><</div>
+                    <div class="Arrow Arrow--right">></div>
+                    <div class="Step">
+                        <span class="StepCount">Step one:</span><span> Ausculation</span>
+                    </div>
+                    <div class="StepContent">
+                        <ul>
+                            <li>Kickoff Meeting</li>
+                            <li>Problem definition</li>
+                            <li>KPI definition</li>
+                            <li>KPIs listing</li>
+                            <li>Planning...</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Screen 5 - Articles -->
+            <div data-anchor="articles" class="Fullscreen section">
+                <div class="Screen Articles">
+                    <h2 class="Title">articles</h2>
+                    <h3 class="Subtitle">SHARING IS CARING</h3>
+                </div>
+            </div>
+
+
+            <!-- Screen 6 - Testimonials -->
+            <div data-anchor="testimonials" class="Fullscreen section">
+                <div class="Screen Testimonials">
+                    <h2 class="Title">testimonials</h2>
+                    <h3 class="Subtitle">MAGIC HAPPENS WHEN PEOPLE WORK TOGETHER</h3>
+                    <div class="Quote__wrapper">
+                        <div class="Quote">« It's funny to pitch creative ideas to sell more, but it's funnier to create solutions that make people life better. »</div>
+                        <div class="Client">
+                            <span>Client name</span>
+                        </div>
+                    </div>
+                    <div class="Logo__wrapper">
+                        <div class="Logo">
+                            <img src="./img/Logo-nokia.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Screen 7 - FAQ -->
+            <div data-anchor="faq" class="Fullscreen section">
+                <div class="Screen Faq">
+                    <h2 class="Title">frequently asked questions</h2>
+                    <h3 class="Subtitle">TO LET YOU KNOW ME A BIT</h3>
+                </div>
+            </div>
+
         </div>
+
 
         <script src="js/vendor/modernizr-3.5.0.min.js"></script>
         <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.6/jquery.fullpage.min.js" type="text/javascript"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
