@@ -19,6 +19,7 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/fontawesome.css" integrity="sha384-q3jl8XQu1OpdLgGFvNRnPdj5VIlCvgsDQTQB6owSOHWlAurxul7f+JpUOVdAiJ5P" crossorigin="anonymous">
 
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.6/jquery.fullpage.min.css" />
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
 
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
@@ -112,32 +113,63 @@
 
 
             <!-- Screen 4 - Process -->
-            <div data-anchor="process" class="Fullscreen section">
-                <div class="Screen Process">
-                    <h2 class="Title">process</h2>
-                    <h3 class="Subtitle">METHODOLOGY IS EVERYTHING</h3>
-                    <div class="SmallPicture"></div>
-                    <div class="LargePicture"></div>
-                    <div class="Pagination">
-                        <div class="Page">
-                            <span class="CurrentPage">1</span><span class="TotalPages">/5</span>
-                        </div>
-                    </div>
-                    <div class="Arrow Arrow--left"><</div>
-                    <div class="Arrow Arrow--right">></div>
-                    <div class="Step">
-                        <span class="StepCount">Step one:</span><span> Ausculation</span>
-                    </div>
-                    <div class="StepContent">
-                        <ul>
-                            <li>Kickoff Meeting</li>
-                            <li>Problem definition</li>
-                            <li>KPI definition</li>
-                            <li>KPIs listing</li>
-                            <li>Planning...</li>
-                        </ul>
+            <div data-anchor="process" class="Fullscreen Screen section Process">
+                <h2 class="Title">process</h2>
+                <h3 class="Subtitle">METHODOLOGY IS EVERYTHING</h3>
+                <div class="Pagination">
+                    <div class="Page">
+                        <span class="CurrentPage">1</span><span class="TotalPages">/5</span>
                     </div>
                 </div>
+                <div class="Arrow Arrow--left"></div>
+                <div class="Arrow Arrow--right"></div>
+
+                <div class="Steps">
+                    <div class="slide">
+                        <div class="StepGrid">
+                            <div class="Step">
+                                <span class="StepTitle">Ausculation</span>
+                            </div>
+                            <div class="StepContent">
+                                <ul>
+                                    <li>Kickoff Meeting</li>
+                                    <li>Problem definition</li>
+                                    <li>KPI definition</li>
+                                    <li>KPIs listing</li>
+                                    <li>Planning...</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="StepGrid">
+                            <div class="Step">
+                                <span class="StepTitle">Analysis</span>
+                            </div>
+                            <div class="StepContent">
+                                <ul>
+                                    <li>YOLO</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="SmallPicture__wrapper">
+                    <div class="SmallPictureSlick">
+                        <div class="Step__background SmallPicture SmallPicture--step1"></div>
+                        <div class="Step__background SmallPicture SmallPicture--step2"></div>
+                    </div>
+                </div>
+
+                <div class="LargePicture__wrapper">
+                    <div class="LargePictureSlick">
+                        <div class="Step__background LargePicture LargePicture--step1"></div>
+                        <div class="Step__background LargePicture LargePicture--step2"></div>
+                    </div>
+                </div>
+
+                <div class="EmptySection"></div>
             </div>
 
 
@@ -185,6 +217,8 @@
         <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.6/jquery.fullpage.min.js" type="text/javascript"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
 

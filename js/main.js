@@ -5,7 +5,39 @@ $(document).ready(function() {
         scrollBar: true,
         fixedElements: '.Header, .Links',
         slidesNavigation: true,
+        onSlideLeave: function( anchorLink, index, slideIndex, direction, nextSlideIndex) {
+            $('.CurrentPage').text(nextSlideIndex + 1);
+            if(direction == 'right') {
+                if(nextSlideIndex === 0) {
+                    $('.SmallPictureSlick').slick('slickPrev');
+                    $('.LargePictureSlick').slick('slickPrev');
+                } else {
+                    $('.SmallPictureSlick').slick('slickNext');
+                    $('.LargePictureSlick').slick('slickNext');
+                }
+            } else {
+                $('.SmallPictureSlick').slick('slickPrev');
+                $('.LargePictureSlick').slick('slickPrev');
+            }
+        },
     });
+
+    $('.TotalPages').text('/' + $('.Project .slide').length);
+});
+
+// Slick
+$(document).ready(function() {
+    var slickOptions = {
+        arrows: false,
+        draggable: false,
+        pauseOnFocus: false,
+        pauseOnHover: false,
+        swipe: false,
+        touchMove: false,
+        adaptiveHeight: true,
+    };
+    $('.SmallPictureSlick').slick(slickOptions);
+    $('.LargePictureSlick').slick(slickOptions);
 });
 
 // Hide Header on on scroll down

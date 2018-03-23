@@ -305,7 +305,7 @@ h1, h2, h3, h4, h5, h6 {
     Fullpage.js
 */
 
-.fp-controlArrow {
+.Home .fp-controlArrow {
     display: none;
 }
 
@@ -354,6 +354,7 @@ header nav {
     flex-direction: column;
     align-self: flex-end;
     justify-self: flex-end;
+    z-index: 1;
 
     padding-left: 3vw;
     right: 3vw;
@@ -421,7 +422,7 @@ header nav {
     grid-template-rows: 20vh 13.3vh 16.7vh 16.7vh;
 }
 
-.Project__background {
+.Project__background, .Step__background {
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: inherit;
@@ -433,10 +434,10 @@ header nav {
 }
 
 .Project__background--1 {
-    background-image: url('https://images.unsplash.com/photo-1503844281047-cf42eade5ca5?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=ec224d4e2d53871f65b3a3ee1bae0638&auto=format&fit=crop&w=1355&q=80');
+    background-image: url('http://placekitten.com/g/1920/1080');
 }
 .Project__background--2 {
-    background-image: url('https://images.unsplash.com/photo-1482786951817-f26b90cfb79c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=810e368c2d908a4dc4afb845fb4da35e&auto=format&fit=crop&w=1350&q=80');
+    background-image: url('http://placekitten.com/g/1080/720');
 }
 
 .GoToProject {
@@ -577,22 +578,14 @@ header nav {
     Process
 */
 
-.SmallPicture {
-    grid-column-start: 6;
-    grid-column-end: 6;
+.Process .EmptySection {
+    grid-column-start: 7;
+    grid-column-end: 9;
     grid-row-start: 1;
     grid-row-end: 3;
 
-    background-color: #e5eaeb;
-}
-
-.LargePicture {
-    grid-column-start: 7;
-    grid-column-end: 9;
-    grid-row-start: 3;
-    grid-row-end: 7;
-
-    background-color: #e5eaeb;
+    background-color: white;
+    z-index: 10;
 }
 
 .Pagination {
@@ -616,9 +609,11 @@ header nav {
     font-weight: 300;
 }
 
+
 .Page .TotalPages {
     opacity: .5;
 }
+
 
 .Arrow {
     justify-items: center;
@@ -634,6 +629,28 @@ header nav {
     grid-row-end: 4;
 }
 
+.Process .fp-controlArrow.fp-prev {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+
+    border-color: transparent #5a71ff transparent transparent;
+}
+
+.Process .fp-controlArrow.fp-next {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+
+    border-color: transparent transparent transparent #5a71ff;
+}
+
+.Process .fp-slidesNav {
+    display: none;
+}
+
 .Arrow--right {
     grid-column-start: 2;
     grid-column-end: 3;
@@ -641,9 +658,22 @@ header nav {
     grid-row-end: 4;
 }
 
-.Step {
+.Steps {
     grid-column-start: 4;
     grid-column-end: 6;
+    grid-row-start: 1;
+    grid-row-end: 7;
+}
+
+.StepGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 12.5vw);
+    grid-template-rows: 20vh 13.3vh 16.7vh 16.7vh 13.3vh 20vh;
+}
+
+.Step {
+    grid-column-start: 1;
+    grid-column-end: 3;
     grid-row-start: 2;
     grid-row-end: 3;
 
@@ -654,11 +684,57 @@ header nav {
     letter-spacing: 0.2vw;
 }
 
-.StepCount {
+.SmallPicture__wrapper {
+    grid-column-start: 6;
+    grid-column-end: 7;
+    grid-row-start: 1;
+    grid-row-end: 3;
+
+    z-index: 10;
+}
+
+.SmallPicture {
+    height: 33.3vh;
+    width: 12.5vw;
+}
+
+.SmallPicture--step1 {
+    background-image: url('http://placekitten.com/g/240/360');
+}
+
+.SmallPicture--step2 {
+    background-image: url('http://placekitten.com/g/360/360');
+}
+
+.LargePicture__wrapper {
+    grid-column-start: 7;
+    grid-column-end: 9;
+    grid-row-start: 3;
+    grid-row-end: 7;
+
+    z-index: 10;
+}
+
+.LargePicture {
+    height: 66.4vh;
+    width: 25vw;
+}
+
+.LargePicture--step1 {
+    height: 66.4vh;
+    width: 25vw;
+    background-image: url('http://placekitten.com/g/240/360');
+}
+
+.LargePicture--step2 {
+    background-image: url('http://placekitten.com/g/360/360');
+}
+
+.StepTitle {
     position: relative;
 }
 
-.StepCount:after {
+.StepTitle:after {
     content: '';
     width: 100%;
     position: absolute;
@@ -669,8 +745,8 @@ header nav {
 }
 
 .StepContent {
-    grid-column-start: 4;
-    grid-column-end: 6;
+    grid-column-start: 1;
+    grid-column-end: 3;
     grid-row-start: 3;
     grid-row-end: 5;
 }
