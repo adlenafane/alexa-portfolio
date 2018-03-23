@@ -422,7 +422,10 @@ header nav {
     grid-template-rows: 20vh 13.3vh 16.7vh 16.7vh;
 }
 
-.Project__background, .Step__background {
+.Project__background,
+.Step__background,
+.About__background,
+.Transition__background {
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: inherit;
@@ -534,13 +537,17 @@ header nav {
     color: white;
 }
 
-.About .Picture-1 {
+/*
+    About
+*/
+
+.About__background {
     grid-column-start: 6;
     grid-column-end: 9;
     grid-row-start: 1;
     grid-row-end: 3;
 
-    background-color: #e5eaeb;
+    background-image: url('http://placekitten.com/g/600/600');
 }
 
 .About .Picture-2 {
@@ -552,14 +559,14 @@ header nav {
     background-color: #5a71ff;
 }
 
-/*
-    About
-*/
-
 
 /*
     Transition
 */
+
+.Transition__background {
+    background-image: url('http://placekitten.com/g/3000/2000');
+}
 
 .Transition__text {
     grid-column-start: 1;
