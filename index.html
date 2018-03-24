@@ -11,7 +11,7 @@
         <link rel="apple-touch-icon" href="icon.png">
         <!-- Place favicon.ico in the root directory -->
 
-        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700|Lustria" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700|Merriweather:400,700" rel="stylesheet">
 
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css" integrity="sha384-v2Tw72dyUXeU3y4aM2Y0tBJQkGfplr39mxZqlTBDUZAb9BGoC40+rdFCG0m10lXk" crossorigin="anonymous">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/regular.css" integrity="sha384-A/oR8MwZKeyJS+Y0tLZ16QIyje/AmPduwrvjeH6NLiLsp4cdE4uRJl8zobWXBm4u" crossorigin="anonymous">
@@ -20,6 +20,7 @@
 
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.6/jquery.fullpage.min.css" />
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/simplebar@2.6.0/dist/simplebar.css"/>
 
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
@@ -58,27 +59,23 @@
         <div id="fullpage">
             <!-- Screen 1 - Home - Work -->
             <div data-anchor="work" class="Fullscreen Screen Home section">
-                <h3 class="Subtitle">ALEXA GUÉGUEN</h3>
+                <div class="Subtitle">ALEXA GUÉGUEN</div>
                 <h2 class="Title">ux strategist</h2>
                 <div class="Credentials"></div>
 
                 <div class="Project">
                     <div class="slide fp-auto-height">
                         <div class="Project__Grid Project__background Project__background--1">
-                            <div class="GoToProject">
-                                <a href="">
-                                    Discover the project A
-                                </a>
-                            </div>
+                            <a class="GoToProject" href="">
+                                <span class="">Discover project</span><img class="Arrow" src="/img/Arrow--right.png">
+                            </a>
                         </div>
                     </div>
                     <div class="slide fp-auto-height">
                         <div class="Project__Grid Project__background Project__background--2">
-                            <div class="GoToProject">
-                                <a href="">
-                                    Discover the project B
-                                </a>
-                            </div>
+                            <a class="GoToProject" href="">
+                                <span class="">Discover project</span><img class="Arrow" src="/img/Arrow--right.png">
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -88,16 +85,16 @@
             <!-- Screen 2 - About -->
             <div data-anchor="about" class="Fullscreen section">
                 <div class="Screen About">
-                    <h3 class="Subtitle">IN ONE SENTENCE</h3>
+                    <div class="Subtitle">IN ONE SENTENCE</div>
                     <h2 class="Title">about</h2>
                     <div class="Description">
-                        <div class="Description__Text">Ex-artistic director in advertising, now focused on searching painful problems to resolve them methodically.</div>
+                        <h4 class="Description__Text">Ex-artistic director in advertising, now focused on searching painful problems to resolve them methodically.</h4>
                         <a class="Resume">
                             <i class="fas fa-arrow-down"></i> My Resume
                         </a>
                     </div>
+                    <div class="EmptySpace"></div>
                     <div class="About__background"></div>
-                    <div class="Picture-2"></div>
                 </div>
             </div>
 
@@ -105,6 +102,7 @@
             <!-- Screen 3 - Transition -->
             <div data-anchor="transition" class="Fullscreen section Fullscreen--gray">
                 <div class="Screen Transition Transition__background">
+                    <div class="EmptySpace"></div>
                     <div class="Transition__text">
                         It's funny to pitch creative ideas to sell more,<br>but it's funnier to create solutions that make people life better.
                     </div>
@@ -115,26 +113,31 @@
             <!-- Screen 4 - Process -->
             <div data-anchor="process" class="Fullscreen Screen section Process">
                 <h2 class="Title">process</h2>
-                <h3 class="Subtitle">METHODOLOGY IS EVERYTHING</h3>
+                <div class="Subtitle">METHODOLOGY IS EVERYTHING</div>
                 <div class="Pagination">
                     <div class="Page">
-                        <span class="CurrentPage">1</span><span class="TotalPages">/5</span>
+                        <span class="CurrentPage CurrentPage--process">1</span><span class="TotalPages TotalPages--process">/5</span>
                     </div>
                 </div>
-                <div class="Arrow Arrow--left"></div>
-                <div class="Arrow Arrow--right"></div>
+
+                <div class="Arrow Arrow--leftWrapper">
+                    <img src="/img/Arrow--left.png"  onclick="javascript:$.fn.fullpage.moveSlideLeft();" class="Arrow Arrow--left" />
+                </div>
+                <div class="Arrow Arrow--rightWrapper">
+                    <img src="/img/Arrow--right.png" onclick="javascript:$.fn.fullpage.moveSlideRight();" class="Arrow Arrow--right" />
+                </div>
 
                 <div class="Steps">
                     <div class="slide">
                         <div class="StepGrid">
                             <div class="Step">
-                                <span class="StepTitle">Ausculation</span>
+                                <span class="StepTitle">Auscultation</span>
                             </div>
                             <div class="StepContent">
                                 <ul>
                                     <li>Kickoff Meeting</li>
                                     <li>Problem definition</li>
-                                    <li>KPI definition</li>
+                                    <li>Goal definition</li>
                                     <li>KPIs listing</li>
                                     <li>Planning...</li>
                                 </ul>
@@ -148,7 +151,57 @@
                             </div>
                             <div class="StepContent">
                                 <ul>
-                                    <li>YOLO</li>
+                                    <li>User research</li>
+                                    <li>Context analysis</li>
+                                    <li>Competitive analysis</li>
+                                    <li>Mappings</li>
+                                    <li>Personae...</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="StepGrid">
+                            <div class="Step">
+                                <span class="StepTitle">Diagnostic</span>
+                            </div>
+                            <div class="StepContent">
+                                <ul>
+                                    <li>Site mapping</li>
+                                    <li>User flows</li>
+                                    <li>Sketching</li>
+                                    <li>Prototyping</li>
+                                    <li>User testing...</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="StepGrid">
+                            <div class="Step">
+                                <span class="StepTitle">Treatment</span>
+                            </div>
+                            <div class="StepContent">
+                                <ul>
+                                    <li>Priorization</li>
+                                    <li>Guidelines definition</li>
+                                    <li>Visual design</li>
+                                    <li>Components library</li>
+                                    <li>Implementation...</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="StepGrid">
+                            <div class="Step">
+                                <span class="StepTitle">Follow-up</span>
+                            </div>
+                            <div class="StepContent">
+                                <ul>
+                                    <li>Retrospective</li>
+                                    <li>KPIs follow-up</li>
+                                    <li>Planning...</li>
                                 </ul>
                             </div>
                         </div>
@@ -159,6 +212,9 @@
                     <div class="SmallPictureSlick">
                         <div class="Step__background SmallPicture SmallPicture--step1"></div>
                         <div class="Step__background SmallPicture SmallPicture--step2"></div>
+                        <div class="Step__background SmallPicture SmallPicture--step3"></div>
+                        <div class="Step__background SmallPicture SmallPicture--step4"></div>
+                        <div class="Step__background SmallPicture SmallPicture--step5"></div>
                     </div>
                 </div>
 
@@ -166,6 +222,9 @@
                     <div class="LargePictureSlick">
                         <div class="Step__background LargePicture LargePicture--step1"></div>
                         <div class="Step__background LargePicture LargePicture--step2"></div>
+                        <div class="Step__background LargePicture LargePicture--step3"></div>
+                        <div class="Step__background LargePicture LargePicture--step4"></div>
+                        <div class="Step__background LargePicture LargePicture--step5"></div>
                     </div>
                 </div>
 
@@ -177,7 +236,23 @@
             <div data-anchor="articles" class="Fullscreen section">
                 <div class="Screen Articles">
                     <h2 class="Title">articles</h2>
-                    <h3 class="Subtitle">SHARING IS CARING</h3>
+                    <div class="Subtitle">SHARING IS CARING</div>
+
+                    <div class="Article Article--1">
+                        <div class="Article__category">Methodology</div>
+                        <div class="Article__title">How to work remotely?</div>
+                        <div class="Article__date">2018-04-01</div>
+                    </div>
+
+                    <div class="Article Article--2">
+                        <div class="Article__category">UX Design</div>
+                        <div class="Article__title">Personae or <br/>no Personae?</div>
+                        <div class="Article__date">2018-05-01</div>
+                    </div>
+
+                    <a class="ReadAll" target="_blank" href="https://medium.com/@alexa.gueguen">
+                        <span class="ReadAll__text">Read all on Medium</span><img class="Arrow" src="/img/Arrow--right.png">
+                    </a>
                 </div>
             </div>
 
@@ -186,11 +261,11 @@
             <div data-anchor="testimonials" class="Fullscreen section">
                 <div class="Screen Testimonials">
                     <h2 class="Title">testimonials</h2>
-                    <h3 class="Subtitle">MAGIC HAPPENS WHEN PEOPLE WORK TOGETHER</h3>
+                    <div class="Subtitle">MAGIC HAPPENS WHEN PEOPLE WORK TOGETHER</div>
                     <div class="Quote__wrapper">
                         <div class="Quote">« It's funny to pitch creative ideas to sell more, but it's funnier to create solutions that make people life better. »</div>
                         <div class="Client">
-                            <span>Client name</span>
+                            <span>Nicolas SCHMIDT<br>Head of Healthcare Products<br>at Nokia Technologies</span>
                         </div>
                     </div>
                     <div class="Logo__wrapper">
@@ -203,10 +278,48 @@
 
 
             <!-- Screen 7 - FAQ -->
-            <div data-anchor="faq" class="Fullscreen section">
-                <div class="Screen Faq">
-                    <h2 class="Title">frequently asked questions</h2>
-                    <h3 class="Subtitle">TO LET YOU KNOW ME A BIT</h3>
+            <div data-anchor="faq" class="Fullscreen section Screen Faq">
+                <h2 class="Title">faq</h2>
+                <div class="Subtitle">WHAT DO YOU WANT TO KNOW?</div>
+
+                <div class="Pagination">
+                    <div class="Page">
+                        <span class="CurrentPage CurrentPage--faq">1</span><span class="TotalPages TotalPages--faq">/5</span>
+                    </div>
+                </div>
+
+                <div class="Arrow Arrow--leftWrapper">
+                    <img src="/img/Arrow--left.png"  onclick="javascript:$.fn.fullpage.moveSlideLeft();" class="Arrow Arrow--left" />
+                </div>
+                <div class="Arrow Arrow--rightWrapper">
+                    <img src="/img/Arrow--right.png" onclick="javascript:$.fn.fullpage.moveSlideRight();" class="Arrow Arrow--right" />
+                </div>
+
+                <div class="Questions">
+                    <div class="slide">
+                        <div class="QuestionGrid">
+                            <span class="QuestionTitle">Question number 1</span>
+
+                            <div class="QuestionContent" data-simplebar>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="slide">
+                        <div class="QuestionGrid">
+                            <span class="QuestionTitle">Question number 2</span>
+
+                            <div class="QuestionContent" data-simplebar>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -218,6 +331,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.6/jquery.fullpage.min.js" type="text/javascript"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/simplebar@2.6.0/dist/simplebar.min.js"></script>
 
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>

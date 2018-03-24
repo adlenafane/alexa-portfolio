@@ -14,7 +14,7 @@ html {
     color: #222;
     font-size: 1em;
     line-height: 1.4;
-    font-family: 'Lustria', serif;
+    font-family: 'Merriweather', serif;
 }
 
 body {
@@ -354,7 +354,7 @@ header nav {
     flex-direction: column;
     align-self: flex-end;
     justify-self: flex-end;
-    z-index: 1;
+    z-index: 100;
 
     padding-left: 3vw;
     right: 3vw;
@@ -373,24 +373,45 @@ header nav {
 }
 
 .Subtitle {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+
     grid-column-start: 1;
     grid-column-end: 7;
     grid-row-start: 5;
     grid-row-end: 5;
     align-self: end;
 
+    font-size: calc( 18px + (26 - 18)*(100vw - 400px)/(1920 - 400) );
     padding-left: 3vw;
 }
 
-.Title {
+.Title, h2 {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+
     grid-column-start: 1;
     grid-column-end: 9;
     grid-row-start: 6;
     grid-row-end: 6;
 
-    font-size: 10vh;
+    font-size: calc( 48px + (144 - 48)*(100vw - 400px)/(1920 - 400) );
+    align-self: center;
     padding-left: 3vw;
-    padding-bottom: 5vw;
+    padding-bottom: 5vh;
+}
+
+h4 {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: calc( 0px + (2.1 - 0)*(100vw - 400px)/(1920 - 400) );
+    color: #4a4a4a;
+    line-height: normal;
+
+    font-size: calc( 24px + (58 - 24)*(100vw - 400px)/(1920 - 400) );
 }
 
 
@@ -426,21 +447,29 @@ header nav {
 .Step__background,
 .About__background,
 .Transition__background {
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-attachment: inherit;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: inherit;
 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 .Project__background--1 {
-    background-image: url('http://placekitten.com/g/1920/1080');
+    background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0.6)
+    ), url('http://placekitten.com/g/1920/1080') ;
 }
 .Project__background--2 {
-    background-image: url('http://placekitten.com/g/1080/720');
+    background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0.6)
+    ), url('http://placekitten.com/g/1080/720');
 }
 
 .GoToProject {
@@ -450,18 +479,31 @@ header nav {
     grid-row-end: 5;
 
     display: flex;
-    align-items: flex-end;
-}
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 
-.GoToProject a {
-    flex: 1;
-
-    padding-top: 5vh;
-    padding-bottom: 5vh;
+    padding: 5vh 3vw;
     background-color: white;
     text-align: center;
     text-decoration: none;
     color: #4a4a4a;
+}
+
+.GoToProject span {
+    flex: 1;
+
+    font-family: Merriweather;
+    font-size: 30px;
+    line-height: 2.2;
+    letter-spacing: 1.3px;
+    color: #4a4a4a;
+}
+
+.GoToProject .Arrow {
+    height: 70%;
+    min-height: 14px;
+    width: auto;
 }
 
 .Home .fp-slidesNav {
@@ -499,7 +541,7 @@ header nav {
 */
 
 .Description {
-    grid-column-start: 3;
+    grid-column-start: 2;
     grid-column-end: 5;
     grid-row-start: 2;
     grid-row-end: 5;
@@ -508,12 +550,6 @@ header nav {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-}
-
-.Description__Text {
-    font-size: 32px;
-    color: #4a4a4a;
-    letter-spacing: 1.3px;
 }
 
 .Resume {
@@ -544,17 +580,17 @@ header nav {
 .About__background {
     grid-column-start: 6;
     grid-column-end: 9;
-    grid-row-start: 1;
-    grid-row-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 7;
 
     background-image: url('http://placekitten.com/g/600/600');
 }
 
-.About .Picture-2 {
+.About .EmptySpace {
     grid-column-start: 6;
     grid-column-end: 9;
-    grid-row-start: 3;
-    grid-row-end: 7;
+    grid-row-start: 1;
+    grid-row-end: 3;
 
     background-color: #5a71ff;
 }
@@ -565,19 +601,32 @@ header nav {
 */
 
 .Transition__background {
-    background-image: url('http://placekitten.com/g/3000/2000');
+    background-image: linear-gradient(
+      rgba(229, 234, 235, 0.5),
+      rgba(229, 234, 235, 0.5)
+    ), url('http://placekitten.com/g/3000/2000');
+}
+
+.Transition .EmptySpace {
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 5;
+    grid-row-end: 5;
+
+    background-color: #5a71ff;
 }
 
 .Transition__text {
-    grid-column-start: 1;
+    grid-column-start: 4;
     grid-column-end: 8;
     grid-row-start: 5;
     grid-row-end: 5;
-    align-self: end;
-    padding-left: 3vw;
+    align-self: center;
 
-    color: #5a71ff;
-    font-size: 36px;
+    color: white;
+    letter-spacing: 1.3px;
+    line-height: 2.2;
+    font-size: calc( 14px + (28 - 14)*(100vw - 400px)/(1920 - 400) );
 }
 
 
@@ -623,46 +672,51 @@ header nav {
 
 
 .Arrow {
-    justify-items: center;
-    text-align: center;
+    cursor: pointer;
+}
 
-    font-size: 24px;
+.Arrow--leftWrapper {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+
+    text-align: right;
 }
 
 .Arrow--left {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 3;
-    grid-row-end: 4;
+    margin-top: 1vh;
+    margin-right: 1vw;
+    height: auto;
+    width: 50%;
 }
 
-.Process .fp-controlArrow.fp-prev {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 3;
-    grid-row-end: 4;
-
-    border-color: transparent #5a71ff transparent transparent;
-}
-
-.Process .fp-controlArrow.fp-next {
+.Arrow--rightWrapper {
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 3;
     grid-row-end: 4;
 
-    border-color: transparent transparent transparent #5a71ff;
-}
-
-.Process .fp-slidesNav {
-    display: none;
+    text-align: left;
 }
 
 .Arrow--right {
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 3;
-    grid-row-end: 4;
+    margin-top: 1vh;
+    margin-left: 1vw;
+    height: auto;
+    width: 50%;
+}
+
+.Process .fp-controlArrow.fp-prev, .Faq .fp-controlArrow.fp-prev {
+    display: none;
+}
+
+.Process .fp-controlArrow.fp-next, .Faq .fp-controlArrow.fp-next {
+    display: none;
+}
+
+.Process .fp-slidesNav, .Faq .fp-slidesNav {
+    display: none;
 }
 
 .Steps {
@@ -713,6 +767,18 @@ header nav {
     background-image: url('http://placekitten.com/g/360/360');
 }
 
+.SmallPicture--step3 {
+    background-image: url('http://placekitten.com/g/400/500');
+}
+
+.SmallPicture--step4 {
+    background-image: url('http://placekitten.com/g/500/600');
+}
+
+.SmallPicture--step5 {
+    background-image: url('http://placekitten.com/g/600/700');
+}
+
 .LargePicture__wrapper {
     grid-column-start: 7;
     grid-column-end: 9;
@@ -735,6 +801,18 @@ header nav {
 
 .LargePicture--step2 {
     background-image: url('http://placekitten.com/g/360/360');
+}
+
+.LargePicture--step3 {
+    background-image: url('http://placekitten.com/g/700/800');
+}
+
+.LargePicture--step4 {
+    background-image: url('http://placekitten.com/g/800/900');
+}
+
+.LargePicture--step5 {
+    background-image: url('http://placekitten.com/g/900/1000');
 }
 
 .StepTitle {
@@ -771,6 +849,88 @@ header nav {
     Articles
 */
 
+.Article {
+    padding-left: 3vw;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.Article--1 {
+    grid-column-start: 1;
+    grid-column-end: 6;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.Article--2 {
+    grid-column-start: 1;
+    grid-column-end: 6;
+    grid-row-start: 3;
+    grid-row-end: 5;
+}
+
+.Article__category {
+    font-family: Lato;
+    font-size: 26px;
+    font-weight: bold;
+    letter-spacing: 3.5px;
+    color: #303346;
+}
+
+.Article__title {
+    font-size: 36px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #5a71ff;
+}
+
+.Article__date {
+    font-family: Lato;
+    font-size: 26px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 3.5px;
+    color: #303346;
+}
+
+.ReadAll {
+    grid-column-start: 6;
+    grid-column-end: 8;
+    grid-row-start: 2;
+    grid-row-end: 3;
+
+    background-color: white;
+    border: solid 1px #979797;
+    display: flex;
+    justify-content: center;
+    align-content: space-between;
+    text-decoration: none;
+
+    padding: 5vh 3vw;
+}
+
+.ReadAll__text {
+    flex: 1;
+    font-family: Lustria;
+    font-size: 24px;
+    letter-spacing: 1.3px;
+    color: #4a4a4a;
+}
+
+.ReadAll .Arrow {
+    height: 100%;
+    min-height: 14px;
+    width: auto;
+}
+
 /*
     Testimonials
 */
@@ -799,20 +959,24 @@ header nav {
 }
 
 .Testimonials .Quote {
+    padding-right: 25%;
     padding-left: 3vw;
-    padding-right: 3vw;
 
     color: white;
-    font-size: 36px;
+    font-size: 30px;
+
+    line-height: 2.2;
 }
 
 .Testimonials .Client {
-    color: #303346;
+    color: #4a4a4a;
     font-family: 'Lato', sans-serif;
-    font-size: 24px;
+    font-size: 26px;
     font-weight: bold;
-    padding-top: 5vh;
+    line-height: normal;
+    letter-spacing: 3.5px;
 
+    padding-top: 5vh;
     padding-left: 3vw;
 }
 
@@ -822,10 +986,10 @@ header nav {
 
 .Testimonials .Client span:after {
     content: '';
-    width: 80%;
+    width: 40%;
     position: absolute;
     left: 0;
-    bottom: -7px;
+    bottom: -20px;
     height: 4px;
     background-color: #303346;
 }
@@ -843,6 +1007,67 @@ header nav {
     Faq
 */
 
+.Questions {
+    grid-column-start: 4;
+    grid-column-end: 9;
+    grid-row-start: 1;
+    grid-row-end: 7;
+}
 
+.QuestionGrid {
+    display: grid;
+    grid-template-columns: repeat(5, 12.5vw);
+    grid-template-rows: 20vh 13.3vh 16.7vh 16.7vh 13.3vh 20vh;
+}
+
+.QuestionTitle {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 3;
+
+    border-top: solid 3px #5a71ff;
+
+    font-family: Merriweather;
+    font-size: 30px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 2.2;
+    letter-spacing: 1.3px;
+}
+
+.QuestionContent {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 3;
+    grid-row-end: 7;
+
+    overflow-y: scroll;
+    font-family: Merriweather;
+    font-size: 30px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 2.2;
+    letter-spacing: 1.3px;
+    color: #4a4a4a;
+
+    --last-row-height: 20vh;
+}
+
+.QuestionContent p {
+    padding-bottom: var(--last-row-height);
+}
+
+.QuestionContent:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: var(--last-row-height);
+    width: 100%;
+    background: -webkit-linear-gradient(rgba(255, 255,255, .4), rgba(255, 255, 255, 1));
+}
 
 

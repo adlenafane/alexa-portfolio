@@ -5,24 +5,29 @@ $(document).ready(function() {
         scrollBar: true,
         fixedElements: '.Header, .Links',
         slidesNavigation: true,
+        normalScrollElements: '.QuestionContent',
         onSlideLeave: function( anchorLink, index, slideIndex, direction, nextSlideIndex) {
-            $('.CurrentPage').text(nextSlideIndex + 1);
-            if(direction == 'right') {
-                if(nextSlideIndex === 0) {
+            $(`.CurrentPage--${anchorLink}`).text(nextSlideIndex + 1);
+
+            if(anchorLink === 'process') {
+                if(direction == 'right') {
+                    if(nextSlideIndex === 0) {
+                        $('.SmallPictureSlick').slick('slickPrev');
+                        $('.LargePictureSlick').slick('slickPrev');
+                    } else {
+                        $('.SmallPictureSlick').slick('slickNext');
+                        $('.LargePictureSlick').slick('slickNext');
+                    }
+                } else {
                     $('.SmallPictureSlick').slick('slickPrev');
                     $('.LargePictureSlick').slick('slickPrev');
-                } else {
-                    $('.SmallPictureSlick').slick('slickNext');
-                    $('.LargePictureSlick').slick('slickNext');
                 }
-            } else {
-                $('.SmallPictureSlick').slick('slickPrev');
-                $('.LargePictureSlick').slick('slickPrev');
             }
         },
     });
 
-    $('.TotalPages').text('/' + $('.Project .slide').length);
+    $('.TotalPages--process').text('/' + $('.Process .slide').length);
+    $('.TotalPages--faq').text('/' + $('.Faq .slide').length);
 });
 
 // Slick
