@@ -490,7 +490,7 @@ h4 {
     color: #4a4a4a;
 }
 
-.GoToProject span {
+.DiscoverProject {
     flex: 1;
 
     font-family: Merriweather;
@@ -536,9 +536,39 @@ h4 {
     margin-top: 10px;
 }
 
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .DiscoverProject {
+        display: none;
+    }
+
+    .GoToProject {
+        justify-content: center;
+    }
+}
+
 /*
     About
 */
+
+.About__background {
+    grid-column-start: 6;
+    grid-column-end: 9;
+    grid-row-start: 3;
+    grid-row-end: 7;
+
+    background-image: url('http://placekitten.com/g/600/600');
+}
+
+.About .EmptySpace {
+    grid-column-start: 6;
+    grid-column-end: 9;
+    grid-row-start: 1;
+    grid-row-end: 3;
+
+    background-color: #5a71ff;
+}
 
 .Description {
     grid-column-start: 2;
@@ -573,26 +603,12 @@ h4 {
     color: white;
 }
 
-/*
-    About
-*/
-
-.About__background {
-    grid-column-start: 6;
-    grid-column-end: 9;
-    grid-row-start: 3;
-    grid-row-end: 7;
-
-    background-image: url('http://placekitten.com/g/600/600');
-}
-
-.About .EmptySpace {
-    grid-column-start: 6;
-    grid-column-end: 9;
-    grid-row-start: 1;
-    grid-row-end: 3;
-
-    background-color: #5a71ff;
+/* Tablet */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .Description {
+        grid-column-start: 1;
+        padding-left: 3vw;
+    }
 }
 
 
@@ -629,6 +645,16 @@ h4 {
     font-size: calc( 14px + (28 - 14)*(100vw - 400px)/(1920 - 400) );
 }
 
+/* Tablet */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .Transition .EmptySpace {
+        display: none;
+    }
+
+    .Transition__text {
+        grid-column-start: 2;
+    }
+}
 
 /*
     Process
@@ -720,7 +746,7 @@ h4 {
 }
 
 .Steps {
-    grid-column-start: 4;
+    grid-column-start: 3;
     grid-column-end: 6;
     grid-row-start: 1;
     grid-row-end: 7;
@@ -728,13 +754,13 @@ h4 {
 
 .StepGrid {
     display: grid;
-    grid-template-columns: repeat(2, 12.5vw);
+    grid-template-columns: repeat(3, 12.5vw);
     grid-template-rows: 20vh 13.3vh 16.7vh 16.7vh 13.3vh 20vh;
 }
 
 .Step {
-    grid-column-start: 1;
-    grid-column-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 4;
     grid-row-start: 2;
     grid-row-end: 3;
 
@@ -743,6 +769,36 @@ h4 {
     font-family: 'Lato', sans-serif;
     font-weight: bold;
     letter-spacing: 0.2vw;
+}
+
+.StepTitle {
+    position: relative;
+}
+
+.StepTitle:after {
+    content: '';
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: -7px;
+    height: 4px;
+    background-color: #303346;
+}
+
+.StepContent {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 5;
+}
+
+.StepContent ul {
+    padding-left: 1em;
+    margin: 0;
+
+    font-size: 24px;
+    line-height: 1.83;
+    letter-spacing: 1.3px;
 }
 
 .SmallPicture__wrapper {
@@ -815,35 +871,17 @@ h4 {
     background-image: url('http://placekitten.com/g/900/1000');
 }
 
-.StepTitle {
-    position: relative;
+/* Tablet */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .Step {
+        grid-column-start: 1;
+    }
+
+    .StepContent {
+        grid-column-start: 1;
+    }
 }
 
-.StepTitle:after {
-    content: '';
-    width: 100%;
-    position: absolute;
-    left: 0;
-    bottom: -7px;
-    height: 4px;
-    background-color: #303346;
-}
-
-.StepContent {
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 3;
-    grid-row-end: 5;
-}
-
-.StepContent ul {
-    padding-left: 1em;
-    margin: 0;
-
-    font-size: 24px;
-    line-height: 1.83;
-    letter-spacing: 1.3px;
-}
 
 /*
     Articles
@@ -923,12 +961,29 @@ h4 {
     font-size: 24px;
     letter-spacing: 1.3px;
     color: #4a4a4a;
+    align-self: center;
 }
 
 .ReadAll .Arrow {
     height: 100%;
     min-height: 14px;
     width: auto;
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .ReadAll {
+        grid-column-end: 9;
+        margin-right: 3vw;
+        padding-top: 3vh;
+        padding-bottom: 3vh;
+    }
+
+    .ReadAll .Arrow {
+        height: 90%;
+        min-height: 14px;
+        width: auto;
+    }
 }
 
 /*
@@ -956,6 +1011,7 @@ h4 {
     background-color: #d8d8d8;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .Testimonials .Quote {
@@ -994,13 +1050,48 @@ h4 {
     background-color: #303346;
 }
 
-.Testimonials .Logo {
-    padding-top: 20vh;
-}
-
 .Testimonials .Logo img {
     max-height: 30vh;
     width: auto;
+}
+
+.Testimonials__slider {
+    grid-column-start: 5;
+    grid-column-end: 9;
+    grid-row-start: 5;
+    grid-row-end: 6;
+
+    display: grid;
+    grid-template-columns: repeat(4, 12.5vw);
+    grid-template-rows: 13.3vh;
+}
+
+.Testimonial__logo--1 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 1;
+
+    background-color: #5a71ff;
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .Quote__wrapper {
+        grid-column-end: 7;
+    }
+
+    .Logo__wrapper {
+        grid-column-start: 7;
+        grid-column-end: 9;
+        grid-row-start: 2;
+        grid-row-end: 4;
+    }
+
+    .Testimonials .Logo img {
+        max-height: 15vh;
+        width: auto;
+    }
 }
 
 /*
@@ -1070,4 +1161,29 @@ h4 {
     background: -webkit-linear-gradient(rgba(255, 255,255, .4), rgba(255, 255, 255, 1));
 }
 
+/* Tablet */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .Questions {
+        grid-column-start: 3;
+        grid-column-end: 9;
+        grid-row-start: 1;
+        grid-row-end: 5;
+    }
 
+    .QuestionTitle {
+        grid-column-end: 6;
+    }
+
+    .QuestionContent {
+        grid-column-end: 6;
+        grid-row-end: 5;
+    }
+
+    .QuestionContent p {
+        padding-bottom: 5vh;
+    }
+
+    .QuestionContent:after {
+        height: 5vh;
+    }
+}
