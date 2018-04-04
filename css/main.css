@@ -333,7 +333,7 @@ header nav {
 }
 
 .Link__internal {
-    color: white;
+    color: #E5EAEB;
     text-decoration: none;
     font-family: Lato;
     font-size: 20px;
@@ -354,7 +354,7 @@ header nav {
   top: calc(-40px - 5vh);
 }
 
-.Link__ContactMe {
+/*.Link__ContactMe {
     position: absolute;
     right: 5vw;
 
@@ -365,7 +365,7 @@ header nav {
     padding-right: 3vw;
     border-radius: 45px;
     font-size: calc( 18px + (26 - 18)*(100vw - 400px)/(1920 - 400) );
-}
+}*/
 
 .Links {
     position: fixed;
@@ -1440,34 +1440,6 @@ h4 {
     align-items: center;
 }
 
-.Logo__wrapper--Nokia {
-    background-image: url('/img/logo/NokiaHealth.png');
-}
-
-.Logo__wrapper--Alkemics {
-    background-image: url('/img/logo/Alkemics.jpg');
-}
-
-.Logo__wrapper--Blackink {
-    background-image: url('/img/logo/Blackink.png');
-}
-
-.Logo__wrapper--CGT {
-    background-image: url('/img/logo/CGTM.jpg');
-}
-
-.Logo__wrapper--Wisean {
-    background-image: url('/img/logo/Wisean.png');
-}
-
-.Logo__wrapper--ABTasty {
-    background-image: url('/img/logo/ABTasty.png');
-}
-
-.Logo__wrapper--Keymetrics {
-    background-image: url('/img/logo/Keymetrics.jpg');
-}
-
 .Logo {
     height: calc(13.3vh + 16.7vh);
     width: calc(13.3vh + 16.7vh);
@@ -1523,6 +1495,35 @@ h4 {
         max-height: 15vh;
         width: auto;
     }
+}
+
+.Logo__wrapper--Nokia {
+    background-image: url('/img/logo/NokiaHealth.png');
+}
+
+.Logo__wrapper--Alkemics {
+    background-image: url('/img/logo/Alkemics.jpg');
+}
+
+.Logo__wrapper--Blackink {
+    background-size: 50% auto;
+    background-image: url('/img/logo/Blackink.png');
+}
+
+.Logo__wrapper--CGT {
+    background-image: url('/img/logo/CGTM.jpg');
+}
+
+.Logo__wrapper--Wisean {
+    background-image: url('/img/logo/Wisean.png');
+}
+
+.Logo__wrapper--ABTasty {
+    background-image: url('/img/logo/ABTasty.png');
+}
+
+.Logo__wrapper--Keymetrics {
+    background-image: url('/img/logo/Keymetrics.jpg');
 }
 
 /* Mobile */
@@ -1665,4 +1666,65 @@ h4 {
     .QuestionContent:after {
         height: 5vh;
     }
+}
+
+/*
+    Contact
+*/
+
+.WhyShouldYouContactMe {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 5;
+
+    /*font-family: Merriweather;
+    font-size: calc( 14px + (30 - 14)*(100vw - 400px)/(1920 - 400) );
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 2.2;
+    letter-spacing: 1.3px;*/
+}
+
+.ContactDetails__TitleWrapper {
+    grid-column-start: 5;
+    grid-column-end: 8;
+    grid-row-start: 2;
+    grid-row-end: 2;
+}
+
+.ContactDetails__Title {
+    position: relative;
+
+    color: #303346;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    letter-spacing: 0.2vw;
+    font-size: calc( 16px + (26 - 16)*(100vw - 400px)/(1920 - 400) );
+}
+
+.ContactDetails__Title:after {
+    content: '';
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: -7px;
+    height: 4px;
+    background-color: #303346;
+}
+
+.ContactDetails {
+    grid-column-start: 5;
+    grid-column-end: 8;
+    grid-row-start: 3;
+    grid-row-end: 5;
+
+    font-family: Merriweather;
+    font-size: calc( 14px + (30 - 14)*(100vw - 400px)/(1920 - 400) );
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 2.2;
+    letter-spacing: 1.3px;
 }
