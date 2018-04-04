@@ -322,10 +322,14 @@ header nav {
   width: 100%;
   text-align: center;
   z-index: 1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .Link__internal + .Link__internal {
-    padding-left: 12px;
+    margin-left: 2vw;
 }
 
 .Link__internal {
@@ -334,6 +338,7 @@ header nav {
     font-family: Lato;
     font-size: 20px;
     font-weight: bold;
+    padding: 3vh 0;
 }
 
 .Link__internal:hover {
@@ -344,8 +349,22 @@ header nav {
     color: #5A71FF;
 }
 
+
 .nav-up {
   top: calc(-40px - 5vh);
+}
+
+.Link__ContactMe {
+    position: absolute;
+    right: 5vw;
+
+    background-image: linear-gradient(to bottom, #5a71ff, #6f83f9);
+    letter-spacing: 3.5px;
+    color: white;
+    padding-left: 3vw;
+    padding-right: 3vw;
+    border-radius: 45px;
+    font-size: calc( 18px + (26 - 18)*(100vw - 400px)/(1920 - 400) );
 }
 
 .Links {
@@ -467,6 +486,11 @@ h4 {
         transform: translate(-50%, -50%) rotate(225deg);
     }
 
+    .Icon {
+        background-color: white;
+        opacity: .8;
+    }
+
     .Icon:not(.MobileOnly) {
         transform: translateX(150%);
         -webkit-transform: translateX(150%);
@@ -537,6 +561,32 @@ h4 {
     grid-row-end: 4;
 
     background-color: #5A71FF;
+    position: relative;
+    overflow: visible;
+}
+
+.Credentials__wrapper {
+    position: absolute;
+    right: -50vw;
+    left: 3vw;
+    top: 5vh;
+
+    font-family: 'Lato', sans-serif;
+}
+
+.Credentials__text {
+    color: white;
+    transform: rotate(90deg) translateY(-100%);
+    transform-origin: 0 0;
+    font-size: calc( 12px + (18 - 12)*(100vw - 400px)/(1920 - 400) );
+}
+
+.Credentials__text .Credentials__Portfolio {
+    padding-right: 12px;
+}
+
+.Credentials__text .Credentials__Name {
+    opacity: .5;
 }
 
 .Project {
@@ -557,7 +607,8 @@ h4 {
 .Project__background,
 .Step__background,
 .About__background,
-.Transition__background {
+.Transition__background,
+.Logo__wrapper {
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: inherit;
@@ -568,19 +619,54 @@ h4 {
     background-size: cover;
 }
 
-.Project__background--1 {
+.Project__background--ABTasty {
     background-image: linear-gradient(
       to bottom,
       rgba(0, 0, 0, 0),
       rgba(0, 0, 0, 0.6)
-    ), url('http://placekitten.com/g/1920/1080') ;
+    ), url('/img/background/ABTasty.png') ;
 }
-.Project__background--2 {
+.Project__background--Alkemics {
     background-image: linear-gradient(
       to bottom,
       rgba(0, 0, 0, 0),
       rgba(0, 0, 0, 0.6)
-    ), url('http://placekitten.com/g/1080/720');
+    ), url('/img/background/Alkemics.png');
+}
+.Project__background--Blackink {
+    background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0.6)
+    ), url('/img/background/Blackink.png');
+}
+.Project__background--CGT {
+    background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0.6)
+    ), url('/img/background/CGT.png');
+}
+.Project__background--Keymetrics {
+    background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0.6)
+    ), url('/img/background/Keymetrics.png');
+}
+.Project__background--NokiaHealth {
+    background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0.6)
+    ), url('/img/background/NokiaHealth.png');
+}
+.Project__background--Wisean {
+    background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0.6)
+    ), url('/img/background/Wisean.png');
 }
 
 .GoToProject {
@@ -605,14 +691,15 @@ h4 {
     flex: 1;
 
     font-family: Merriweather;
-    font-size: 30px;
+    font-size: calc( 14px + (30 - 14)*(100vw - 992px)/(1920 - 992) );
     line-height: 2.2;
     letter-spacing: 1.3px;
     color: #4a4a4a;
+    text-align: left;
 }
 
 .GoToProject .Arrow {
-    height: 70%;
+    height: 50%;
     min-height: 14px;
     width: auto;
 }
@@ -681,7 +768,7 @@ h4 {
     grid-row-start: 3;
     grid-row-end: 7;
 
-    background-image: url('http://placekitten.com/g/600/600');
+    background-image: url('/img/Profile__Photo--Alexa.png');
 }
 
 .About .EmptySpace {
@@ -710,13 +797,16 @@ h4 {
 
     border-radius: 45px;
     border: solid 1px #303346;
-    padding: 2.5vh 1.5vw;
-    font-size: 22px;
+    padding: 2.7vh 2.5vw;
+    font-size: calc( 14px + (26 - 14)*(100vw - 400px)/(1920 - 400) );
     font-family: 'Lato', sans-serif;
     letter-spacing: 3.5px;
     color: #303346;
     cursor: pointer;
-    text-align: center;
+    /*text-align: center;*/
+
+    display: flex;
+    justify-content: space-between;
 
     transition: all 0.3s ease-in-out;
 }
@@ -724,6 +814,22 @@ h4 {
 .Resume:hover {
     background-color: #303346;
     color: white;
+}
+
+.Resume i {
+    position: relative;
+    align-self: flex-start;
+    margin-right: 1.6vw;
+}
+
+.Resume i:after {
+    content: '';
+    width: 100%;
+    position: absolute;
+    left: -1px;
+    bottom: -4px;
+    height: 2px;
+    background-color: #303346;
 }
 
 /* Tablet */
@@ -766,7 +872,7 @@ h4 {
     background-image: linear-gradient(
       rgba(229, 234, 235, 0.5),
       rgba(229, 234, 235, 0.5)
-    ), url('http://placekitten.com/g/3000/2000');
+    ), url('/img/background/Transition.png');
 }
 
 .Transition .EmptySpace {
@@ -835,7 +941,7 @@ h4 {
 
     background-color: #5a71ff;
     color: white;
-    font-size: 48px;
+    font-size: calc( 48px + (72 - 48)*(100vw - 400px)/(1920 - 400) );
 
     display: flex;
     justify-content: flex-end;
@@ -865,13 +971,17 @@ h4 {
     grid-row-end: 4;
 
     text-align: right;
+    display: flex;
 }
 
 .Arrow--left {
-    margin-top: 1vh;
-    margin-right: 1vw;
     height: auto;
     width: 50%;
+    margin: auto;
+    align-self: center;
+    justify-self: center;
+
+    opacity: .5;
 }
 
 .Arrow--rightWrapper {
@@ -881,13 +991,16 @@ h4 {
     grid-row-end: 4;
 
     text-align: left;
+
+    display: flex;
 }
 
 .Arrow--right {
-    margin-top: 1vh;
-    margin-left: 1vw;
     height: auto;
     width: 50%;
+    margin: auto;
+    align-self: center;
+    justify-self: center;
 }
 
 .Process .fp-controlArrow.fp-prev, .Faq .fp-controlArrow.fp-prev {
@@ -921,7 +1034,6 @@ h4 {
     grid-row-start: 2;
     grid-row-end: 3;
 
-    font-size: 18px;
     color: #303346;
     font-family: 'Lato', sans-serif;
     font-weight: bold;
@@ -930,6 +1042,7 @@ h4 {
 
 .StepTitle {
     position: relative;
+    font-size: calc( 16px + (26 - 16)*(100vw - 400px)/(1920 - 400) );
 }
 
 .StepTitle:after {
@@ -953,7 +1066,7 @@ h4 {
     padding-left: 1em;
     margin: 0;
 
-    font-size: 24px;
+    font-size: calc( 20px + (30 - 20)*(100vw - 400px)/(1920 - 400) );
     line-height: 1.83;
     letter-spacing: 1.3px;
 }
@@ -1100,8 +1213,44 @@ h4 {
 
 .Article {
     grid-column-start: 1;
-    grid-column-end: 6;
+    grid-column-end: 5;
 
+    padding-left: 3vw;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.Article--1 {
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.Article--2 {
+    grid-row-start: 4;
+    grid-row-end: 5;
+}
+
+.Article__category--1 {
+    grid-row-start: 1;
+    grid-row-end: 1;
+}
+
+.Article__category--2 {
+    grid-row-start: 3;
+    grid-row-end: 3;
+}
+
+.Article__category {
+    font-family: Lato;
+    font-size: calc( 16px + (26 - 16)*(100vw - 400px)/(1920 - 400) );
+    font-weight: bold;
+    letter-spacing: 3.5px;
+    color: #303346;
+
+    grid-column-start: 1;
+    grid-column-end: 5;
     padding-left: 3vw;
 
     display: flex;
@@ -1109,26 +1258,8 @@ h4 {
     justify-content: flex-end;
 }
 
-.Article--1 {
-    grid-row-start: 1;
-    grid-row-end: 3;
-}
-
-.Article--2 {
-    grid-row-start: 3;
-    grid-row-end: 5;
-}
-
-.Article__category {
-    font-family: Lato;
-    font-size: 26px;
-    font-weight: bold;
-    letter-spacing: 3.5px;
-    color: #303346;
-}
-
 .Article__title {
-    font-size: 36px;
+    font-size: calc( 18px + (36 - 18)*(100vw - 400px)/(1920 - 400) );
     font-weight: normal;
     font-style: normal;
     font-stretch: normal;
@@ -1140,7 +1271,7 @@ h4 {
 
 .Article__date {
     font-family: Lato;
-    font-size: 26px;
+    font-size: calc( 16px + (26 - 16)*(100vw - 400px)/(1920 - 400) );
     font-weight: normal;
     font-style: normal;
     font-stretch: normal;
@@ -1226,6 +1357,19 @@ h4 {
     Testimonials
 */
 
+.TestimonialQuote {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 5;
+
+    /*background-color: #5a71ff;*/
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .Quote__wrapper {
     grid-column-start: 1;
     grid-column-end: 5;
@@ -1233,21 +1377,6 @@ h4 {
     grid-row-end: 5;
 
     background-color: #5a71ff;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.Logo__wrapper {
-    grid-column-start: 5;
-    grid-column-end: 9;
-    grid-row-start: 1;
-    grid-row-end: 5;
-
-    background-color: #d8d8d8;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .Testimonials .Quote {
@@ -1286,29 +1415,96 @@ h4 {
     background-color: #303346;
 }
 
+.TestimonialsSlider__Content {
+    grid-column-start: 1;
+    grid-column-end: 9;
+    grid-row-start: 1;
+    grid-row-end: 5;
+
+    background-color: transparent;
+}
+
+.Testimonial {
+    display: grid;
+
+    grid-template-columns: repeat(8, 12.5vw);
+    grid-template-rows: 20vh 13.3vh 16.7vh 16.7vh;
+}
+
+.Logo__wrapper {
+    flex: 1;
+    width: 50vw !important;
+    height: calc(20vh + 13.3vh + 16.7vh + 16.7vh);
+
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+}
+
+.Logo__wrapper--Nokia {
+    background-image: url('/img/Logo-nokia.png')
+}
+
+.Logo__wrapper--Alkemics {
+    background-image: url('/img/background/Alkemics.png')
+}
+
+.Logo__wrapper--Blackink {
+    background-image: url('/img/background/Blackink.png')
+}
+
+.Logo__wrapper--CGT {
+    background-image: url('/img/background/CGT.png')
+}
+
+.Logo__wrapper--Wisean {
+    background-image: url('/img/background/Wisean.png')
+}
+
+.Logo__wrapper--ABTasty {
+    background-image: url('/img/background/ABTasty.png')
+}
+
+.Logo__wrapper--Keymetrics {
+    background-image: url('/img/background/Keymetrics.png')
+}
+
+/*.Logo {
+    display: flex !important;
+}*/
+
 .Testimonials .Logo img {
     max-height: 30vh;
     width: auto;
 }
 
-.Testimonials__slider {
+.TestimonialsSlider {
     grid-column-start: 5;
     grid-column-end: 9;
     grid-row-start: 5;
     grid-row-end: 6;
 
-    display: grid;
+    /*display: grid;
     grid-template-columns: repeat(4, 12.5vw);
-    grid-template-rows: 13.3vh;
+    grid-template-rows: 13.3vh;*/
 }
 
-.Testimonial__logo--1 {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 1;
-    grid-row-end: 1;
+.slick-list {
+    padding: 0 !important;
+}
 
-    background-color: #5a71ff;
+.TestimonialsSlider__Logo {
+    height: 13.3vh;
+    width: 25vw;
+
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: inherit;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 /* Tablet */

@@ -24,6 +24,17 @@
 
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-44855546-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          var googleAnalyticsUA = window.location.hostname === 'www.alexa-gueguen.com' ? 'UA-44855546-1' : '';
+          gtag('config', googleAnalyticsUA);
+        </script>
     </head>
     <body>
         <!--[if lte IE 9]>
@@ -38,6 +49,7 @@
                 <a class="Link__internal" data-menuanchor="articles" href="#articles">ARTICLES</a>
                 <a class="Link__internal" data-menuanchor="testimonials" href="#testimonials">TESTIMONIALS</a>
                 <a class="Link__internal" data-menuanchor="faq" href="#faq">FAQ</a>
+                <a class="Link__internal Link__ContactMe">Contact Me</a>
             </nav>
         </header>
 
@@ -51,7 +63,7 @@
             <a class="Icon" target="_blank" href="mailto:alexa.gueguen@gmail.com">
                 <i class="far fa-envelope"></i>
             </a>
-            <a class="Icon" target="_blank" href="">
+            <a class="Icon Icon__copyUrl" title="Copied!" data-clipboard-text="http://alexa-gueguen.com/">
                 <i class="fas fa-link"></i>
             </a>
             <a class="Icon MobileOnly FAB">
@@ -65,18 +77,60 @@
             <div data-anchor="work" class="Fullscreen Screen Home section">
                 <div class="Subtitle">ALEXA GUÉGUEN</div>
                 <h2 class="Title">ux strategist</h2>
-                <div class="Credentials"></div>
+                <div class="Credentials">
+                    <div class="Credentials__wrapper">
+                        <div class="Credentials__text">
+                            <span class="Credentials__Portfolio">Portfolio 2018</span>
+                            <span class="Credentials__Name">Grid: Adrián Somoza</span>
+                        </div>
+                    </div>
+                </div>
 
                 <div class="Project">
                     <div class="slide fp-auto-height">
-                        <div class="Project__Grid Project__background Project__background--1">
+                        <div class="Project__Grid Project__background Project__background--ABTasty">
                             <a class="GoToProject" href="">
                                 <span class="DiscoverProject">Discover project</span><img class="Arrow" src="/img/Arrow--right.png">
                             </a>
                         </div>
                     </div>
                     <div class="slide fp-auto-height">
-                        <div class="Project__Grid Project__background Project__background--2">
+                        <div class="Project__Grid Project__background Project__background--Alkemics">
+                            <a class="GoToProject" href="">
+                                <span class="DiscoverProject">Discover project</span><img class="Arrow" src="/img/Arrow--right.png">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="slide fp-auto-height">
+                        <div class="Project__Grid Project__background Project__background--Blackink">
+                            <a class="GoToProject" href="">
+                                <span class="DiscoverProject">Discover project</span><img class="Arrow" src="/img/Arrow--right.png">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="slide fp-auto-height">
+                        <div class="Project__Grid Project__background Project__background--CGT">
+                            <a class="GoToProject" href="">
+                                <span class="DiscoverProject">Discover project</span><img class="Arrow" src="/img/Arrow--right.png">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="slide fp-auto-height">
+                        <div class="Project__Grid Project__background Project__background--Keymetrics">
+                            <a class="GoToProject" href="">
+                                <span class="DiscoverProject">Discover project</span><img class="Arrow" src="/img/Arrow--right.png">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="slide fp-auto-height">
+                        <div class="Project__Grid Project__background Project__background--NokiaHealth">
+                            <a class="GoToProject" href="">
+                                <span class="DiscoverProject">Discover project</span><img class="Arrow" src="/img/Arrow--right.png">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="slide fp-auto-height">
+                        <div class="Project__Grid Project__background Project__background--Wisean">
                             <a class="GoToProject" href="">
                                 <span class="DiscoverProject">Discover project</span><img class="Arrow" src="/img/Arrow--right.png">
                             </a>
@@ -125,7 +179,7 @@
                 </div>
 
                 <div class="Arrow Arrow--leftWrapper">
-                    <img src="/img/Arrow--left.png"  onclick="javascript:$.fn.fullpage.moveSlideLeft();" class="Arrow Arrow--left" />
+                    <img src="/img/Arrow--left.png"  onclick="$.fn.fullpage.moveSlideLeft();" class="Arrow Arrow--left" />
                 </div>
                 <div class="Arrow Arrow--rightWrapper">
                     <img src="/img/Arrow--right.png" onclick="javascript:$.fn.fullpage.moveSlideRight();" class="Arrow Arrow--right" />
@@ -242,15 +296,15 @@
                     <h2 class="Title">articles</h2>
                     <div class="Subtitle">SHARING IS CARING</div>
 
+                    <div class="Article__category Article__category--1">Methodology</div>
                     <div class="Article Article--1">
-                        <div class="Article__category">Methodology</div>
-                        <div class="Article__title">How to work remotely?</div>
+                        <div class="Article__title">How to work remotely? How to work remotely? How to work remotely?</div>
                         <div class="Article__date">2018-04-01</div>
                     </div>
 
+                    <div class="Article__category Article__category--2">UX Design</div>
                     <div class="Article Article--2">
-                        <div class="Article__category">UX Design</div>
-                        <div class="Article__title">Personae or <br/>no Personae?</div>
+                        <div class="Article__title">Personae or no Personae? Personae or no Personae?</div>
                         <div class="Article__date">2018-05-01</div>
                     </div>
 
@@ -266,16 +320,139 @@
                 <div class="Screen Testimonials">
                     <h2 class="Title">testimonials</h2>
                     <div class="Subtitle">MAGIC HAPPENS WHEN PEOPLE WORK TOGETHER</div>
-                    <div class="Quote__wrapper">
-                        <div class="Quote">« It's funny to pitch creative ideas to sell more, but it's funnier to create solutions that make people life better. »</div>
-                        <div class="Client">
-                            <span>Nicolas SCHMIDT<br>Head of Healthcare Products<br>at Nokia Technologies</span>
+
+                    <div class="Quote__wrapper"></div>
+
+                    <div class="TestimonialsSlider__Content">
+                        <div data-slick-index="0">
+                            <div class="Testimonial">
+                                <div class="TestimonialQuote">
+                                    <div class="Quote">
+                                        « It's funny to pitch creative ideas to sell more, but it's funnier to create solutions that make people life better. »
+                                    </div>
+                                    <div class="Client">
+                                        <span>Nicolas SCHMIDT<br>Head of Healthcare Products<br>at Nokia Technologies</span>
+                                    </div>
+                                </div>
+                                <div class="Logo__wrapper Project__background--NokiaHealth">
+                                    <div class="Logo">
+                                        <img src="./img/Logo-nokia.png">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div data-slick-index="1">
+                            <div class="Testimonial">
+                                <div class="TestimonialQuote">
+                                    <div class="Quote">
+                                        « Alexa constantly amazed me with her business insight and brilliant ways to to solving problems. She consistently demonstrated a strong work ethic at Alkemics along with a commitment to success. Her performance at Alkemics was golden. »
+                                    </div>
+                                    <div class="Client">
+                                        <span>Nicolas LABE<br>Head of Customer Success<br>at Alkemics</span>
+                                    </div>
+                                </div>
+                                <div class="Logo__wrapper Project__background--Alkemics">
+                                    <div class="Logo">
+                                        Alkemics
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div data-slick-index="2">
+                            <div class="Testimonial">
+                                <div class="TestimonialQuote">
+                                    <div class="Quote">
+                                        « »
+                                    </div>
+                                    <div class="Client">
+                                        <span>Radhia HOUIDI<br>Founder and CEO<br>at Blackink</span>
+                                    </div>
+                                </div>
+                                <div class="Logo__wrapper Project__background--Blackink">
+                                    <div class="Logo">
+                                        BLACKINK
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div data-slick-index="3">
+                            <div class="Testimonial">
+                                <div class="TestimonialQuote">
+                                    <div class="Quote">
+                                        « »
+                                    </div>
+                                    <div class="Client">
+                                        <span>XXX<br>Director<br>at CGT</span>
+                                    </div>
+                                </div>
+                                <div class="Logo__wrapper Project__background--CGT">
+                                    <div class="Logo">
+                                        CGT
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div data-slick-index="4">
+                            <div class="Testimonial">
+                                <div class="TestimonialQuote">
+                                    <div class="Quote">
+                                        « »
+                                    </div>
+                                    <div class="Client">
+                                        <span>Jeremy BELLAICHE<br>Founder & CEO<br>at Wisean</span>
+                                    </div>
+                                </div>
+                                <div class="Logo__wrapper Project__background--Wisean">
+                                    <div class="Logo">
+                                        Wisean
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div data-slick-index="5">
+                            <div class="Testimonial">
+                                <div class="TestimonialQuote">
+                                    <div class="Quote">
+                                        « »
+                                    </div>
+                                    <div class="Client">
+                                        <span>XXX<br>Director<br>at ABTasty</span>
+                                    </div>
+                                </div>
+                                <div class="Logo__wrapper Project__background--ABTasty">
+                                    <div class="Logo">
+                                        ABTasty
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div data-slick-index="6">
+                            <div class="Testimonial">
+                                <div class="TestimonialQuote">
+                                    <div class="Quote">
+                                        « »
+                                    </div>
+                                    <div class="Client">
+                                        <span>XXX<br>Director<br>at Keymetrics</span>
+                                    </div>
+                                </div>
+                                <div class="Logo__wrapper Project__background--Keymetrics">
+                                    <div class="Logo">
+                                        Keymetrics
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="Logo__wrapper">
-                        <div class="Logo">
-                            <img src="./img/Logo-nokia.png">
-                        </div>
+
+                    <div class="TestimonialsSlider">
+                        <div data-slick-index="0" class="TestimonialsSlider__Logo Logo__wrapper--Nokia"></div>
+                        <div data-slick-index="1" class="TestimonialsSlider__Logo Logo__wrapper--Alkemics"></div>
+                        <div data-slick-index="2" class="TestimonialsSlider__Logo Logo__wrapper--Blackink"></div>
+                        <div data-slick-index="3" class="TestimonialsSlider__Logo Logo__wrapper--CGT"></div>
+                        <div data-slick-index="4" class="TestimonialsSlider__Logo Logo__wrapper--Wisean"></div>
+                        <div data-slick-index="5" class="TestimonialsSlider__Logo Logo__wrapper--ABTasty"></div>
+                        <div data-slick-index="6" class="TestimonialsSlider__Logo Logo__wrapper--Keymetrics"></div>
                     </div>
                 </div>
             </div>
@@ -342,15 +519,11 @@
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/simplebar@2.6.0/dist/simplebar.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+        <script src="https://unpkg.com/tippy.js@2.5.0/dist/tippy.all.min.js"></script>
+
 
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
-
-        <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-        <script>
-            window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
-            ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
-        </script>
-        <script src="https://www.google-analytics.com/analytics.js" async defer></script>
     </body>
 </html>

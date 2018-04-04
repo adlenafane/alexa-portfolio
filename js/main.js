@@ -57,6 +57,47 @@ $(document).ready(function() {
     $('.SmallPictureSlick').slick(slickOptions);
     $('.LargePictureSlick').slick(slickOptions);
 });
+$(document).ready(function() {
+    $('.TestimonialsSlider__Content').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: false,
+      fade: true,
+      asNavFor: '.TestimonialsSlider'
+    });
+    $('.TestimonialsSlider').slick({
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      asNavFor: '.TestimonialsSlider__Content',
+      dots: false,
+      centerMode: true,
+      focusOnSelect: true,
+      arrows: false,
+    });
+});
+
+
+
+$(document).ready(function() {
+    var clipboard = new ClipboardJS('.Icon__copyUrl');
+    window.copyIcon = document.querySelector('.Icon__copyUrl');
+    tippy(copyIcon, {
+        placement: 'left',
+        trigger: 'manual',
+        hideOnClick: false
+    });
+
+    clipboard.on('success', function(e) {
+        window.copyIcon._tippy.show();
+
+        window.setTimeout(function() {
+            window.copyIcon._tippy.hide();
+        }, 2000);
+
+        e.clearSelection();
+    });
+
+});
 
 $(document).ready(function() {
     var isFabOpen = false;
