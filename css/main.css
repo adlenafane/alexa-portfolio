@@ -1363,7 +1363,6 @@ h4 {
     grid-row-start: 1;
     grid-row-end: 5;
 
-    /*background-color: #5a71ff;*/
     background-color: transparent;
     display: flex;
     flex-direction: column;
@@ -1442,40 +1441,44 @@ h4 {
 }
 
 .Logo__wrapper--Nokia {
-    background-image: url('/img/Logo-nokia.png')
+    background-image: url('/img/logo/NokiaHealth.png');
 }
 
 .Logo__wrapper--Alkemics {
-    background-image: url('/img/background/Alkemics.png')
+    background-image: url('/img/logo/Alkemics.jpg');
 }
 
 .Logo__wrapper--Blackink {
-    background-image: url('/img/background/Blackink.png')
+    background-image: url('/img/logo/Blackink.png');
 }
 
 .Logo__wrapper--CGT {
-    background-image: url('/img/background/CGT.png')
+    background-image: url('/img/logo/CGTM.jpg');
 }
 
 .Logo__wrapper--Wisean {
-    background-image: url('/img/background/Wisean.png')
+    background-image: url('/img/logo/Wisean.png');
 }
 
 .Logo__wrapper--ABTasty {
-    background-image: url('/img/background/ABTasty.png')
+    background-image: url('/img/logo/ABTasty.png');
 }
 
 .Logo__wrapper--Keymetrics {
-    background-image: url('/img/background/Keymetrics.png')
+    background-image: url('/img/logo/Keymetrics.jpg');
 }
 
-/*.Logo {
-    display: flex !important;
-}*/
+.Logo {
+    height: calc(13.3vh + 16.7vh);
+    width: calc(13.3vh + 16.7vh);
+    background-color: white;
 
-.Testimonials .Logo img {
-    max-height: 30vh;
-    width: auto;
+    background-position:center center;
+    background-repeat: no-repeat;
+    -webkit-background-size: 70% auto;
+    -moz-background-size: 70% auto;
+    -o-background-size: 70% auto;
+    background-size: 70% auto;
 }
 
 .TestimonialsSlider {
@@ -1483,10 +1486,6 @@ h4 {
     grid-column-end: 9;
     grid-row-start: 5;
     grid-row-end: 6;
-
-    /*display: grid;
-    grid-template-columns: repeat(4, 12.5vw);
-    grid-template-rows: 13.3vh;*/
 }
 
 .slick-list {
@@ -1501,10 +1500,10 @@ h4 {
     background-position: center center;
     background-attachment: inherit;
 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    -webkit-background-size: 60% auto;
+    -moz-background-size: 60% auto;
+    -o-background-size: 60% auto;
+    background-size: 60% auto;
 }
 
 /* Tablet */
