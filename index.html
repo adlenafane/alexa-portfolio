@@ -21,6 +21,7 @@
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.6/jquery.fullpage.min.css" />
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/simplebar@2.6.0/dist/simplebar.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css" integrity="sha384-OHBBOqpYHNsIqQy8hL1U+8OXf9hH6QRxi0+EODezv82DfnZoV7qoHAZDwMwEJvSw" crossorigin="anonymous">
 
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
@@ -41,6 +42,10 @@
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
         <![endif]-->
 
+        <div class="Loader Loader--3"></div>
+        <div class="Loader Loader--2"></div>
+        <div class="Loader Loader--1"></div>
+
         <header class="Header">
             <nav id="menu">
                 <a class="Link__internal" data-menuanchor="work" href="#work">WORK</a>
@@ -54,16 +59,16 @@
         </header>
 
         <nav class="Links">
-            <a class="Icon" target="_blank" href="https://www.linkedin.com/in/agueguen/">
+            <a class="Icon SlideInHoverTransition" target="_blank" href="https://www.linkedin.com/in/agueguen/">
                 <i class="fab fa-linkedin-in"></i>
             </a>
-            <a class="Icon" target="_blank" href="https://medium.com/@alexa.gueguen">
+            <a class="Icon SlideInHoverTransition" target="_blank" href="https://medium.com/@alexa.gueguen">
                 <i class="fab fa-medium-m"></i>
             </a>
-            <a class="Icon" target="_blank" href="mailto:alexa.gueguen@gmail.com">
+            <a class="Icon SlideInHoverTransition" target="_blank" href="mailto:alexa.gueguen@gmail.com">
                 <i class="far fa-envelope"></i>
             </a>
-            <a class="Icon Icon__copyUrl" title="Copied!" data-clipboard-text="http://alexa-gueguen.com/">
+            <a class="Icon SlideInHoverTransition Icon__copyUrl" title="Copied!" data-clipboard-text="http://alexa-gueguen.com/">
                 <i class="fas fa-link"></i>
             </a>
             <a class="Icon MobileOnly FAB">
@@ -76,7 +81,12 @@
             <!-- Screen 1 - Home - Work -->
             <div data-anchor="work" class="Fullscreen Screen Home section">
                 <div class="Subtitle">ALEXA GUÉGUEN</div>
-                <h2 class="Title">ux strategist</h2>
+                <h2 class="Title animated-words">
+                    I'm a&nbsp;
+                    <span>ux strategist</span>
+                    <span>product designer</span>
+                    <span>uxui designer</span>
+                </h2>
                 <div class="Credentials">
                     <div class="Credentials__wrapper">
                         <div class="Credentials__text">
@@ -147,7 +157,7 @@
                     <h2 class="Title">about</h2>
                     <div class="Description">
                         <h4 class="Description__Text">Ex-artistic director in advertising, now focused on searching painful problems to resolve them methodically.</h4>
-                        <a class="Resume">
+                        <a class="Resume SlideInHoverTransition">
                             <i class="fas fa-arrow-down"></i> My Resume
                         </a>
                     </div>
@@ -178,10 +188,10 @@
                     </div>
                 </div>
 
-                <div class="Arrow Arrow--leftWrapper">
+                <div class="Arrow--leftWrapper">
                     <img src="/img/Arrow--left.png"  onclick="$.fn.fullpage.moveSlideLeft();" class="Arrow Arrow--left" />
                 </div>
-                <div class="Arrow Arrow--rightWrapper">
+                <div class="Arrow--rightWrapper">
                     <img src="/img/Arrow--right.png" onclick="javascript:$.fn.fullpage.moveSlideRight();" class="Arrow Arrow--right" />
                 </div>
 
@@ -268,21 +278,21 @@
 
                 <div class="SmallPicture__wrapper">
                     <div class="SmallPictureSlick">
-                        <div class="Step__background SmallPicture SmallPicture--step1"></div>
-                        <div class="Step__background SmallPicture SmallPicture--step2"></div>
-                        <div class="Step__background SmallPicture SmallPicture--step3"></div>
-                        <div class="Step__background SmallPicture SmallPicture--step4"></div>
-                        <div class="Step__background SmallPicture SmallPicture--step5"></div>
+                        <div class="Step__background SmallPicture"></div>
+                        <div class="Step__background SmallPicture"></div>
+                        <div class="Step__background SmallPicture"></div>
+                        <div class="Step__background SmallPicture"></div>
+                        <div class="Step__background SmallPicture"></div>
                     </div>
                 </div>
 
                 <div class="LargePicture__wrapper">
                     <div class="LargePictureSlick">
-                        <div class="Step__background LargePicture LargePicture--step1"></div>
-                        <div class="Step__background LargePicture LargePicture--step2"></div>
-                        <div class="Step__background LargePicture LargePicture--step3"></div>
-                        <div class="Step__background LargePicture LargePicture--step4"></div>
-                        <div class="Step__background LargePicture LargePicture--step5"></div>
+                        <div class="Step__background LargePicture"></div>
+                        <div class="Step__background LargePicture"></div>
+                        <div class="Step__background LargePicture"></div>
+                        <div class="Step__background LargePicture"></div>
+                        <div class="Step__background LargePicture"></div>
                     </div>
                 </div>
 
@@ -455,10 +465,10 @@
                     </div>
                 </div>
 
-                <div class="Arrow Arrow--leftWrapper">
+                <div class="Arrow--leftWrapper">
                     <img src="/img/Arrow--left.png"  onclick="javascript:$.fn.fullpage.moveSlideLeft();" class="Arrow Arrow--left" />
                 </div>
-                <div class="Arrow Arrow--rightWrapper">
+                <div class="Arrow--rightWrapper">
                     <img src="/img/Arrow--right.png" onclick="javascript:$.fn.fullpage.moveSlideRight();" class="Arrow Arrow--right" />
                 </div>
 

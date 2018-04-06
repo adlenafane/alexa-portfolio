@@ -1,3 +1,25 @@
+/**
+ * inViewport jQuery plugin by Roko C.B.
+ * http://stackoverflow.com/a/26831113/383904
+ * Returns a callback function with an argument holding
+ * the current amount of px an element is visible in viewport
+ * (The min returned value is 0 (element outside of viewport)
+ */
+;(function($, win) {
+  $.fn.inViewport = function(cb) {
+     return this.each(function(i,el) {
+       function visPx(){
+         var elH = $(el).outerHeight(),
+             H = $(win).height(),
+             r = el.getBoundingClientRect(), t=r.top, b=r.bottom;
+         return cb.call(el, Math.max(0, t>0? Math.min(elH, H-t) : (b<H?b:H)));
+       }
+       visPx();
+       $(win).on("resize scroll", visPx);
+     });
+  };
+}(jQuery, window));
+
 // Slide page per page
 $(document).ready(function() {
     window.isMobile = window.innerWidth < 768;
@@ -19,6 +41,35 @@ $(document).ready(function() {
         fixedElements: '.Header, .Links',
         slidesNavigation: true,
         normalScrollElements: '.QuestionContent',
+        afterRender: function() {
+            $('.Loader').addClass('slideAndHide');
+
+            var fadeInUpSelectors = '.Title, .Subtitle, .Description, .Transition__text, .Transition .EmptySpace, .Article__category, .Article, .ReadAll, .QuestionTitle, .QuestionContent, .WhyShouldYouContactMe, .ContactDetails__TitleWrapper, .ContactDetails';
+            var fadeInRightSelectors = '.About__background, .About .EmptySpace';
+            var fadeInSelectors = '.Pagination, .Page, .Arrow';
+
+            $(fadeInUpSelectors).addClass('opacity-0');
+            $(fadeInRightSelectors).addClass('opacity-0');
+            $(fadeInSelectors).addClass('opacity-0');
+
+            window.setTimeout(function() {
+                $('.Credentials__Portfolio, .Credentials__Name').inViewport(function (px) {
+                    if(px) $(this).addClass('animated fadeInDown') ;
+                });
+                $(fadeInUpSelectors).inViewport(function (px) {
+                    if(px) $(this).addClass('animated fadeInUp') ;
+                });
+                $(fadeInRightSelectors).inViewport(function (px) {
+                    if(px) $(this).addClass('animated fadeInRight') ;
+                });
+                $(fadeInSelectors).inViewport(function (px) {
+                    if(px) {
+                        $(this).addClass('animated fadeIn');
+                    } ;
+                });
+            }, 1700);
+
+        },
         onSlideLeave: function( anchorLink, index, slideIndex, direction, nextSlideIndex) {
             $(`.CurrentPage--${anchorLink}`).text(nextSlideIndex + 1);
 
@@ -125,41 +176,41 @@ $(document).ready(function() {
 });
 
 // Hide Header on on scroll down
-var didScroll;
-var lastScrollTop = 0;
-var delta = 5;
-var headerSelector = 'header nav';
-var navbarHeight = $(headerSelector).outerHeight();
+// var didScroll;
+// var lastScrollTop = 0;
+// var delta = 5;
+// var headerSelector = 'header nav';
+// var navbarHeight = $(headerSelector).outerHeight();
 
-$(window).scroll(function(event){
-    didScroll = true;
-});
+// $(window).scroll(function(event){
+//     didScroll = true;
+// });
 
-setInterval(function() {
-    if (didScroll) {
-        hasScrolled();
-        didScroll = false;
-    }
-}, 250);
+// setInterval(function() {
+//     if (didScroll) {
+//         hasScrolled();
+//         didScroll = false;
+//     }
+// }, 250);
 
-function hasScrolled() {
-    var st = $(this).scrollTop();
+// function hasScrolled() {
+//     var st = $(this).scrollTop();
 
-    // Make sure they scroll more than delta
-    if(Math.abs(lastScrollTop - st) <= delta)
-        return;
+//     // Make sure they scroll more than delta
+//     if(Math.abs(lastScrollTop - st) <= delta)
+//         return;
 
-    // If they scrolled down and are past the navbar, add class .nav-up.
-    // This is necessary so you never see what is "behind" the navbar.
-    if (st > lastScrollTop && st > navbarHeight){
-        // Scroll Down
-        $(headerSelector).removeClass('nav-down').addClass('nav-up');
-    } else {
-        // Scroll Up
-        if(st + $(window).height() < $(document).height()) {
-            $(headerSelector).removeClass('nav-up').addClass('nav-down');
-        }
-    }
+//     // If they scrolled down and are past the navbar, add class .nav-up.
+//     // This is necessary so you never see what is "behind" the navbar.
+//     if (st > lastScrollTop && st > navbarHeight){
+//         // Scroll Down
+//         $(headerSelector).removeClass('nav-down').addClass('nav-up');
+//     } else {
+//         // Scroll Up
+//         if(st + $(window).height() < $(document).height()) {
+//             $(headerSelector).removeClass('nav-up').addClass('nav-down');
+//         }
+//     }
 
-    lastScrollTop = st;
-}
+//     lastScrollTop = st;
+// }
