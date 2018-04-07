@@ -315,7 +315,14 @@ h1, h2, h3, h4, h5, h6 {
     --row-6-height: var(--row-1-height);
 
     --margin-screen-horizontal: 3vw;
-    --margin-screen-vertical: 5vh;
+    --margin-screen-vertical: 3vh;
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    :root {
+        --margin-screen-horizontal: 4vh;
+        --margin-screen-vertical: 4vh;
+    }
 }
 
 /*
@@ -466,9 +473,9 @@ header nav {
 
     grid-column-start: 1;
     grid-column-end: 7;
-    grid-row-start: 5;
-    grid-row-end: 5;
-    align-self: end;
+    grid-row-start: 6;
+    grid-row-end: 6;
+    align-self: start;
 
     font-size: calc( 18px + (26 - 18)*(100vw - 400px)/(1920 - 400) );
     padding-left: var(--margin-screen-horizontal);
@@ -888,12 +895,21 @@ h4 {
     align-items: stretch;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
+}
+
+.ResumeWrapper {
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row-start: 4;
+    grid-row-end: 5;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .Resume {
-    align-self: flex-start;
-
     border-radius: 45px;
     border: solid 1px var(--dark-gray);
     padding: 2.7vh 2.5vw;
@@ -904,7 +920,6 @@ h4 {
     cursor: pointer;
 
     display: flex;
-    justify-content: space-between;
 }
 
 .SlideInHoverTransition {
@@ -976,8 +991,8 @@ h4 {
 /* Tablet */
 @media (min-width: 768px) and (max-width: 991.98px) {
     .Description {
-        grid-column-start: 1;
-        padding-left: var(--margin-screen-horizontal);
+        /*grid-column-start: 1;*/
+        /*padding-left: var(--margin-screen-horizontal);*/
     }
 }
 

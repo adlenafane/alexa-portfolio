@@ -41,6 +41,9 @@ $(document).ready(function() {
         fixedElements: '.Header, .Links',
         slidesNavigation: true,
         normalScrollElements: '.QuestionContent',
+        afterLoad: function(anchorLink, index) {
+            window.gtag('config', window.googleAnalyticsUA, {'page_path': '/' + anchorLink});
+        },
         afterRender: function() {
             $('.Loader').addClass('slideAndHide');
 
@@ -139,6 +142,7 @@ $(document).ready(function() {
     });
 
     clipboard.on('success', function(e) {
+        window.gtag('event', 'copy_website_address');
         window.copyIcon._tippy.show();
 
         window.setTimeout(function() {
@@ -158,6 +162,13 @@ $(document).ready(function() {
 
         $('.FAB').click(function() {
             isFabOpen = !isFabOpen;
+
+            window.gtag('event', 'toggle_link_menu', {
+              'event_category': 'mobile',
+              'event_label': 'toggle_link_menu',
+              'value': isFabOpen
+            });
+
             $('.FAB i').toggleClass('hide');
 
             if(isFabOpen) {
