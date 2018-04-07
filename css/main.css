@@ -1595,6 +1595,12 @@ h4 {
     -moz-background-size: 60% auto;
     -o-background-size: 60% auto;
     background-size: 60% auto;
+
+    filter: grayscale(100%);
+}
+
+.TestimonialsSlider__Logo.slick-current {
+    filter: grayscale(0%);
 }
 
 .Logo__wrapper--Nokia {
@@ -1661,12 +1667,6 @@ h4 {
     .TestimonialsSlider__Logo {
         height: var(--row-4-height);
         width: calc(2 * var(--column-width));
-
-        filter: grayscale(100%);
-    }
-
-    .TestimonialsSlider__Logo.slick-current {
-        filter: grayscale(0%);
     }
 }
 
@@ -1712,12 +1712,6 @@ h4 {
     .TestimonialsSlider__Logo {
         height: var(--row-4-height);
         width: calc(2 * var(--column-width));
-
-        filter: grayscale(100%);
-    }
-
-    .TestimonialsSlider__Logo.slick-current {
-        filter: grayscale(0%);
     }
 }
 
