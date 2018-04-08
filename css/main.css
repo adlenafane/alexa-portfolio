@@ -315,13 +315,20 @@ h1, h2, h3, h4, h5, h6 {
     --row-6-height: var(--row-1-height);
 
     --margin-screen-horizontal: 3vw;
-    --margin-screen-vertical: 3vh;
+    --margin-screen-vertical: 5vh;
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
     :root {
         --margin-screen-horizontal: 4vh;
         --margin-screen-vertical: 4vh;
+    }
+}
+
+@media (max-width: 768px) {
+    :root {
+        --margin-screen-horizontal: 5vh;
+        --margin-screen-vertical: 5vh;
     }
 }
 
@@ -340,6 +347,11 @@ h1, h2, h3, h4, h5, h6 {
 /*
     Global
 */
+
+h3 {
+    letter-spacing: 2.4px;
+    font-size: calc( 30px + (72 - 30)*(100vw - 400px)/(1920 - 400) );
+}
 
 header nav {
   padding-top: var(--margin-screen-vertical);
@@ -421,7 +433,7 @@ header nav {
 
     padding-left: var(--margin-screen-horizontal);
     right: var(--margin-screen-horizontal);
-    bottom: var(--margin-screen-vertical);
+    bottom: calc(var(--margin-screen-vertical) / 2);
 }
 
 .Icon {
@@ -473,9 +485,9 @@ header nav {
 
     grid-column-start: 1;
     grid-column-end: 7;
-    grid-row-start: 6;
-    grid-row-end: 6;
-    align-self: start;
+    grid-row-start: 5;
+    grid-row-end: 5;
+    align-self: end;
 
     font-size: calc( 18px + (26 - 18)*(100vw - 400px)/(1920 - 400) );
     padding-left: var(--margin-screen-horizontal);
@@ -510,14 +522,50 @@ h4 {
     font-size: calc( 24px + (58 - 24)*(100vw - 400px)/(1920 - 400) );
 }
 
-/* Mobile */
+/* NOT Mobile */
 @media (min-width: 767.98px) {
     .MobileOnly {
         display: none !important;
     }
 }
 
+/* NOT Desktop */
+@media (min-width: 991.98px) {
+    .MobileOrTablet {
+        display: none !important;
+    }
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .Subtitle {
+        grid-row-start: 6;
+        grid-row-end: 6;
+        align-self: start;
+    }
+}
+
+/* Mobile */
 @media (max-width: 767.98px) {
+    .Subtitle {
+        grid-row-start: 6;
+        grid-row-end: 6;
+        align-self: start;
+    }
+}
+
+/* Tablet Or Mobile */
+@media (max-width: 991.98px) {
+    .Links {
+        bottom: var(--margin-screen-vertical);
+        pointer-events: none;
+    }
+
+    .Icon {
+        pointer-events: all;
+        font-size: calc( 14px + (20 - 14)*(100vw - 400px)/(992 - 400) );
+    }
+
     .FAB {
         position: relative;
     }
@@ -545,13 +593,12 @@ h4 {
     }
 
     .Icon {
-        background-color: white;
         opacity: .8;
     }
 
-    .Icon:not(.MobileOnly) {
-        transform: translateX(150%);
-        -webkit-transform: translateX(150%);
+    .Icon:not(.MobileOrTablet) {
+        transform: translateX(200%);
+        -webkit-transform: translateX(200%);
     }
 
     .slide-in {
@@ -598,12 +645,12 @@ h4 {
 
     @keyframes slide-out {
         0% { transform: translateX(0%); }
-        100% { transform: translateX(150%); }
+        100% { transform: translateX(200%); }
     }
 
     @-webkit-keyframes slide-out {
         0% { -webkit-transform: translateX(0%); }
-        100% { -webkit-transform: translateX(150%); }
+        100% { -webkit-transform: translateX(200%); }
     }
 }
 
@@ -636,7 +683,7 @@ h4 {
     color: white;
     transform: rotate(90deg) translateY(-100%);
     transform-origin: 0 0;
-    font-size: calc( 12px + (18 - 12)*(100vw - 400px)/(1920 - 400) );
+    font-size: calc( 12px + (20 - 12)*(100vw - 400px)/(1920 - 400) );
 }
 
 .Credentials__text .Credentials__Portfolio {
@@ -740,19 +787,41 @@ h4 {
     background-image: url('/img/background/Wisean.png');
 }
 
-.GoToProject {
+.ProjectDetails {
     grid-column-start: 5;
     grid-column-end: 7;
-    grid-row-start: 4;
+    grid-row-start: 2;
     grid-row-end: 5;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    padding: var(--margin-screen-vertical) var(--margin-screen-horizontal);
+    background-color: white;
+    text-align: left;
+    color: var(--dark-gray);
+
+    opacity: .8;
+}
+
+.ProjectDetails > h3 {
+    line-height: 1.1;
+}
+
+.ProjectProblematic {
+    font-family: 'Lato', sans-serif;
+    font-size: calc( 14px + (26 - 14)*(100vw - 400px)/(1920 - 400) );
+}
+
+.GoToProject {
+    align-self: stretch;
 
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
 
-    padding: var(--margin-screen-vertical) var(--margin-screen-horizontal);
-    background-color: white;
     text-align: center;
     text-decoration: none;
     color: var(--dark-gray);
@@ -761,16 +830,19 @@ h4 {
 .DiscoverProject {
     flex: 1;
 
+    opacity: 1;
     font-family: Merriweather;
-    font-size: calc( 14px + (30 - 14)*(100vw - 992px)/(1920 - 992) );
+    font-size: calc( 14px + (30 - 14)*(100vw - 400px)/(1920 - 400) );
     line-height: 2.2;
     letter-spacing: 1.3px;
     color: var(--dark-gray);
     text-align: left;
+
+    z-index: 1;
 }
 
 .GoToProject .Arrow {
-    height: 50%;
+    height: calc( 14px + (30 - 14)*(100vw - 400px)/(1920 - 400) );
     min-height: 14px;
     width: auto;
 }
@@ -788,46 +860,69 @@ h4 {
     background: white;
 }
 
+/* Desktop */
+@media (min-width: 992px) {
+    .Home .fp-slidesNav ul li a span {
+        height: 8px;
+        width: 8px;
+        margin: -4px 0 0 -4px;
+    }
+
+    .Home .fp-slidesNav ul li a.active span {
+        height: 22px;
+        width: 22px;
+        margin: -11px 0 0 -11px;
+    }
+
+}
+
 
 /* Tablet */
 @media (min-width: 768px) and (max-width: 991.98px) {
-    .DiscoverProject {
-        display: none;
+    .ProjectDetails {
+        grid-column-start: 4;
+        grid-row-start: 3;
     }
 
-    .GoToProject {
-        justify-content: center;
-    }
-
-    .GoToProject .Arrow {
-        height: calc(0.7 * 16.7vw);
+    .Home .fp-slidesNav {
+        grid-column-end: 6;
     }
 }
 
 /* Mobile */
 @media (max-width: 767.98px) {
     .Credentials {
-        display: none;
+        grid-row-end: 2;
+        z-index: 10;
     }
 
     .Project {
         grid-column-start: 1;
     }
 
-    .DiscoverProject {
-        display: none;
+    .Project__Grid {
+        grid-template-columns: repeat(8, var(--column-width));
     }
 
-    .GoToProject {
-        justify-content: center;
-        grid-column-start: 7;
+    .ProjectDetails {
+        grid-column-start: 3;
         grid-column-end: 9;
-        grid-row-start: 4;
-        grid-row-end: 5;
     }
 
-    .GoToProject .Arrow {
-        height: calc(0.7 * 16.7vw);
+    .Home .fp-slidesNav {
+        grid-column-start: 1;
+        grid-column-end: 9;
+        grid-row-start: 5;
+        grid-row-end: 6;
+
+        display: flex;
+        justify-content: center;
+
+        top: 6px;
+    }
+
+    .Home .fp-slidesNav ul li a span {
+        background-color: var(--primary-color);
     }
 }
 
@@ -845,7 +940,6 @@ h4 {
 .animated-words span {
     position: absolute;
     opacity: 0;
-    /*overflow: hidden;*/
     display: inline;
     -webkit-animation: animateWord 9s linear infinite 0s;
     -ms-animation: animateWord 9s linear infinite 0s;
@@ -912,10 +1006,10 @@ h4 {
 .Resume {
     border-radius: 45px;
     border: solid 1px var(--dark-gray);
-    padding: 2.7vh 2.5vw;
+    padding: 2.7vh var(--margin-screen-horizontal);
     font-size: calc( 14px + (26 - 14)*(100vw - 400px)/(1920 - 400) );
     font-family: 'Lato', sans-serif;
-    letter-spacing: 3.5px;
+    letter-spacing: 3px;
     color: var(--dark-gray);
     cursor: pointer;
 
@@ -990,14 +1084,38 @@ h4 {
 
 /* Tablet */
 @media (min-width: 768px) and (max-width: 991.98px) {
-    .Description {
-        /*grid-column-start: 1;*/
-        /*padding-left: var(--margin-screen-horizontal);*/
+    .Description, .ResumeWrapper {
+        grid-column-start: 1;
+        padding-left: var(--margin-screen-horizontal);
+    }
+
+    .ResumeWrapper {
+        align-items: flex-start;
+    }
+
+    .Title {
+        align-self: flex-end;
+    }
+
+    .Subtitle {
+        align-self: center;
+    }
+
+    .Resume i {
+        margin-right: 3vw;
     }
 }
 
 /* Mobile */
 @media (max-width: 767.98px) {
+    .Title {
+        align-self: flex-end;
+    }
+
+    .Subtitle {
+        align-self: center;
+    }
+
     .About__background {
         grid-column-start: 1;
         grid-column-end: 9;
@@ -1016,6 +1134,15 @@ h4 {
 
     .About .About__background {
         display: none;
+    }
+
+    .ResumeWrapper {
+        grid-column-end: 8;
+        align-items: flex-start;
+    }
+
+    .Resume i {
+        margin-right: 3vw;
     }
 }
 
@@ -1067,7 +1194,12 @@ h4 {
 /* Mobile */
 @media (max-width: 767.98px) {
     .Transition .EmptySpace {
-        display: none;
+        /*display: none;*/
+        grid-row-start: 3;
+        grid-row-end: 3;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        z-index: 10;
     }
 
     .Transition__text {
@@ -1262,12 +1394,37 @@ h4 {
 
 /* Tablet */
 @media (min-width: 768px) and (max-width: 991.98px) {
+    .Pagination {
+        grid-column-end: 3;
+        justify-content: center;
+    }
+
+    .Steps {
+        grid-column-start: 4;
+        grid-column-end: 7;
+    }
+
     .Step {
         grid-column-start: 1;
     }
 
     .StepContent {
         grid-column-start: 1;
+    }
+
+    .SmallPicture__wrapper {
+        grid-column-start: 7;
+        grid-column-end: 8;
+    }
+
+    .LargePicture__wrapper {
+        grid-column-start: 8;
+        grid-column-end: 9;
+    }
+
+    .Process .EmptySection {
+        grid-column-start: 8;
+        grid-column-end: 9;
     }
 }
 
@@ -1301,6 +1458,8 @@ h4 {
 
         padding-left: var(--margin-screen-horizontal);
         padding-right: var(--margin-screen-horizontal);
+        display: flex;
+        align-items: center;
     }
 
     .StepContent {
@@ -1349,6 +1508,8 @@ h4 {
 .Article--2 {
     grid-row-start: 4;
     grid-row-end: 5;
+
+    padding-bottom: calc(var(--row-4-height) - var(--row-2-height));
 }
 
 .Article__category--1 {
@@ -1425,9 +1586,8 @@ h4 {
 }
 
 .ReadAll .Arrow {
-    height: 100%;
-    min-height: 14px;
-    width: auto;
+    height: calc( 14px + (30 - 14)*(100vw - 400px)/(1920 - 400) );
+    margin: auto;
 }
 
 /* Tablet */
@@ -1437,12 +1597,6 @@ h4 {
         margin-right: var(--margin-screen-horizontal);
         padding-top: 3vh;
         padding-bottom: 3vh;
-    }
-
-    .ReadAll .Arrow {
-        height: 90%;
-        min-height: 14px;
-        width: auto;
     }
 }
 
@@ -1463,12 +1617,6 @@ h4 {
         margin-right: var(--margin-screen-horizontal);
         padding-top: 3vh;
         padding-bottom: 3vh;
-    }
-
-    .ReadAll .Arrow {
-        height: 90%;
-        min-height: 14px;
-        width: auto;
     }
 }
 
@@ -1638,14 +1786,14 @@ h4 {
         grid-column-start: 1;
         grid-column-end: 9;
         grid-row-start: 1;
-        grid-row-end: 4;
+        grid-row-end: 5;
     }
 
     .TestimonialQuote {
         grid-column-start: 1;
         grid-column-end: 9;
         grid-row-start: 1;
-        grid-row-end: 4;
+        grid-row-end: 5;
     }
 
     .Testimonials .Quote {
@@ -1660,8 +1808,8 @@ h4 {
     .TestimonialsSlider {
         grid-column-start: 1;
         grid-column-end: 9;
-        grid-row-start: 4;
-        grid-row-end: 5;
+        grid-row-start: 5;
+        grid-row-end: 6;
     }
 
     .TestimonialsSlider__Logo {
@@ -1676,14 +1824,14 @@ h4 {
         grid-column-start: 1;
         grid-column-end: 9;
         grid-row-start: 1;
-        grid-row-end: 4;
+        grid-row-end: 5;
     }
 
     .TestimonialQuote {
         grid-column-start: 1;
         grid-column-end: 9;
         grid-row-start: 1;
-        grid-row-end: 4;
+        grid-row-end: 5;
     }
 
     .Testimonials .Quote {
@@ -1705,8 +1853,8 @@ h4 {
     .TestimonialsSlider {
         grid-column-start: 1;
         grid-column-end: 9;
-        grid-row-start: 4;
-        grid-row-end: 5;
+        grid-row-start: 5;
+        grid-row-end: 6;
     }
 
     .TestimonialsSlider__Logo {
@@ -1786,7 +1934,9 @@ h4 {
         grid-column-start: 3;
         grid-column-end: 9;
         grid-row-start: 1;
-        grid-row-end: 5;
+        grid-row-end: 6;
+
+        padding-left: var(--margin-screen-horizontal);
     }
 
     .QuestionTitle {
@@ -1795,7 +1945,7 @@ h4 {
 
     .QuestionContent {
         grid-column-end: 6;
-        grid-row-end: 5;
+        grid-row-end: 6;
     }
 
     .QuestionContent p {
@@ -1813,16 +1963,17 @@ h4 {
         grid-column-start: 3;
         grid-column-end: 9;
         grid-row-start: 1;
-        grid-row-end: 5;
+        grid-row-end: 6;
     }
 
     .QuestionTitle {
         grid-column-end: 6;
+        margin-top: var(--margin-screen-vertical);
     }
 
     .QuestionContent {
         grid-column-end: 6;
-        grid-row-end: 5;
+        grid-row-end: 6;
     }
 
     .QuestionContent p {

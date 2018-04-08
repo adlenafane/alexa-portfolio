@@ -23,6 +23,7 @@
 // Slide page per page
 $(document).ready(function() {
     window.isMobile = window.innerWidth < 768;
+    window.isMobileOrTablet = window.innerWidth < 992;
 
     if(window.isMobile) {
         var aboutMobileSection = $("#About--mobileInvisible").clone();
@@ -157,7 +158,7 @@ $(document).ready(function() {
 $(document).ready(function() {
     var isFabOpen = false;
 
-    if(window.isMobile) {
+    if(window.isMobileOrTablet) {
         $('.Icon:not(.FAB)').addClass('slide-out');
 
         $('.FAB').click(function() {
@@ -177,8 +178,6 @@ $(document).ready(function() {
                 $('.Icon:not(.FAB)').addClass('slide-in');
                 $('.Icon:not(.FAB)').removeClass('slide-out');
             } else {
-                // $('.Icon:not(.FAB)').css('display', 'none');
-
                 $('.Icon:not(.FAB)').addClass('slide-out');
                 $('.Icon:not(.FAB)').removeClass('slide-in');
             }
