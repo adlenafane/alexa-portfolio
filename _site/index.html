@@ -1,0 +1,616 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="manifest" href="site.webmanifest">
+        <link rel="apple-touch-icon" href="icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700|Merriweather:400,700" rel="stylesheet">
+
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css" integrity="sha384-v2Tw72dyUXeU3y4aM2Y0tBJQkGfplr39mxZqlTBDUZAb9BGoC40+rdFCG0m10lXk" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/regular.css" integrity="sha384-A/oR8MwZKeyJS+Y0tLZ16QIyje/AmPduwrvjeH6NLiLsp4cdE4uRJl8zobWXBm4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/brands.css" integrity="sha384-IiIL1/ODJBRTrDTFk/pW8j0DUI5/z9m1KYsTm/RjZTNV8RHLGZXkUDwgRRbbQ+Jh" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/fontawesome.css" integrity="sha384-q3jl8XQu1OpdLgGFvNRnPdj5VIlCvgsDQTQB6owSOHWlAurxul7f+JpUOVdAiJ5P" crossorigin="anonymous">
+
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.6/jquery.fullpage.min.css" />
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/simplebar@2.6.0/dist/simplebar.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css" integrity="sha384-OHBBOqpYHNsIqQy8hL1U+8OXf9hH6QRxi0+EODezv82DfnZoV7qoHAZDwMwEJvSw" crossorigin="anonymous">
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-44855546-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          // window.googleAnalyticsUA = window.location.hostname === 'www.alexa-gueguen.com' ? 'UA-44855546-1' : '';
+          window.googleAnalyticsUA = 'UA-44855546-1';
+          gtag('config', googleAnalyticsUA);
+        </script>
+    </head>
+    <body>
+        <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+        <div class="Loader Loader--3"></div>
+        <div class="Loader Loader--2"></div>
+        <div class="Loader Loader--1"></div>
+
+        <header class="Header">
+            <nav id="menu">
+                <a class="Link__internal" data-menuanchor="work" href="#work">WORK</a>
+                <a class="Link__internal" data-menuanchor="about" href="#about">ABOUT</a>
+                <a class="Link__internal" data-menuanchor="process" href="#process">PROCESS</a>
+                <a class="Link__internal" data-menuanchor="articles" href="#articles">ARTICLES</a>
+                <a class="Link__internal" data-menuanchor="testimonials" href="#testimonials">TESTIMONIALS</a>
+                <a class="Link__internal" data-menuanchor="faq" href="#faq">FAQ</a>
+                <a class="Link__internal Link__ContactMe" data-menuanchor="contact" href="#contact" >CONTACT</a>
+            </nav>
+        </header>
+
+        <nav class="Links">
+            <a class="Icon SlideInHoverTransition"
+               target="_blank"
+               href="https://www.linkedin.com/in/agueguen/"
+               onclick="gtag('event', 'go_linkedin');"
+            >
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a class="Icon SlideInHoverTransition"
+               target="_blank"
+               href="https://medium.com/@alexa.gueguen"
+               onclick="gtag('event', 'go_medium');"
+            >
+                <i class="fab fa-medium-m"></i>
+            </a>
+            <a class="Icon SlideInHoverTransition"
+               target="_blank"
+               href="mailto:alexa.gueguen@gmail.com"
+               onclick="gtag('event', 'go_email');"
+            >
+                <i class="far fa-envelope"></i>
+            </a>
+            <a
+                class="Icon SlideInHoverTransition Icon__copyUrl"
+                title="Copied!"
+                data-clipboard-text="http://alexa-gueguen.com/"
+            >
+                <i class="fas fa-link"></i>
+            </a>
+            <a class="Icon MobileOrTablet FAB">
+                <i class="fas fa-share-alt"></i>
+                <i class="fas fa-times hide"></i>
+            </a>
+        </nav>
+
+        <div id="fullpage">
+            <!-- Screen 1 - Home - Work -->
+            <div data-anchor="work" class="Fullscreen Screen Home section">
+                <div class="Subtitle">ALEXA GUÉGUEN</div>
+                <h2 class="Title animated-words">
+                    I'm a&nbsp;
+                    <span>ux strategist</span>
+                    <span>product designer</span>
+                    <span>uxui designer</span>
+                </h2>
+                <div class="Credentials">
+                    <div class="Credentials__wrapper">
+                        <div class="Credentials__text">
+                            <span class="Credentials__Portfolio">Portfolio 2018</span>
+                            <!-- <span class="Credentials__Name">Grid: Adrián Somoza</span> -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="Project">
+                    <div class="slide fp-auto-height">
+                        <div class="Project__Grid Project__background Project__background--NokiaHealth">
+                            <div class="ProjectDetails">
+                                <h3>Nokia Health</h3>
+                                <div class="ProjectProblematic">
+                                    How to bring value to big U.S. companies by making their employees healthier?
+                                </div>
+                                <a class="GoToProject" href="">
+                                    <span class="DiscoverProject">Read Case Study</span><img class="Arrow" src="/img/Arrow--right.png">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="slide fp-auto-height">
+                        <div class="Project__Grid Project__background Project__background--ABTasty">
+                            <div class="ProjectDetails">
+                                <h3>Nokia Health</h3>
+                                <div class="ProjectProblematic">
+                                    How to bring value to big U.S. companies by making their employees healthier?
+                                </div>
+                                <a class="GoToProject" href="">
+                                    <span class="DiscoverProject">Read Case Study</span><img class="Arrow" src="/img/Arrow--right.png">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide fp-auto-height">
+                        <div class="Project__Grid Project__background Project__background--Alkemics">
+                            <div class="ProjectDetails">
+                                <h3>Nokia Health</h3>
+                                <div class="ProjectProblematic">
+                                    How to bring value to big U.S. companies by making their employees healthier?
+                                </div>
+                                <a class="GoToProject" href="">
+                                    <span class="DiscoverProject">Read Case Study</span><img class="Arrow" src="/img/Arrow--right.png">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide fp-auto-height">
+                        <div class="Project__Grid Project__background Project__background--Blackink">
+                            <div class="ProjectDetails">
+                                <h3>Nokia Health</h3>
+                                <div class="ProjectProblematic">
+                                    How to bring value to big U.S. companies by making their employees healthier?
+                                </div>
+                                <a class="GoToProject" href="">
+                                    <span class="DiscoverProject">Read Case Study</span><img class="Arrow" src="/img/Arrow--right.png">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide fp-auto-height">
+                        <div class="Project__Grid Project__background Project__background--CGT">
+                            <div class="ProjectDetails">
+                                <h3>Nokia Health</h3>
+                                <div class="ProjectProblematic">
+                                    How to bring value to big U.S. companies by making their employees healthier?
+                                </div>
+                                <a class="GoToProject" href="">
+                                    <span class="DiscoverProject">Read Case Study</span><img class="Arrow" src="/img/Arrow--right.png">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide fp-auto-height">
+                        <div class="Project__Grid Project__background Project__background--Keymetrics">
+                            <div class="ProjectDetails">
+                                <h3>Nokia Health</h3>
+                                <div class="ProjectProblematic">
+                                    How to bring value to big U.S. companies by making their employees healthier?
+                                </div>
+                                <a class="GoToProject" href="">
+                                    <span class="DiscoverProject">Read Case Study</span><img class="Arrow" src="/img/Arrow--right.png">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide fp-auto-height">
+                        <div class="Project__Grid Project__background Project__background--Wisean">
+                            <div class="ProjectDetails">
+                                <h3>Nokia Health</h3>
+                                <div class="ProjectProblematic">
+                                    How to bring value to big U.S. companies by making their employees healthier?
+                                </div>
+                                <a class="GoToProject" href="">
+                                    <span class="DiscoverProject">Read Case Study</span><img class="Arrow" src="/img/Arrow--right.png">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Screen 2 - About -->
+            <div id="About" data-anchor="about" class="Fullscreen section">
+                <div class="Screen About">
+                    <div class="Subtitle">IN ONE SENTENCE</div>
+                    <h2 class="Title">about</h2>
+                    <div class="Description">
+                        <h4 class="Description__Text">Ex-artistic director in advertising, now focused on searching painful problems to resolve them methodically.</h4>
+                    </div>
+                    <div class="ResumeWrapper">
+                        <a class="Resume SlideInHoverTransition" onclick="gtag('event', 'download_resume');">
+                            <i class="fas fa-arrow-down"></i> My Resume
+                        </a>
+                    </div>
+                    <div class="EmptySpace"></div>
+                    <div class="About__background"></div>
+                </div>
+            </div>
+
+
+            <!-- Screen 3 - Transition -->
+            <div data-anchor="transition" class="Fullscreen section Fullscreen--gray">
+                <div class="Screen Transition Transition__background">
+                    <div class="EmptySpace"></div>
+                    <div class="Transition__text">
+                        It's funny to pitch creative ideas to sell more,<br>but it's funnier to create solutions that make people life better.
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Screen 4 - Process -->
+            <div data-anchor="process" class="Fullscreen Screen section Process">
+                <h2 class="Title">process</h2>
+                <div class="Subtitle">METHODOLOGY IS EVERYTHING</div>
+                <div class="Pagination">
+                    <div class="Page">
+                        <span class="CurrentPage CurrentPage--process">1</span><span class="TotalPages TotalPages--process">/5</span>
+                    </div>
+                </div>
+
+                <div class="Arrow--leftWrapper">
+                    <img src="/img/Arrow--left.png"  onclick="$.fn.fullpage.moveSlideLeft();gtag('event', 'process_previous_step');" class="Arrow Arrow--left" />
+                </div>
+                <div class="Arrow--rightWrapper">
+                    <img src="/img/Arrow--right.png" onclick="javascript:$.fn.fullpage.moveSlideRight();gtag('event', 'process_next_step');" class="Arrow Arrow--right" />
+                </div>
+
+                <div class="Steps">
+                    <div class="slide">
+                        <div class="StepGrid">
+                            <div class="Step">
+                                <span class="StepTitle">Auscultation</span>
+                            </div>
+                            <div class="StepContent">
+                                <ul>
+                                    <li>Kickoff Meeting</li>
+                                    <li>Problem definition</li>
+                                    <li>Goal definition</li>
+                                    <li>KPIs listing</li>
+                                    <li>Planning...</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="StepGrid">
+                            <div class="Step">
+                                <span class="StepTitle">Analysis</span>
+                            </div>
+                            <div class="StepContent">
+                                <ul>
+                                    <li>User research</li>
+                                    <li>Context analysis</li>
+                                    <li>Competitive analysis</li>
+                                    <li>Mappings</li>
+                                    <li>Personae...</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="StepGrid">
+                            <div class="Step">
+                                <span class="StepTitle">Diagnostic</span>
+                            </div>
+                            <div class="StepContent">
+                                <ul>
+                                    <li>Site mapping</li>
+                                    <li>User flows</li>
+                                    <li>Sketching</li>
+                                    <li>Prototyping</li>
+                                    <li>User testing...</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="StepGrid">
+                            <div class="Step">
+                                <span class="StepTitle">Treatment</span>
+                            </div>
+                            <div class="StepContent">
+                                <ul>
+                                    <li>Priorization</li>
+                                    <li>Guidelines definition</li>
+                                    <li>Visual design</li>
+                                    <li>Components library</li>
+                                    <li>Implementation...</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="StepGrid">
+                            <div class="Step">
+                                <span class="StepTitle">Follow-up</span>
+                            </div>
+                            <div class="StepContent">
+                                <ul>
+                                    <li>Retrospective</li>
+                                    <li>KPIs follow-up</li>
+                                    <li>Planning...</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="SmallPicture__wrapper">
+                    <div class="SmallPictureSlick">
+                        <div class="Step__background SmallPicture"></div>
+                        <div class="Step__background SmallPicture"></div>
+                        <div class="Step__background SmallPicture"></div>
+                        <div class="Step__background SmallPicture"></div>
+                        <div class="Step__background SmallPicture"></div>
+                    </div>
+                </div>
+
+                <div class="LargePicture__wrapper">
+                    <div class="LargePictureSlick">
+                        <div class="Step__background LargePicture"></div>
+                        <div class="Step__background LargePicture"></div>
+                        <div class="Step__background LargePicture"></div>
+                        <div class="Step__background LargePicture"></div>
+                        <div class="Step__background LargePicture"></div>
+                    </div>
+                </div>
+
+                <div class="EmptySection"></div>
+            </div>
+
+
+            <!-- Screen 5 - Articles -->
+            <div data-anchor="articles" class="Fullscreen section">
+                <div class="Screen Articles">
+                    <h2 class="Title">articles</h2>
+                    <div class="Subtitle">SHARING IS CARING</div>
+
+                    <div class="Article__category Article__category--1">Methodology</div>
+                    <div class="Article Article--1">
+                        <div class="Article__title">How to work remotely? How to work remotely? How to work remotely?</div>
+                        <div class="Article__date">2018-04-01</div>
+                    </div>
+
+                    <div class="Article__category Article__category--2">UX Design</div>
+                    <div class="Article Article--2">
+                        <div class="Article__title">Personae or no Personae? Personae or no Personae?</div>
+                        <div class="Article__date">2018-05-01</div>
+                    </div>
+
+                    <a class="ReadAll" target="_blank" href="https://medium.com/@alexa.gueguen" onclick="gtag('event', 'go_read_all_medium');">
+                        <span class="ReadAll__text">Read all on Medium</span><img class="Arrow" src="/img/Arrow--right.png">
+                    </a>
+                </div>
+            </div>
+
+
+            <!-- Screen 6 - Testimonials -->
+            <div data-anchor="testimonials" class="Fullscreen section">
+                <div class="Screen Testimonials">
+                    <h2 class="Title">testimonials</h2>
+                    <div class="Subtitle">MAGIC HAPPENS WHEN PEOPLE WORK TOGETHER</div>
+
+                    <div class="Quote__wrapper"></div>
+
+                    <div class="TestimonialsSlider__Content">
+                        <div data-slick-index="0">
+                            <div class="Testimonial">
+                                <div class="TestimonialQuote">
+                                    <div class="Quote">
+                                        « It's funny to pitch creative ideas to sell more, but it's funnier to create solutions that make people life better. »
+                                    </div>
+                                    <div class="Client">
+                                        <span>Nicolas SCHMIDT<br>Head of Healthcare Products<br>at Nokia Technologies</span>
+                                    </div>
+                                </div>
+                                <div class="Logo__wrapper Project__background--NokiaHealth">
+                                    <div class="Logo Logo__wrapper--Nokia"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div data-slick-index="1">
+                            <div class="Testimonial">
+                                <div class="TestimonialQuote">
+                                    <div class="Quote">
+                                        « Alexa constantly amazed me with her business insight and brilliant ways to to solving problems. She consistently demonstrated a strong work ethic at Alkemics along with a commitment to success. Her performance at Alkemics was golden. »
+                                    </div>
+                                    <div class="Client">
+                                        <span>Nicolas LABE<br>Head of Customer Success<br>at Alkemics</span>
+                                    </div>
+                                </div>
+                                <div class="Logo__wrapper Project__background--Alkemics">
+                                    <div class="Logo Logo__wrapper--Alkemics"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div data-slick-index="2">
+                            <div class="Testimonial">
+                                <div class="TestimonialQuote">
+                                    <div class="Quote">
+                                        « »
+                                    </div>
+                                    <div class="Client">
+                                        <span>Radhia HOUIDI<br>Founder and CEO<br>at Blackink</span>
+                                    </div>
+                                </div>
+                                <div class="Logo__wrapper Project__background--Blackink">
+                                    <div class="Logo Logo__wrapper--Blackink"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div data-slick-index="3">
+                            <div class="Testimonial">
+                                <div class="TestimonialQuote">
+                                    <div class="Quote">
+                                        « »
+                                    </div>
+                                    <div class="Client">
+                                        <span>XXX<br>Director<br>at CGT</span>
+                                    </div>
+                                </div>
+                                <div class="Logo__wrapper Project__background--CGT">
+                                    <div class="Logo Logo__wrapper--CGT"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div data-slick-index="4">
+                            <div class="Testimonial">
+                                <div class="TestimonialQuote">
+                                    <div class="Quote">
+                                        « »
+                                    </div>
+                                    <div class="Client">
+                                        <span>Jeremy BELLAICHE<br>Founder & CEO<br>at Wisean</span>
+                                    </div>
+                                </div>
+                                <div class="Logo__wrapper Project__background--Wisean">
+                                    <div class="Logo Logo__wrapper--Wisean"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div data-slick-index="5">
+                            <div class="Testimonial">
+                                <div class="TestimonialQuote">
+                                    <div class="Quote">
+                                        « »
+                                    </div>
+                                    <div class="Client">
+                                        <span>XXX<br>Director<br>at ABTasty</span>
+                                    </div>
+                                </div>
+                                <div class="Logo__wrapper Project__background--ABTasty">
+                                    <div class="Logo Logo__wrapper--ABTasty"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div data-slick-index="6">
+                            <div class="Testimonial">
+                                <div class="TestimonialQuote">
+                                    <div class="Quote">
+                                        « »
+                                    </div>
+                                    <div class="Client">
+                                        <span>XXX<br>Director<br>at Keymetrics</span>
+                                    </div>
+                                </div>
+                                <div class="Logo__wrapper Project__background--Keymetrics">
+                                    <div class="Logo Logo__wrapper--Keymetrics"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="TestimonialsSlider">
+                        <div data-slick-index="0" class="TestimonialsSlider__Logo Logo__wrapper--Nokia"></div>
+                        <div data-slick-index="1" class="TestimonialsSlider__Logo Logo__wrapper--Alkemics"></div>
+                        <div data-slick-index="2" class="TestimonialsSlider__Logo Logo__wrapper--Blackink"></div>
+                        <div data-slick-index="3" class="TestimonialsSlider__Logo Logo__wrapper--CGT"></div>
+                        <div data-slick-index="4" class="TestimonialsSlider__Logo Logo__wrapper--Wisean"></div>
+                        <div data-slick-index="5" class="TestimonialsSlider__Logo Logo__wrapper--ABTasty"></div>
+                        <div data-slick-index="6" class="TestimonialsSlider__Logo Logo__wrapper--Keymetrics"></div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Screen 7 - FAQ -->
+            <div data-anchor="faq" class="Fullscreen section Screen Faq">
+                <h2 class="Title">faq</h2>
+                <div class="Subtitle">WHAT DO YOU WANT TO KNOW?</div>
+
+                <div class="Pagination">
+                    <div class="Page">
+                        <span class="CurrentPage CurrentPage--faq">1</span><span class="TotalPages TotalPages--faq">/5</span>
+                    </div>
+                </div>
+
+                <div class="Arrow--leftWrapper">
+                    <img src="/img/Arrow--left.png"  onclick="javascript:$.fn.fullpage.moveSlideLeft();gtag('event', 'faq_previous_question');" class="Arrow Arrow--left" />
+                </div>
+                <div class="Arrow--rightWrapper">
+                    <img src="/img/Arrow--right.png" onclick="javascript:$.fn.fullpage.moveSlideRight();gtag('event', 'faq_next_question');" class="Arrow Arrow--right" />
+                </div>
+
+                <div class="Questions">
+                    <div class="slide">
+                        <div class="QuestionGrid">
+                            <span class="QuestionTitle">Question number 1</span>
+
+                            <div class="QuestionContent" data-simplebar>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="slide">
+                        <div class="QuestionGrid">
+                            <span class="QuestionTitle">Question number 2</span>
+
+                            <div class="QuestionContent" data-simplebar>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Screen 8 - Contact -->
+            <div id="Contact" data-anchor="contact" class="Fullscreen section">
+                <div class="Screen Contact">
+                    <div class="Subtitle">LET'S KEEP IN TOUCH</div>
+                    <h2 class="Title">contact</h2>
+
+                    <h4 class="WhyShouldYouContactMe">
+                        A project in mind? Need some expertise on UX, UI or Strategy? Let's talk about it! ☕
+                    </h4>
+
+                    <div class="ContactDetails__TitleWrapper">
+                        <span class="ContactDetails__Title">
+                            How to reach me?
+                        </span>
+                    </div>
+                    <div class="ContactDetails">
+                        <div class="PhoneNumber">🇨🇦 (604) 910-9425</div>
+                        <div class="PhoneNumber">🇫🇷 06 98 43 50 90</div>
+                        <div class="Email">
+                            <i class="far fa-envelope"></i> alexa.gueguen@gmail.com
+                        </div>
+                        <div class="Country">
+                            <i class="fas fa-map-marker-alt"></i> Vancouver, BC | Paris, France
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="About--mobileInvisible" class="About--mobile MobileOnly" style="display: none;">
+            <div class="Screen">
+                <div class="About__background"></div>
+            </div>
+        </div>
+
+
+        <script src="js/vendor/modernizr-3.5.0.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.6/jquery.fullpage.min.js" type="text/javascript"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/simplebar@2.6.0/dist/simplebar.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+        <script src="https://unpkg.com/tippy.js@2.5.0/dist/tippy.all.min.js"></script>
+
+
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
