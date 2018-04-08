@@ -1,3 +1,7 @@
+---
+title: CSS stylesheet
+---
+
 /*! HTML5 Boilerplate v6.0.1 | MIT License | https://html5boilerplate.com/ */
 
 /*
@@ -735,56 +739,56 @@ h4 {
       to bottom,
       rgba(0, 0, 0, 0),
       rgba(0, 0, 0, 0.6)
-    ), url('/img/background/ABTasty.png') ;*/
-    background-image: url('/img/background/ABTasty.png') ;
+    ), url('{{ site.baseurl }}/img/background/ABTasty.png') ;*/
+    background-image: url('{{ site.baseurl }}/img/background/ABTasty.png') ;
 }
 .Project__background--Alkemics {
     /*background-image: linear-gradient(
       to bottom,
       rgba(0, 0, 0, 0),
       rgba(0, 0, 0, 0.6)
-    ), url('/img/background/Alkemics.png');*/
-    background-image: url('/img/background/Alkemics.png');
+    ), url('{{ site.baseurl }}/img/background/Alkemics.png');*/
+    background-image: url('{{ site.baseurl }}/img/background/Alkemics.png');
 }
 .Project__background--Blackink {
     /*background-image: linear-gradient(
       to bottom,
       rgba(0, 0, 0, 0),
       rgba(0, 0, 0, 0.6)
-    ), url('/img/background/Blackink.png');*/
-    background-image: url('/img/background/Blackink.png');
+    ), url('{{ site.baseurl }}/img/background/Blackink.png');*/
+    background-image: url('{{ site.baseurl }}/img/background/Blackink.png');
 }
 .Project__background--CGT {
     /*background-image: linear-gradient(
       to bottom,
       rgba(0, 0, 0, 0),
       rgba(0, 0, 0, 0.6)
-    ), url('/img/background/CGT.png');*/
-    background-image: url('/img/background/CGT.png');
+    ), url('{{ site.baseurl }}/img/background/CGT.png');*/
+    background-image: url('{{ site.baseurl }}/img/background/CGT.png');
 }
 .Project__background--Keymetrics {
     /*background-image: linear-gradient(
       to bottom,
       rgba(0, 0, 0, 0),
       rgba(0, 0, 0, 0.6)
-    ), url('/img/background/Keymetrics.png');*/
-    background-image: url('/img/background/Keymetrics.png');
+    ), url('{{ site.baseurl }}/img/background/Keymetrics.png');*/
+    background-image: url('{{ site.baseurl }}/img/background/Keymetrics.png');
 }
 .Project__background--NokiaHealth {
     /*background-image: linear-gradient(
       to bottom,
       rgba(0, 0, 0, 0),
       rgba(0, 0, 0, 0.6)
-    ), url('/img/background/NokiaHealth.png');*/
-    background-image: url('/img/background/NokiaHealth.png');
+    ), url('{{ site.baseurl }}/img/background/NokiaHealth.png');*/
+    background-image: url('{{ site.baseurl }}/img/background/NokiaHealth.png');
 }
 .Project__background--Wisean {
     /*background-image: linear-gradient(
       to bottom,
       rgba(0, 0, 0, 0),
       rgba(0, 0, 0, 0.6)
-    ), url('/img/background/Wisean.png');*/
-    background-image: url('/img/background/Wisean.png');
+    ), url('{{ site.baseurl }}/img/background/Wisean.png');*/
+    background-image: url('{{ site.baseurl }}/img/background/Wisean.png');
 }
 
 .ProjectDetails {
@@ -970,7 +974,7 @@ h4 {
     grid-row-start: 3;
     grid-row-end: 7;
 
-    background-image: url('/img/Profile__Photo--Alexa.png');
+    background-image: url('{{ site.baseurl }}/img/Profile__Photo--Alexa.png');
     animation-delay: .1s;
 }
 
@@ -1158,7 +1162,7 @@ h4 {
     background-image: linear-gradient(
       rgba(229, 234, 235, 0.5),
       rgba(229, 234, 235, 0.5)
-    ), url('/img/background/Transition.png');
+    ), url('{{ site.baseurl }}/img/background/Transition.png');
 }
 
 .Transition .EmptySpace {
@@ -1755,32 +1759,32 @@ h4 {
 }
 
 .Logo__wrapper--Nokia {
-    background-image: url('/img/logo/NokiaHealth.png');
+    background-image: url('{{ site.baseurl }}/img/logo/NokiaHealth.png');
 }
 
 .Logo__wrapper--Alkemics {
-    background-image: url('/img/logo/Alkemics.jpg');
+    background-image: url('{{ site.baseurl }}/img/logo/Alkemics.jpg');
 }
 
 .Logo__wrapper--Blackink {
     background-size: 50% auto;
-    background-image: url('/img/logo/Blackink.png');
+    background-image: url('{{ site.baseurl }}/img/logo/Blackink.png');
 }
 
 .Logo__wrapper--CGT {
-    background-image: url('/img/logo/CGTM.jpg');
+    background-image: url('{{ site.baseurl }}/img/logo/CGTM.jpg');
 }
 
 .Logo__wrapper--Wisean {
-    background-image: url('/img/logo/Wisean.png');
+    background-image: url('{{ site.baseurl }}/img/logo/Wisean.png');
 }
 
 .Logo__wrapper--ABTasty {
-    background-image: url('/img/logo/ABTasty.png');
+    background-image: url('{{ site.baseurl }}/img/logo/ABTasty.png');
 }
 
 .Logo__wrapper--Keymetrics {
-    background-image: url('/img/logo/Keymetrics.jpg');
+    background-image: url('{{ site.baseurl }}/img/logo/Keymetrics.jpg');
 }
 
 /* Tablet */

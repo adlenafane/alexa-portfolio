@@ -735,56 +735,56 @@ h4 {
       to bottom,
       rgba(0, 0, 0, 0),
       rgba(0, 0, 0, 0.6)
-    ), url('/img/background/ABTasty.png') ;*/
-    background-image: url('/img/background/ABTasty.png') ;
+    ), url('/alexa-portfolio/img/background/ABTasty.png') ;*/
+    background-image: url('/alexa-portfolio/img/background/ABTasty.png') ;
 }
 .Project__background--Alkemics {
     /*background-image: linear-gradient(
       to bottom,
       rgba(0, 0, 0, 0),
       rgba(0, 0, 0, 0.6)
-    ), url('/img/background/Alkemics.png');*/
-    background-image: url('/img/background/Alkemics.png');
+    ), url('/alexa-portfolio/img/background/Alkemics.png');*/
+    background-image: url('/alexa-portfolio/img/background/Alkemics.png');
 }
 .Project__background--Blackink {
     /*background-image: linear-gradient(
       to bottom,
       rgba(0, 0, 0, 0),
       rgba(0, 0, 0, 0.6)
-    ), url('/img/background/Blackink.png');*/
-    background-image: url('/img/background/Blackink.png');
+    ), url('/alexa-portfolio/img/background/Blackink.png');*/
+    background-image: url('/alexa-portfolio/img/background/Blackink.png');
 }
 .Project__background--CGT {
     /*background-image: linear-gradient(
       to bottom,
       rgba(0, 0, 0, 0),
       rgba(0, 0, 0, 0.6)
-    ), url('/img/background/CGT.png');*/
-    background-image: url('/img/background/CGT.png');
+    ), url('/alexa-portfolio/img/background/CGT.png');*/
+    background-image: url('/alexa-portfolio/img/background/CGT.png');
 }
 .Project__background--Keymetrics {
     /*background-image: linear-gradient(
       to bottom,
       rgba(0, 0, 0, 0),
       rgba(0, 0, 0, 0.6)
-    ), url('/img/background/Keymetrics.png');*/
-    background-image: url('/img/background/Keymetrics.png');
+    ), url('/alexa-portfolio/img/background/Keymetrics.png');*/
+    background-image: url('/alexa-portfolio/img/background/Keymetrics.png');
 }
 .Project__background--NokiaHealth {
     /*background-image: linear-gradient(
       to bottom,
       rgba(0, 0, 0, 0),
       rgba(0, 0, 0, 0.6)
-    ), url('/img/background/NokiaHealth.png');*/
-    background-image: url('/img/background/NokiaHealth.png');
+    ), url('/alexa-portfolio/img/background/NokiaHealth.png');*/
+    background-image: url('/alexa-portfolio/img/background/NokiaHealth.png');
 }
 .Project__background--Wisean {
     /*background-image: linear-gradient(
       to bottom,
       rgba(0, 0, 0, 0),
       rgba(0, 0, 0, 0.6)
-    ), url('/img/background/Wisean.png');*/
-    background-image: url('/img/background/Wisean.png');
+    ), url('/alexa-portfolio/img/background/Wisean.png');*/
+    background-image: url('/alexa-portfolio/img/background/Wisean.png');
 }
 
 .ProjectDetails {
@@ -970,7 +970,7 @@ h4 {
     grid-row-start: 3;
     grid-row-end: 7;
 
-    background-image: url('/img/Profile__Photo--Alexa.png');
+    background-image: url('/alexa-portfolio/img/Profile__Photo--Alexa.png');
     animation-delay: .1s;
 }
 
@@ -1158,7 +1158,7 @@ h4 {
     background-image: linear-gradient(
       rgba(229, 234, 235, 0.5),
       rgba(229, 234, 235, 0.5)
-    ), url('/img/background/Transition.png');
+    ), url('/alexa-portfolio/img/background/Transition.png');
 }
 
 .Transition .EmptySpace {
@@ -1755,32 +1755,32 @@ h4 {
 }
 
 .Logo__wrapper--Nokia {
-    background-image: url('/img/logo/NokiaHealth.png');
+    background-image: url('/alexa-portfolio/img/logo/NokiaHealth.png');
 }
 
 .Logo__wrapper--Alkemics {
-    background-image: url('/img/logo/Alkemics.jpg');
+    background-image: url('/alexa-portfolio/img/logo/Alkemics.jpg');
 }
 
 .Logo__wrapper--Blackink {
     background-size: 50% auto;
-    background-image: url('/img/logo/Blackink.png');
+    background-image: url('/alexa-portfolio/img/logo/Blackink.png');
 }
 
 .Logo__wrapper--CGT {
-    background-image: url('/img/logo/CGTM.jpg');
+    background-image: url('/alexa-portfolio/img/logo/CGTM.jpg');
 }
 
 .Logo__wrapper--Wisean {
-    background-image: url('/img/logo/Wisean.png');
+    background-image: url('/alexa-portfolio/img/logo/Wisean.png');
 }
 
 .Logo__wrapper--ABTasty {
-    background-image: url('/img/logo/ABTasty.png');
+    background-image: url('/alexa-portfolio/img/logo/ABTasty.png');
 }
 
 .Logo__wrapper--Keymetrics {
-    background-image: url('/img/logo/Keymetrics.jpg');
+    background-image: url('/alexa-portfolio/img/logo/Keymetrics.jpg');
 }
 
 /* Tablet */
