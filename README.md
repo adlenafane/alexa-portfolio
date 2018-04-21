@@ -45,10 +45,12 @@ Push changes to Github
 TODO
 ----
 
-[ ] Icone Loading
+[ ] Icone Loading avec vrai chargement (img)
 [ ] Menu mobile
 [ ] Font + border aliasing
 [ ] Changer image transition
+[ ] iPhone SE display
+[ ] Share button size on Mobile
 [x] Logo Black and White tous
 [x] Discover Project Tout support
 [x] Flèche discover project deformée
