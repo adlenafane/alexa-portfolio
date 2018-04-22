@@ -5,7 +5,7 @@
  * the current amount of px an element is visible in viewport
  * (The min returned value is 0 (element outside of viewport)
  */
-;(function($, win) {
+(function($, win) {
   $.fn.inViewport = function(cb) {
      return this.each(function(i,el) {
        function visPx(){
@@ -48,7 +48,7 @@ $(document).ready(function() {
         afterRender: function() {
             $('.Loader').addClass('slideAndHide');
 
-            var fadeInUpSelectors = '.Title, .Subtitle, .Description, .Transition__text, .Transition .EmptySpace, .Article__category, .Article, .ReadAll, .QuestionTitle, .QuestionContent, .WhyShouldYouContactMe, .ContactDetails__TitleWrapper, .ContactDetails';
+            var fadeInUpSelectors = '.Title, .Subtitle, .Description, .ResumeWrapper, .ArticlesTitle, .Article, .QuestionTitle, .QuestionContent, .WhyShouldYouContactMe, .ContactDetails__TitleWrapper, .ContactDetails';
             var fadeInRightSelectors = '.About__background, .About .EmptySpace';
             var fadeInSelectors = '.Pagination, .Page, .Arrow';
 
@@ -74,11 +74,14 @@ $(document).ready(function() {
             }, 1700);
 
             $('.Home').inViewport(function (px) {
-                if(px) {
-                    $('.Project__loaderBarBg').addClass('animate')
-                    window.setInterval(function() {
+                if(px === window.innerHeight) {
+                    $('.Project__loaderBarBg').addClass('animate');
+                    window.homeInterval = window.setInterval(function() {
                         $.fn.fullpage.moveSlideRight();
-                    }, 5000);
+                    }, 8000);
+                } else {
+                    $('.Project__loaderBarBg').removeClass('animate');
+                    clearInterval(window.homeInterval);
                 }
             });
 
@@ -109,17 +112,6 @@ $(document).ready(function() {
 
 // Slick
 $(document).ready(function() {
-    var slickOptions = {
-        arrows: false,
-        draggable: false,
-        pauseOnFocus: false,
-        pauseOnHover: false,
-        swipe: false,
-        touchMove: false,
-        adaptiveHeight: true,
-    };
-    // $('.SmallPictureSlick').slick(slickOptions);
-    // $('.LargePictureSlick').slick(slickOptions);
     $('.Steps__Content').slick({
       slidesToShow: 1,
       slidesToScroll: 1,

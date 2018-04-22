@@ -22,10 +22,14 @@ title: HTML page
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/brands.css" integrity="sha384-IiIL1/ODJBRTrDTFk/pW8j0DUI5/z9m1KYsTm/RjZTNV8RHLGZXkUDwgRRbbQ+Jh" crossorigin="anonymous">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/fontawesome.css" integrity="sha384-q3jl8XQu1OpdLgGFvNRnPdj5VIlCvgsDQTQB6owSOHWlAurxul7f+JpUOVdAiJ5P" crossorigin="anonymous">
 
+        <link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.6/jquery.fullpage.min.css" />
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/simplebar@2.6.0/dist/simplebar.css"/>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css" integrity="sha384-OHBBOqpYHNsIqQy8hL1U+8OXf9hH6QRxi0+EODezv82DfnZoV7qoHAZDwMwEJvSw" crossorigin="anonymous">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css" />
 
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
@@ -61,8 +65,8 @@ title: HTML page
                 <a class="Link__internal" data-menuanchor="faq" href="#faq">FAQ</a>
                 <a class="Link__internal Link__ContactMe" data-menuanchor="contact" href="#contact" >CONTACT</a>
                 <a class="MobileOrTablet MenuButton">
-                    <i class="fas fa-menu"></i>
-                    <i class="fas fa-times hide"></i>
+                    <i class="icon ion-navicon"></i>
+                    <i class="icon ion-ios-close-empty hide"></i>
                 </a>
             </nav>
         </header>
@@ -149,7 +153,7 @@ title: HTML page
                                     How to bring value to big U.S. companies by making their employees healthier?
                                 </div>
                                 <a class="GoToProject" href="">
-                                    <h4 class="DiscoverProject">Read Case Study</span><img class="Arrow" src="{{ site.baseurl }}/img/Arrow--right.png">
+                                    <h4 class="DiscoverProject">Read Case Study</h4><img class="Arrow" src="{{ site.baseurl }}/img/Arrow--right.png">
                                 </a>
                             </div>
                         </div>
@@ -162,7 +166,7 @@ title: HTML page
                                     How to bring value to big U.S. companies by making their employees healthier?
                                 </div>
                                 <a class="GoToProject" href="">
-                                    <h4 class="DiscoverProject">Read Case Study</span><img class="Arrow" src="{{ site.baseurl }}/img/Arrow--right.png">
+                                    <h4 class="DiscoverProject">Read Case Study</h4><img class="Arrow" src="{{ site.baseurl }}/img/Arrow--right.png">
                                 </a>
                             </div>
                         </div>
@@ -175,7 +179,7 @@ title: HTML page
                                     How to bring value to big U.S. companies by making their employees healthier?
                                 </div>
                                 <a class="GoToProject" href="">
-                                    <h4 class="DiscoverProject">Read Case Study</span><img class="Arrow" src="{{ site.baseurl }}/img/Arrow--right.png">
+                                    <h4 class="DiscoverProject">Read Case Study</h4><img class="Arrow" src="{{ site.baseurl }}/img/Arrow--right.png">
                                 </a>
                             </div>
                         </div>
@@ -188,7 +192,7 @@ title: HTML page
                                     How to bring value to big U.S. companies by making their employees healthier?
                                 </div>
                                 <a class="GoToProject" href="">
-                                    <h4 class="DiscoverProject">Read Case Study</span><img class="Arrow" src="{{ site.baseurl }}/img/Arrow--right.png">
+                                    <h4 class="DiscoverProject">Read Case Study</h4><img class="Arrow" src="{{ site.baseurl }}/img/Arrow--right.png">
                                 </a>
                             </div>
                         </div>
@@ -201,7 +205,7 @@ title: HTML page
                                     How to bring value to big U.S. companies by making their employees healthier?
                                 </div>
                                 <a class="GoToProject" href="">
-                                    <h4 class="DiscoverProject">Read Case Study</span><img class="Arrow" src="{{ site.baseurl }}/img/Arrow--right.png">
+                                    <h4 class="DiscoverProject">Read Case Study</h4><img class="Arrow" src="{{ site.baseurl }}/img/Arrow--right.png">
                                 </a>
                             </div>
                         </div>
@@ -248,7 +252,7 @@ title: HTML page
                     <h3 class="Subtitle">UX journey</h3>
 
                     <div class="Steps">
-                        <div data-slick-index="0" class="StepTitle">Ausculation</div>
+                        <div data-slick-index="0" class="StepTitle">Auscultation</div>
                         <div data-slick-index="1" class="StepTitle">Empathy & Analysis</div>
                         <div data-slick-index="2" class="StepTitle">Diagnostic</div>
                         <div data-slick-index="3" class="StepTitle">Treatment</div>
@@ -257,20 +261,44 @@ title: HTML page
                     <div class="Steps__Content">
                         <div data-slick-index="0">
                             <div class="Step Step--1">
-                                <div class="StepPicture StepPicture--1"></div>
-                                <div class="StepPicture StepPicture--2"></div>
-                                <div class="StepPicture StepPicture--3"></div>
+                                <div
+                                    class="StepPicture StepPicture--topLeft StepPicture--1"
+                                    data-src="https://source.unsplash.com/Qpjl_dXQrD8/1500x1000"
+                                    data-fancybox="step-1"
+                                >
+                                    <i class="icon ion-ios-plus-outline"></i>
+                                </div>
+                                <div
+                                    class="StepPicture StepPicture--topRight StepPicture--2"
+                                    data-src="https://source.unsplash.com/egfS7HzgKcc/1500x1000"
+                                    data-fancybox="step-1"
+                                >
+                                    <i class="icon ion-ios-plus-outline"></i>
+                                </div>
+                                <div
+                                    class="StepPicture StepPicture--bottom StepPicture--3"
+                                    data-src="https://source.unsplash.com/_STvosrG-pw/1500x1000"
+                                    data-fancybox="step-1"
+                                >
+                                    <i class="icon ion-ios-plus-outline"></i>
+                                </div>
                                 <div class="Step__Text">
-                                    <span>Understand the problem and the expectations</span>
+                                    <span class="Step__Text--highlight">Understand the problem and the expectations</span>
                                     <span>Possible steps: Kickoff meeting, Problem validation, Goals definition, KPIs listing, Planning…</span>
                                 </div>
                             </div>
                         </div>
                         <div data-slick-index="1">
                             <div class="Step Step--1">
-                                <div class="StepPicture StepPicture--1"></div>
-                                <div class="StepPicture StepPicture--2 StepPicture--primary"></div>
-                                <div class="StepPicture StepPicture--3"></div>
+                                <div class="StepPicture StepPicture--topLeft">
+                                    <i class="icon ion-ios-plus-outline"></i>
+                                </div>
+                                <div class="StepPicture StepPicture--topRight StepPicture--primary">
+                                    <i class="icon ion-ios-plus-outline"></i>
+                                </div>
+                                <div class="StepPicture StepPicture--bottom">
+                                    <i class="icon ion-ios-plus-outline"></i>
+                                </div>
                                 <div class="Step__Text">
                                     <span>Empathy & Analysis</span>
                                     <span>Possible steps: Kickoff meeting, Problem validation, Goals definition, KPIs listing, Planning…</span>
@@ -279,9 +307,15 @@ title: HTML page
                         </div>
                         <div data-slick-index="2">
                             <div class="Step Step--1">
-                                <div class="StepPicture StepPicture--1"></div>
-                                <div class="StepPicture StepPicture--2"></div>
-                                <div class="StepPicture StepPicture--3 StepPicture--primary"></div>
+                                <div class="StepPicture StepPicture--topLeft">
+                                    <i class="icon ion-ios-plus-outline"></i>
+                                </div>
+                                <div class="StepPicture StepPicture--topRight">
+                                    <i class="icon ion-ios-plus-outline"></i>
+                                </div>
+                                <div class="StepPicture StepPicture--bottom StepPicture--primary">
+                                    <i class="icon ion-ios-plus-outline"></i>
+                                </div>
                                 <div class="Step__Text">
                                     <span>Diagnostic</span>
                                     <span>Possible steps: Kickoff meeting, Problem validation, Goals definition, KPIs listing, Planning…</span>
@@ -290,9 +324,15 @@ title: HTML page
                         </div>
                         <div data-slick-index="3">
                             <div class="Step Step--1">
-                                <div class="StepPicture StepPicture--1 StepPicture--primary"></div>
-                                <div class="StepPicture StepPicture--2 StepPicture--primary"></div>
-                                <div class="StepPicture StepPicture--3"></div>
+                                <div class="StepPicture StepPicture--topLeft StepPicture--primary">
+                                    <i class="icon ion-ios-plus-outline"></i>
+                                </div>
+                                <div class="StepPicture StepPicture--topRight StepPicture--primary">
+                                    <i class="icon ion-ios-plus-outline"></i>
+                                </div>
+                                <div class="StepPicture StepPicture--bottom">
+                                    <i class="icon ion-ios-plus-outline"></i>
+                                </div>
                                 <div class="Step__Text">
                                     <span>Treatment</span>
                                     <span>Possible steps: Kickoff meeting, Problem validation, Goals definition, KPIs listing, Planning…</span>
@@ -301,9 +341,15 @@ title: HTML page
                         </div>
                         <div data-slick-index="4">
                             <div class="Step Step--1">
-                                <div class="StepPicture StepPicture--1 StepPicture--primary"></div>
-                                <div class="StepPicture StepPicture--2 StepPicture--primary"></div>
-                                <div class="StepPicture StepPicture--3 StepPicture--primary"></div>
+                                <div class="StepPicture StepPicture--topLeft StepPicture--primary">
+                                    <i class="icon ion-ios-plus-outline"></i>
+                                </div>
+                                <div class="StepPicture StepPicture--topRight StepPicture--primary">
+                                    <i class="icon ion-ios-plus-outline"></i>
+                                </div>
+                                <div class="StepPicture StepPicture--bottom StepPicture--primary">
+                                    <i class="icon ion-ios-plus-outline"></i>
+                                </div>
                                 <div class="Step__Text">
                                     <span>Follow-up</span>
                                     <span>Possible steps: Kickoff meeting, Problem validation, Goals definition, KPIs listing, Planning…</span>
@@ -342,7 +388,7 @@ title: HTML page
                                 <img class="Article__picture--logo" src="{{ site.baseurl }}/img/Monogram.png">
                             </div>
                             <a class="Article__title" target="_blank">Coming Soon</a>
-                            <div class="Article__category">•••</div>
+                            <div class="Article__category">&#42;&#42;&#42;</div>
                         </div>
 
                         <div class="Article Article--3">
@@ -350,7 +396,7 @@ title: HTML page
                                 <img class="Article__picture--logo" src="{{ site.baseurl }}/img/Monogram.png">
                             </div>
                             <a class="Article__title" target="_blank">Coming Soon</a>
-                            <div class="Article__category">•••</div>
+                            <div class="Article__category">&#42;&#42;&#42;</div>
                         </div>
                     </div>
 
@@ -370,118 +416,130 @@ title: HTML page
                         <div data-slick-index="0">
                             <div class="Testimonial">
                                 <div class="TestimonialQuote">
-                                    <div class="Quote">
-                                        « It's funny to pitch creative ideas to sell more, but it's funnier to create solutions that make people life better. »
-                                    </div>
-                                    <div class="Client">
-                                        <span>Nicolas SCHMIDT<br>Head of Healthcare Products<br>at Nokia Technologies</span>
+                                    <div class="Quote Text--large">
+                                        « Problem solver and creative researcher are the words that come to my mind when I think about Alexa. She would be a true asset for any positions requiring user research or UX strategy. Warmly recommended. »
                                     </div>
                                 </div>
+                                <div class="Line"></div>
+                                <h4 class="Client">
+                                    <span>Nicolas SCHMIDT<br>Head of Healthcare Products<br>@ Nokia Technologies (ex - Withings)</span>
+                                </h4>
                                 <div class="Logo__wrapper Project__background--NokiaHealth">
                                     <div class="Logo Logo__wrapper--Nokia"></div>
                                 </div>
                             </div>
                         </div>
+
                         <div data-slick-index="1">
                             <div class="Testimonial">
                                 <div class="TestimonialQuote">
-                                    <div class="Quote">
-                                        « Alexa constantly amazed me with her business insight and brilliant ways to to solving problems. She consistently demonstrated a strong work ethic at Alkemics along with a commitment to success. Her performance at Alkemics was golden. »
-                                    </div>
-                                    <div class="Client">
-                                        <span>Nicolas LABE<br>Head of Customer Success<br>at Alkemics</span>
+                                    <div class="Quote Text--large">
+                                        « The team - basically tech driven - ended up with a better sensitivity for the customer experience ins and outs. Alexa is full of energy and methodical [...] she totally completed her part of the deal. »
                                     </div>
                                 </div>
+                                <div class="Line"></div>
+                                <h4 class="Client">
+                                    <span>Victor Matei<br>COO<br>@ Keymetrics</span>
+                                </h4>
+                                <div class="Logo__wrapper Project__background--Keymetrics">
+                                    <div class="Logo Logo__wrapper--Keymetrics"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div data-slick-index="2">
+                            <div class="Testimonial">
+                                <div class="TestimonialQuote">
+                                    <div class="Quote Text--large">
+                                        « In short, I’ve been amazed by her method and her determination. A driven, ambitious individual with an infectious enthusiasm for any problem to solve. »
+                                    </div>
+                                </div>
+                                <div class="Line"></div>
+                                <h4 class="Client">
+                                    <span>Jeremy BELLAICHE<br>Founder & CEO<br>@ Wisean</span>
+                                </h4>
+                                <div class="Logo__wrapper Project__background--Wisean">
+                                    <div class="Logo Logo__wrapper--Wisean"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div data-slick-index="3">
+                            <div class="Testimonial">
+                                <div class="TestimonialQuote">
+                                    <div class="Quote Text--large">
+                                        « Alexa constantly amazed me with her business insight and brilliant ways to to solving problems. She consistently demonstrated a strong work ethic at Alkemics along with a commitment to success. Her performance at Alkemics was golden. »
+                                    </div>
+                                </div>
+                                <div class="Line"></div>
+                                <h4 class="Client">
+                                    <span>Adlen AFANE<br>Engineering Manager<br>@ Alkemics</span>
+                                </h4>
                                 <div class="Logo__wrapper Project__background--Alkemics">
                                     <div class="Logo Logo__wrapper--Alkemics"></div>
                                 </div>
                             </div>
                         </div>
-                        <div data-slick-index="2">
+<!--                         <div data-slick-index="4">
                             <div class="Testimonial">
                                 <div class="TestimonialQuote">
-                                    <div class="Quote">
+                                    <div class="Quote Text--large">
                                         « »
                                     </div>
-                                    <div class="Client">
-                                        <span>Radhia HOUIDI<br>Founder and CEO<br>at Blackink</span>
-                                    </div>
                                 </div>
+                                <div class="Line"></div>
+                                <h4 class="Client">
+                                    <span>Radhia HOUIDI<br>Founder and CEO<br>@ Blackink</span>
+                                </h4>
                                 <div class="Logo__wrapper Project__background--Blackink">
                                     <div class="Logo Logo__wrapper--Blackink"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div data-slick-index="3">
-                            <div class="Testimonial">
-                                <div class="TestimonialQuote">
-                                    <div class="Quote">
-                                        « »
-                                    </div>
-                                    <div class="Client">
-                                        <span>XXX<br>Director<br>at CGT</span>
-                                    </div>
-                                </div>
-                                <div class="Logo__wrapper Project__background--CGT">
-                                    <div class="Logo Logo__wrapper--CGT"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div data-slick-index="4">
-                            <div class="Testimonial">
-                                <div class="TestimonialQuote">
-                                    <div class="Quote">
-                                        « »
-                                    </div>
-                                    <div class="Client">
-                                        <span>Jeremy BELLAICHE<br>Founder & CEO<br>at Wisean</span>
-                                    </div>
-                                </div>
-                                <div class="Logo__wrapper Project__background--Wisean">
-                                    <div class="Logo Logo__wrapper--Wisean"></div>
                                 </div>
                             </div>
                         </div>
                         <div data-slick-index="5">
                             <div class="Testimonial">
                                 <div class="TestimonialQuote">
-                                    <div class="Quote">
+                                    <div class="Quote Text--large">
                                         « »
                                     </div>
-                                    <div class="Client">
-                                        <span>XXX<br>Director<br>at ABTasty</span>
+                                </div>
+                                <div class="Line"></div>
+                                <h4 class="Client">
+                                    <span>XXX<br>Director<br>@ CGT</span>
+                                </h4>
+                                <div class="Logo__wrapper Project__background--CGT">
+                                    <div class="Logo Logo__wrapper--CGT"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div data-slick-index="">
+                            <div class="Testimonial">
+                                <div class="TestimonialQuote">
+                                    <div class="Quote Text--large">
+                                        « »
                                     </div>
                                 </div>
+                                <div class="Line"></div>
+                                <h4 class="Client">
+                                    <span>XXX<br>Director<br>@ ABTasty</span>
+                                </h4>
                                 <div class="Logo__wrapper Project__background--ABTasty">
                                     <div class="Logo Logo__wrapper--ABTasty"></div>
                                 </div>
                             </div>
-                        </div>
-                        <div data-slick-index="6">
-                            <div class="Testimonial">
-                                <div class="TestimonialQuote">
-                                    <div class="Quote">
-                                        « »
-                                    </div>
-                                    <div class="Client">
-                                        <span>XXX<br>Director<br>at Keymetrics</span>
-                                    </div>
-                                </div>
-                                <div class="Logo__wrapper Project__background--Keymetrics">
-                                    <div class="Logo Logo__wrapper--Keymetrics"></div>
-                                </div>
-                            </div>
-                        </div>
+                        </div> -->
+
                     </div>
 
                     <div class="TestimonialsSlider">
                         <div data-slick-index="0" class="TestimonialsSlider__Logo Logo__wrapper--Nokia"></div>
-                        <div data-slick-index="1" class="TestimonialsSlider__Logo Logo__wrapper--Alkemics"></div>
-                        <div data-slick-index="2" class="TestimonialsSlider__Logo Logo__wrapper--Blackink"></div>
-                        <div data-slick-index="3" class="TestimonialsSlider__Logo Logo__wrapper--CGT"></div>
-                        <div data-slick-index="4" class="TestimonialsSlider__Logo Logo__wrapper--Wisean"></div>
-                        <div data-slick-index="5" class="TestimonialsSlider__Logo Logo__wrapper--ABTasty"></div>
-                        <div data-slick-index="6" class="TestimonialsSlider__Logo Logo__wrapper--Keymetrics"></div>
+                        <div data-slick-index="1" class="TestimonialsSlider__Logo Logo__wrapper--Keymetrics"></div>
+                        <div data-slick-index="2" class="TestimonialsSlider__Logo Logo__wrapper--Wisean"></div>
+                        <div data-slick-index="3" class="TestimonialsSlider__Logo Logo__wrapper--Alkemics"></div>
+                        <!-- <div data-slick-index="4" class="TestimonialsSlider__Logo Logo__wrapper--Blackink"></div>
+                        <div data-slick-index="5" class="TestimonialsSlider__Logo Logo__wrapper--CGT"></div>
+                        <div data-slick-index="6" class="TestimonialsSlider__Logo Logo__wrapper--ABTasty"></div> -->
                     </div>
                 </div>
             </div>
@@ -498,11 +556,12 @@ title: HTML page
                     </div>
                 </div>
 
-                <div class="Arrow--leftWrapper">
-                    <img src="{{ site.baseurl }}/img/Arrow--left.png"  onclick="javascript:$.fn.fullpage.moveSlideLeft();gtag('event', 'faq_previous_question');" class="Arrow Arrow--left" />
+                <div class="Arrow--leftWrapper" onclick="javascript:$.fn.fullpage.moveSlideLeft();gtag('event', 'faq_previous_question');">
+                    <i class="Arrow Arrow--left icon ion-ios-arrow-left"></i>
                 </div>
-                <div class="Arrow--rightWrapper">
-                    <img src="{{ site.baseurl }}/img/Arrow--right.png" onclick="javascript:$.fn.fullpage.moveSlideRight();gtag('event', 'faq_next_question');" class="Arrow Arrow--right" />
+
+                <div class="Arrow--rightWrapper" onclick="javascript:$.fn.fullpage.moveSlideRight();gtag('event', 'faq_previous_question');">
+                    <i class="Arrow Arrow--right icon ion-ios-arrow-right"></i>
                 </div>
 
                 <div class="Questions">
@@ -577,13 +636,18 @@ title: HTML page
 
 
         <script src="js/vendor/modernizr-3.5.0.min.js"></script>
-        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        <script
+            src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous">
+        </script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.6/jquery.fullpage.min.js" type="text/javascript"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/simplebar@2.6.0/dist/simplebar.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
         <script src="https://unpkg.com/tippy.js@2.5.0/dist/tippy.all.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.js"></script>
 
 
         <script src="{{ site.baseurl }}/js/plugins.js"></script>
