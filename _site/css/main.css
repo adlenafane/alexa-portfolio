@@ -1253,6 +1253,10 @@ h1.Title {
     display: none;
 }
 
+.Process {
+    --margin--step: 1vh;
+}
+
 .Steps {
     grid-column-start: 2;
     grid-column-end: 4;
@@ -1264,6 +1268,33 @@ h1.Title {
     align-items: stretch;
     justify-content: space-between;
     text-align: center;
+
+    position: relative;
+}
+
+.ArrowRepeat__wrapper {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 5;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.ArrowRepeat {
+    height: calc(
+        0.9 * (var(--row-2-height) + var(--row-3-height) + var(--row-4-height) - 4 * var(--margin--step))
+    ) !important;
+}
+
+.ArrowRepat svg text {
+    font-weight: 400;
+}
+
+#Feedback-arrow {
+    marker-end: url(#markerArrow)
 }
 
 .Steps .slick-list, .Steps .slick-track {
@@ -1297,7 +1328,7 @@ h1.Title {
 }
 
 .StepTitle + .StepTitle {
-    margin-top: 12px;
+    margin-top: var(--margin--step);
 }
 
 .StepTitle.slick-current {
@@ -1980,6 +2011,13 @@ h1.Title {
     grid-column-end: 4;
     grid-row-start: 2;
     grid-row-end: 3;
+
+    line-height: 2;
+}
+
+.WhyShouldYouContactMe__content {
+    font-size: calc( 14px + (30 - 14)*(100vw - 400px)/(1920 - 400) );
+    padding-top: var(--margin-screen-vertical);
 }
 
 .WhyShouldYouContactMe--2 {
