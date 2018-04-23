@@ -52,6 +52,14 @@
         <div class="Loader Loader--1"></div>
 
         <header class="Header">
+            <input id="menuIconCheckbox" type="checkbox" />
+
+            <label for="menuIconCheckbox" class="MobileOrTablet MenuButton">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
             <nav id="menu">
                 <a class="Link__internal" data-menuanchor="work" href="#work">WORK</a>
                 <a class="Link__internal" data-menuanchor="about" href="#about">ABOUT</a>
@@ -60,10 +68,6 @@
                 <a class="Link__internal" data-menuanchor="testimonials" href="#testimonials">TESTIMONIALS</a>
                 <a class="Link__internal" data-menuanchor="faq" href="#faq">FAQ</a>
                 <a class="Link__internal Link__ContactMe" data-menuanchor="contact" href="#contact" >CONTACT</a>
-                <a class="MobileOrTablet MenuButton">
-                    <i class="icon ion-navicon"></i>
-                    <i class="icon ion-ios-close-empty hide"></i>
-                </a>
             </nav>
         </header>
 
@@ -107,10 +111,10 @@
             <div data-anchor="work" class="Fullscreen Screen Home section">
                 <h3 class="Subtitle">Alexa Guéguen</h3>
                 <h1 class="Title animated-words">
-                    I'm a&nbsp;
-                    <span>ux strategist</span>
-                    <span>product designer</span>
-                    <span>uxui designer</span>
+                    <span class="prefix">I'm a&nbsp;</span>
+                    <span class="animated-word">ux strategist</span>
+                    <span class="animated-word">product designer</span>
+                    <span class="animated-word">uxui designer</span>
                 </h1>
                 <div class="Credentials">
                     <div class="Credentials__wrapper">
@@ -634,7 +638,7 @@
                                 You have a project in mind?
                             </div>
                             <div>
-                                A need some expertise on UX, UI or Strategy?
+                                A need for  some expertise on UX, UI or Strategy?
                             </div>
                             <div>
                                 Or just want to grab a coffe to share some best practices ☕
@@ -644,7 +648,7 @@
 
                     <div class="ContactDetails__TitleWrapper">
                         <span class="ContactDetails__Title Text--large">
-                            <span class="Text--highlight">Let's talk</span> about it!
+                            Here's how to <span class="Text--highlight">reach me</span>
                         </span>
                     </div>
                     <div class="ContactDetails">
