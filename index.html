@@ -17,13 +17,6 @@ title: HTML page
 
         <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
 
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css" integrity="sha384-v2Tw72dyUXeU3y4aM2Y0tBJQkGfplr39mxZqlTBDUZAb9BGoC40+rdFCG0m10lXk" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/regular.css" integrity="sha384-A/oR8MwZKeyJS+Y0tLZ16QIyje/AmPduwrvjeH6NLiLsp4cdE4uRJl8zobWXBm4u" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/brands.css" integrity="sha384-IiIL1/ODJBRTrDTFk/pW8j0DUI5/z9m1KYsTm/RjZTNV8RHLGZXkUDwgRRbbQ+Jh" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/fontawesome.css" integrity="sha384-q3jl8XQu1OpdLgGFvNRnPdj5VIlCvgsDQTQB6owSOHWlAurxul7f+JpUOVdAiJ5P" crossorigin="anonymous">
-
-        <link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.6/jquery.fullpage.min.css" />
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/simplebar@2.6.0/dist/simplebar.css"/>
@@ -33,6 +26,8 @@ title: HTML page
 
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
+        <link href="css/materialdesignicons.min.css" media="all" rel="stylesheet" type="text/css" />
+
 
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-44855546-1"></script>
@@ -81,45 +76,47 @@ title: HTML page
                href="https://www.linkedin.com/in/agueguen/"
                onclick="gtag('event', 'go_linkedin');"
             >
-                <i class="fab fa-linkedin-in"></i>
+                <i class="mdi mdi-linkedin"></i>
             </a>
             <a class="Icon SlideInHoverTransition"
                target="_blank"
                href="https://medium.com/@alexa.gueguen"
                onclick="gtag('event', 'go_medium');"
             >
-                <i class="fab fa-medium-m"></i>
+                <i class="mdi mdi-medium"></i>
             </a>
             <a class="Icon SlideInHoverTransition"
                target="_blank"
                href="mailto:alexa.gueguen@gmail.com"
                onclick="gtag('event', 'go_email');"
             >
-                <i class="far fa-envelope"></i>
+                <i class="mdi mdi-email-outline"></i>
             </a>
             <a
                 class="Icon SlideInHoverTransition Icon__copyUrl"
                 title="Copied!"
                 data-clipboard-text="http://alexa-gueguen.com/"
             >
-                <i class="fas fa-link"></i>
+                <i class="mdi mdi-link-variant"></i>
             </a>
             <a class="Icon MobileOrTablet FAB">
-                <i class="fas fa-share-alt"></i>
-                <i class="fas fa-times hide"></i>
+                <i class="mdi mdi-share-variant"></i>
+                <i class="mdi mdi-close hide"></i>
             </a>
         </nav>
 
         <div id="fullpage">
             <!-- Screen 1 - Home - Work -->
             <div data-anchor="work" class="Fullscreen Screen Home section">
-                <h3 class="Subtitle">Alexa Guéguen</h3>
-                <h1 class="Title animated-words">
-                    <span class="prefix">I'm a&nbsp;</span>
-                    <span class="animated-word">ux strategist</span>
-                    <span class="animated-word">product designer</span>
-                    <span class="animated-word">uxui designer</span>
-                </h1>
+                <div class="Titles">
+                    <h4 class="Subtitle">Alexa Guéguen</h4>
+                    <h1 class="Title animated-words">
+                        <span class="prefix">I'm a&nbsp;</span>
+                        <span class="animated-word">ux strategist</span>
+                        <span class="animated-word">product designer</span>
+                        <span class="animated-word">uxui designer</span>
+                    </h1>
+                </div>
                 <div class="Credentials">
                     <div class="Credentials__wrapper">
                         <div class="Credentials__text">
@@ -143,7 +140,7 @@ title: HTML page
                                     How to bring value to big U.S. companies by making their employees healthier?
                                 </div>
                                 <a class="GoToProject" href="">
-                                    <h4 class="DiscoverProject">Read Case Study</h4><img class="Arrow" src="{{ site.baseurl }}/img/Arrow--right.png">
+                                    <div class="DiscoverProject">Read Case Study</div><!-- <img class="Arrow" src="{{ site.baseurl }}/img/Arrow--right.png"> -->
                                 </a>
                             </div>
                         </div>
@@ -157,7 +154,7 @@ title: HTML page
                                     How to bring value to big U.S. companies by making their employees healthier?
                                 </div>
                                 <a class="GoToProject" href="">
-                                    <h4 class="DiscoverProject">Read Case Study</h4><img class="Arrow" src="{{ site.baseurl }}/img/Arrow--right.png">
+                                    <div class="DiscoverProject">Read Case Study</div><!-- <img class="Arrow" src="{{ site.baseurl }}/img/Arrow--right.png"> -->
                                 </a>
                             </div>
                         </div>
@@ -170,7 +167,7 @@ title: HTML page
                                     How to bring value to big U.S. companies by making their employees healthier?
                                 </div>
                                 <a class="GoToProject" href="">
-                                    <h4 class="DiscoverProject">Read Case Study</h4><img class="Arrow" src="{{ site.baseurl }}/img/Arrow--right.png">
+                                    <div class="DiscoverProject">Read Case Study</div><!-- <img class="Arrow" src="{{ site.baseurl }}/img/Arrow--right.png"> -->
                                 </a>
                             </div>
                         </div>
@@ -183,7 +180,7 @@ title: HTML page
                                     How to bring value to big U.S. companies by making their employees healthier?
                                 </div>
                                 <a class="GoToProject" href="">
-                                    <h4 class="DiscoverProject">Read Case Study</h4><img class="Arrow" src="{{ site.baseurl }}/img/Arrow--right.png">
+                                    <div class="DiscoverProject">Read Case Study</div><!-- <img class="Arrow" src="{{ site.baseurl }}/img/Arrow--right.png"> -->
                                 </a>
                             </div>
                         </div>
@@ -196,7 +193,7 @@ title: HTML page
                                     How to bring value to big U.S. companies by making their employees healthier?
                                 </div>
                                 <a class="GoToProject" href="">
-                                    <h4 class="DiscoverProject">Read Case Study</h4><img class="Arrow" src="{{ site.baseurl }}/img/Arrow--right.png">
+                                    <div class="DiscoverProject">Read Case Study</div><!-- <img class="Arrow" src="{{ site.baseurl }}/img/Arrow--right.png"> -->
                                 </a>
                             </div>
                         </div>
@@ -209,7 +206,7 @@ title: HTML page
                                     How to bring value to big U.S. companies by making their employees healthier?
                                 </div>
                                 <a class="GoToProject" href="">
-                                    <h4 class="DiscoverProject">Read Case Study</h4><img class="Arrow" src="{{ site.baseurl }}/img/Arrow--right.png">
+                                    <div class="DiscoverProject">Read Case Study</div><!-- <img class="Arrow" src="{{ site.baseurl }}/img/Arrow--right.png"> -->
                                 </a>
                             </div>
                         </div>
@@ -222,7 +219,7 @@ title: HTML page
                                     How to bring value to big U.S. companies by making their employees healthier?
                                 </div>
                                 <a class="GoToProject" href="">
-                                    <h4 class="DiscoverProject">Read Case Study</h4><img class="Arrow" src="{{ site.baseurl }}/img/Arrow--right.png">
+                                    <div class="DiscoverProject">Read Case Study</div><!-- <img class="Arrow" src="{{ site.baseurl }}/img/Arrow--right.png"> -->
                                 </a>
                             </div>
                         </div>
@@ -234,14 +231,16 @@ title: HTML page
             <!-- Screen 2 - About -->
             <div id="About" data-anchor="about" class="Fullscreen section">
                 <div class="Screen About">
-                    <h3 class="Subtitle">In one sentence</h3>
-                    <h2 class="Title">about</h2>
-                    <div class="Description Text--large">
-                        Former art director in advertising, now dedicated to <span class="Text--highlight">finding problems to solve them methodically.</span>
+                    <div class="Titles">
+                        <h4 class="Subtitle">In one sentence</h4>
+                        <h2 class="Title">about</h2>
                     </div>
+                    <h3 class="Description">
+                        Former art director in advertising, now dedicated to <span class="Text--highlight">finding problems to solve them methodically.</span>
+                    </h3>
                     <div class="ResumeWrapper">
                         <a class="Resume" onclick="gtag('event', 'download_resume');" href="https://drive.google.com/uc?authuser=0&id=1_Oi5XyhqXjwKSNSkBWq5hJqjlAaZ1KbR&export=download">
-                            <span><i class="fas fa-arrow-down"></i>My Resume</span>
+                            <span><i class="mdi mdi-download"></i>My Resume</span>
                         </a>
                     </div>
                     <div class="EmptySpace"></div>
@@ -252,8 +251,10 @@ title: HTML page
             <!-- Screen 4 - Process -->
             <div data-anchor="process" class="Fullscreen section ">
                 <div class="Screen Process">
-                    <h2 class="Title">process</h2>
-                    <h3 class="Subtitle">UX journey</h3>
+                    <div class="Titles">
+                        <h4 class="Subtitle">UX journey</h4>
+                        <h2 class="Title">process</h2>
+                    </div>
 
                     <div class="ArrowRepeat__wrapper">
                         <svg class="ArrowRepeat" width="100px" height="439px" viewBox="0 0 100 439" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -289,7 +290,7 @@ title: HTML page
 
                     <div class="Steps">
                         <div data-slick-index="0" class="StepTitle__wrapper">
-                            <i class="StepIcon icon ion-ios-plus-outline"></i>
+                            <i class="StepIcon mdi mdi-stethoscope"></i>
                             <div class="StepText">
                                 <div class="StepTitle">
                                     Auscultation
@@ -300,7 +301,7 @@ title: HTML page
                             </div>
                         </div>
                         <div data-slick-index="1" class="StepTitle__wrapper">
-                            <i class="StepIcon icon ion-ios-plus-outline"></i>
+                            <i class="StepIcon mdi mdi-test-tube"></i>
                             <div class="StepText">
                                 <div class="StepTitle">
                                     Analysis w/ empathy
@@ -311,7 +312,7 @@ title: HTML page
                             </div>
                         </div>
                         <div data-slick-index="2" class="StepTitle__wrapper">
-                            <i class="StepIcon icon ion-ios-plus-outline"></i>
+                            <i class="StepIcon mdi mdi-clipboard-pulse-outline"></i>
                             <div class="StepText">
                                 <div class="StepTitle">
                                     Diagnostic
@@ -322,7 +323,7 @@ title: HTML page
                             </div>
                         </div>
                         <div data-slick-index="3" class="StepTitle__wrapper">
-                            <i class="StepIcon icon ion-ios-plus-outline"></i>
+                            <i class="StepIcon mdi mdi-pill"></i>
                             <div class="StepText">
                                 <div class="StepTitle">
                                     Treatment
@@ -333,7 +334,7 @@ title: HTML page
                             </div>
                         </div>
                         <div data-slick-index="4" class="StepTitle__wrapper">
-                            <i class="StepIcon icon ion-ios-plus-outline"></i>
+                            <i class="StepIcon mdi mdi-finance"></i>
                             <div class="StepText">
                                 <div class="StepTitle">
                                     Follow up
@@ -352,7 +353,7 @@ title: HTML page
                                     data-src="{{ site.baseurl }}/img/process/Auscultation.png"
                                     data-fancybox="step-1"
                                 >
-                                    <i class="icon ion-ios-plus-outline"></i>
+                                    <i class="mdi mdi-magnify-plus-outline"></i>
                                 </div>
                             </div>
                         </div>
@@ -363,7 +364,7 @@ title: HTML page
                                     data-src="{{ site.baseurl }}/img/process/Analysis-w-empathy.jpg"
                                     data-fancybox="step-2"
                                 >
-                                    <i class="icon ion-ios-plus-outline"></i>
+                                    <i class="mdi mdi-magnify-plus-outline"></i>
                                 </div>
                             </div>
                         </div>
@@ -374,7 +375,7 @@ title: HTML page
                                     data-src="{{ site.baseurl }}/img/process/Diagnostic.png"
                                     data-fancybox="step-3"
                                 >
-                                    <i class="icon ion-ios-plus-outline"></i>
+                                    <i class="mdi mdi-magnify-plus-outline"></i>
                                 </div>
                             </div>
                         </div>
@@ -385,7 +386,7 @@ title: HTML page
                                     data-src="{{ site.baseurl }}/img/process/Treatment.png"
                                     data-fancybox="step-4"
                                 >
-                                    <i class="icon ion-ios-plus-outline"></i>
+                                    <i class="mdi mdi-magnify-plus-outline"></i>
                                 </div>
                             </div>
                         </div>
@@ -396,7 +397,7 @@ title: HTML page
                                     data-src="{{ site.baseurl }}/img/process/Follow-up.jpg"
                                     data-fancybox="step-5"
                                 >
-                                    <i class="icon ion-ios-plus-outline"></i>
+                                    <i class="mdi mdi-magnify-plus-outline"></i>
                                 </div>
                             </div>
                         </div>
@@ -408,12 +409,14 @@ title: HTML page
             <!-- Screen 5 - Articles -->
             <div data-anchor="articles" class="Fullscreen section">
                 <div class="Screen Articles">
-                    <h2 class="Title">last articles</h2>
-                    <h3 class="Subtitle">Sharing is key</h3>
-
-                    <div class="ArticlesTitle Text--large">
-                        <span class="Text--highlight">Share my thoughts</span> to make the user experince field better known.
+                    <div class="Titles">
+                        <h4 class="Subtitle">Sharing is key</h4>
+                        <h2 class="Title">articles</h2>
                     </div>
+
+                    <h3 class="ArticlesTitle">
+                        <span class="Text--highlight">Share my thoughts to make the user experience field better known.</span>
+                    </h3>
 
                     <div class="ArticlesWrapper">
                         <div class="Article Article--1">
@@ -427,7 +430,7 @@ title: HTML page
                             <div class="Article__category">Work, Remote</div>
                         </div>
 
-                        <div class="Article Article--2">
+                        <!-- <div class="Article Article--2">
                             <div class="Article__picture Article__picture--empty">
                                 <img class="Article__picture--logo" src="{{ site.baseurl }}/img/Monogram.png">
                             </div>
@@ -441,7 +444,7 @@ title: HTML page
                             </div>
                             <a class="Article__title" target="_blank">Coming Soon</a>
                             <div class="Article__category">&#42;&#42;&#42;</div>
-                        </div>
+                        </div> -->
                     </div>
 
                 </div>
@@ -451,8 +454,10 @@ title: HTML page
             <!-- Screen 6 - Testimonials -->
             <div data-anchor="testimonials" class="Fullscreen section">
                 <div class="Screen Testimonials">
-                    <h2 class="Title">testimonials</h2>
-                    <h3 class="Subtitle">Magic happens when people work together</h3>
+                    <div class="Titles">
+                        <h4 class="Subtitle">Magic happens when people work together</h4>
+                        <h2 class="Title">testimonials</h2>
+                    </div>
 
                     <div class="Quote__wrapper"></div>
 
@@ -460,14 +465,13 @@ title: HTML page
                         <div data-slick-index="0">
                             <div class="Testimonial">
                                 <div class="TestimonialQuote">
-                                    <div class="Quote Text--large">
+                                    <h3 class="Quote">
                                         « Problem solver and creative researcher are the words that come to my mind when I think about Alexa. She would be a true asset for any positions requiring user research or UX strategy. Warmly recommended. »
-                                    </div>
+                                    </h3>
                                 </div>
-                                <div class="Line"></div>
-                                <h4 class="Client">
+                                <div class="Client">
                                     <span>Nicolas SCHMIDT<br>Head of Healthcare Products<br>@ Nokia Technologies (ex - Withings)</span>
-                                </h4>
+                                </div>
                                 <div class="Logo__wrapper Project__background--NokiaHealth">
                                     <div class="Logo Logo__wrapper--Nokia"></div>
                                 </div>
@@ -477,14 +481,13 @@ title: HTML page
                         <div data-slick-index="1">
                             <div class="Testimonial">
                                 <div class="TestimonialQuote">
-                                    <div class="Quote Text--large">
+                                    <h3 class="Quote">
                                         « The team - basically tech driven - ended up with a better sensitivity for the customer experience ins and outs. Alexa is full of energy and methodical [...] she totally completed her part of the deal. »
-                                    </div>
+                                    </h3>
                                 </div>
-                                <div class="Line"></div>
-                                <h4 class="Client">
+                                <div class="Client">
                                     <span>Victor Matei<br>COO<br>@ Keymetrics</span>
-                                </h4>
+                                </div>
                                 <div class="Logo__wrapper Project__background--Keymetrics">
                                     <div class="Logo Logo__wrapper--Keymetrics"></div>
                                 </div>
@@ -494,14 +497,13 @@ title: HTML page
                         <div data-slick-index="2">
                             <div class="Testimonial">
                                 <div class="TestimonialQuote">
-                                    <div class="Quote Text--large">
+                                    <h3 class="Quote">
                                         « In short, I’ve been amazed by her method and her determination. A driven, ambitious individual with an infectious enthusiasm for any problem to solve. »
-                                    </div>
+                                    </h3>
                                 </div>
-                                <div class="Line"></div>
-                                <h4 class="Client">
+                                <div class="Client">
                                     <span>Jeremy BELLAICHE<br>Founder & CEO<br>@ Wisean</span>
-                                </h4>
+                                </div>
                                 <div class="Logo__wrapper Project__background--Wisean">
                                     <div class="Logo Logo__wrapper--Wisean"></div>
                                 </div>
@@ -511,14 +513,13 @@ title: HTML page
                         <div data-slick-index="3">
                             <div class="Testimonial">
                                 <div class="TestimonialQuote">
-                                    <div class="Quote Text--large">
+                                    <h3 class="Quote">
                                         « Alexa constantly amazed me with her business insight and brilliant ways to to solving problems. She consistently demonstrated a strong work ethic at Alkemics along with a commitment to success. Her performance at Alkemics was golden. »
-                                    </div>
+                                    </h3>
                                 </div>
-                                <div class="Line"></div>
-                                <h4 class="Client">
+                                <div class="Client">
                                     <span>Adlen AFANE<br>Engineering Manager<br>@ Alkemics</span>
-                                </h4>
+                                </div>
                                 <div class="Logo__wrapper Project__background--Alkemics">
                                     <div class="Logo Logo__wrapper--Alkemics"></div>
                                 </div>
@@ -527,14 +528,13 @@ title: HTML page
 <!--                         <div data-slick-index="4">
                             <div class="Testimonial">
                                 <div class="TestimonialQuote">
-                                    <div class="Quote Text--large">
+                                    <h3 class="Quote">
                                         « »
-                                    </div>
+                                    </h3>
                                 </div>
-                                <div class="Line"></div>
-                                <h4 class="Client">
+                                <div class="Client">
                                     <span>Radhia HOUIDI<br>Founder and CEO<br>@ Blackink</span>
-                                </h4>
+                                </div>
                                 <div class="Logo__wrapper Project__background--Blackink">
                                     <div class="Logo Logo__wrapper--Blackink"></div>
                                 </div>
@@ -543,14 +543,13 @@ title: HTML page
                         <div data-slick-index="5">
                             <div class="Testimonial">
                                 <div class="TestimonialQuote">
-                                    <div class="Quote Text--large">
+                                    <h3 class="Quote">
                                         « »
-                                    </div>
+                                    </h3>
                                 </div>
-                                <div class="Line"></div>
-                                <h4 class="Client">
+                                <div class="Client">
                                     <span>XXX<br>Director<br>@ CGT</span>
-                                </h4>
+                                </div>
                                 <div class="Logo__wrapper Project__background--CGT">
                                     <div class="Logo Logo__wrapper--CGT"></div>
                                 </div>
@@ -560,14 +559,13 @@ title: HTML page
                         <div data-slick-index="">
                             <div class="Testimonial">
                                 <div class="TestimonialQuote">
-                                    <div class="Quote Text--large">
+                                    <h3 class="Quote">
                                         « »
-                                    </div>
+                                    </h3>
                                 </div>
-                                <div class="Line"></div>
-                                <h4 class="Client">
+                                <div class="Client">
                                     <span>XXX<br>Director<br>@ ABTasty</span>
-                                </h4>
+                                </div>
                                 <div class="Logo__wrapper Project__background--ABTasty">
                                     <div class="Logo Logo__wrapper--ABTasty"></div>
                                 </div>
@@ -591,8 +589,10 @@ title: HTML page
 
             <!-- Screen 7 - FAQ -->
             <div data-anchor="faq" class="Fullscreen section Screen Faq">
-                <h2 class="Title">faq</h2>
-                <h3 class="Subtitle">What else?</h3>
+                <div class="Titles">
+                    <h4 class="Subtitle">What else?</h4>
+                    <h2 class="Title">faq</h2>
+                </div>
 
                 <div class="Pagination">
                     <div class="Page">
@@ -601,17 +601,17 @@ title: HTML page
                 </div>
 
                 <div class="Arrow--leftWrapper" onclick="javascript:$.fn.fullpage.moveSlideLeft();gtag('event', 'faq_previous_question');">
-                    <i class="Arrow Arrow--left icon ion-ios-arrow-left"></i>
+                    <i class="Arrow Arrow--left mdi mdi-chevron-left"></i>
                 </div>
 
                 <div class="Arrow--rightWrapper" onclick="javascript:$.fn.fullpage.moveSlideRight();gtag('event', 'faq_previous_question');">
-                    <i class="Arrow Arrow--right icon ion-ios-arrow-right"></i>
+                    <i class="Arrow Arrow--right mdi mdi-chevron-right"></i>
                 </div>
 
                 <div class="Questions">
                     <div class="slide">
                         <div class="QuestionGrid">
-                            <span class="QuestionTitle Text--large">What is <span class="Text--highlight">UX Design?</span></span>
+                            <h3 class="QuestionTitle"><span class="Text--highlight">What is UX Design?</span></h3>
 
                             <div class="QuestionContent" data-simplebar>
                                 <p>
@@ -623,7 +623,7 @@ title: HTML page
 
                     <div class="slide">
                         <div class="QuestionGrid">
-                            <span class="QuestionTitle Text--large">Question number 2</span>
+                            <h3 class="QuestionTitle">Question number 2</h3>
 
                             <div class="QuestionContent" data-simplebar>
                                 <p>
@@ -639,12 +639,14 @@ title: HTML page
             <!-- Screen 8 - Contact -->
             <div id="Contact" data-anchor="contact" class="Fullscreen section">
                 <div class="Screen Contact">
-                    <h3 class="Subtitle">Let's keep in touch</h3>
-                    <h2 class="Title">contact</h2>
+                    <div class="Titles">
+                        <h4 class="Subtitle">Let's keep in touch</h4>
+                        <h2 class="Title">contact</h2>
+                    </div>
 
 
                     <div class="WhyShouldYouContactMe">
-                        <div class="Text--large">Thank you for stopping by!</div>
+                        <h3>Thank you for stopping by!</h3>
                         <div class="WhyShouldYouContactMe__content">
                             <div>
                                 You have a project in mind?
@@ -659,18 +661,18 @@ title: HTML page
                     </div>
 
                     <div class="ContactDetails__TitleWrapper">
-                        <span class="ContactDetails__Title Text--large">
+                        <h3 class="ContactDetails__Title">
                             Here's how to <span class="Text--highlight">reach me</span>
-                        </span>
+                        </h3>
                     </div>
                     <div class="ContactDetails">
                         <div class="PhoneNumber">🇨🇦 (604) 910-9425</div>
                         <div class="PhoneNumber">🇫🇷 06 98 43 50 90</div>
                         <div class="Email">
-                            <i class="far fa-envelope"></i> alexa.gueguen@gmail.com
+                            <i class="mdi mdi-email-outline"></i> alexa.gueguen@gmail.com
                         </div>
                         <div class="Country">
-                            <i class="fas fa-map-marker-alt"></i> Vancouver, BC
+                            <i class="mdi mdi-map-marker"></i> Vancouver, BC
                         </div>
                     </div>
                 </div>
