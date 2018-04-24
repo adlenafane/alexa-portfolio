@@ -1301,7 +1301,7 @@ h1.Title {
 
 .Steps {
     grid-column-start: 2;
-    grid-column-end: 4;
+    grid-column-end: 7;
     grid-row-start: 2;
     grid-row-end: 5;
 
@@ -1349,84 +1349,131 @@ h1.Title {
     width: 100% !important;
 }
 
-.StepTitle {
-    border-radius: 8px;
-    background-color: var(--light-gray);
+.StepTitle__wrapper {
     padding: 25px 0;
-    width: calc(2 * var(--column-width)) !important;
+    width: calc(4 * var(--column-width) - var(--margin-screen-horizontal)) !important;
 
     display: flex !important;
     float: none !important;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     height: auto;
 
     transition: all .3s ease;
 
-    font-size: calc( 12px + (24 - 12)*(100vw - 400px)/(1920 - 400) );
-    color: var(--primary-color);
-    font-weight: 400;
     cursor: pointer;
 }
 
-.StepTitle + .StepTitle {
+.StepIcon {
+    --step-icon-size: 32px;
+
+    padding-left: calc(var(--margin-screen-horizontal) / 2);
+    padding-right: calc(var(--margin-screen-horizontal) / 2);
+
+    height: var(--step-icon-size);
+    width: var(--step-icon-size);
+}
+
+.StepText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.StepTitle {
+    font-size: calc( 12px + (24 - 12)*(100vw - 400px)/(1920 - 400) );
+    color: var(--primary-color);
+    font-weight: 400;
+}
+
+.StepTitle__wrapper + .StepTitle__wrapper {
     margin-top: var(--margin--step);
 }
 
-.StepTitle.slick-current {
-    background-color: var(--primary-color);
-    color: white;
-    font-weight: 700;
+.StepTitle__wrapper.slick-current {
+    border-radius: 8px;
+    background-color: var(--light-gray);
 }
 
 .Steps__Content {
-    grid-column-start: 5;
-    grid-column-end: 8;
+    grid-column-start: 6;
+    grid-column-end: 9;
     grid-row-start: 2;
-    grid-row-end: 6;
+    grid-row-end: 5;
+
+    margin-right: var(--margin-screen-horizontal);
 }
 
 .Step {
     display: grid;
-    grid-template-columns: repeat(4, var(--column-width));
-    grid-template-rows: var(--row-2-height) var(--row-3-height) var(--row-4-height) var(--row-5-height);
+    grid-template-columns: repeat(1, calc(
+        3 * var(--column-width) - var(--margin-screen-vertical)
+    ));
+    grid-template-rows: var(--row-2-height) var(--row-3-height) var(--row-4-height);
 }
 
 .StepPicture--1 {
-    background: url('https://source.unsplash.com/Qpjl_dXQrD8/1500x1000') no-repeat center center;
+    background: url('{{ site.baseurl }}/img/process/Auscultation.png') no-repeat center center;
 }
 
 .StepPicture--1:hover {
     background:
     linear-gradient(to bottom, rgba(89,91,212, 0.5), rgba(111,131,249,0.5)),
-    url('https://source.unsplash.com/Qpjl_dXQrD8/1500x1000')
+    url('{{ site.baseurl }}/img/process/Auscultation.png')
     no-repeat center center;
 }
 
 .StepPicture--2 {
-    background: url('https://source.unsplash.com/egfS7HzgKcc/1500x1000') no-repeat center center;
+    background: url('{{ site.baseurl }}/img/process/Analysis-w-empathy.jpg') no-repeat center center;
 }
 
 .StepPicture--2:hover {
     background:
     linear-gradient(to bottom, rgba(89,91,212, 0.5), rgba(111,131,249,0.5)),
-    url('https://source.unsplash.com/egfS7HzgKcc/1500x1000')
+    url('{{ site.baseurl }}/img/process/Analysis-w-empathy.jpg')
     no-repeat center center;
 }
 
 .StepPicture--3 {
-    background: url('https://source.unsplash.com/_STvosrG-pw/1500x1000') no-repeat center center;
+    background: url('{{ site.baseurl }}/img/process/Diagnostic.png') no-repeat center center;
 }
 
 .StepPicture--3:hover {
     background:
     linear-gradient(to bottom, rgba(89,91,212, 0.5), rgba(111,131,249,0.5)),
-    url('https://source.unsplash.com/_STvosrG-pw/1500x1000')
+    url('{{ site.baseurl }}/img/process/Diagnostic.png')
+    no-repeat center center;
+}
+
+.StepPicture--4 {
+    background: url('{{ site.baseurl }}/img/process/Treatment.png') no-repeat center center;
+}
+
+.StepPicture--4:hover {
+    background:
+    linear-gradient(to bottom, rgba(89,91,212, 0.5), rgba(111,131,249,0.5)),
+    url('{{ site.baseurl }}/img/process/Treatment.png')
+    no-repeat center center;
+}
+
+.StepPicture--5 {
+    background: url('{{ site.baseurl }}/img/process/Follow-up.jpg') no-repeat center center;
+}
+
+.StepPicture--5:hover {
+    background:
+    linear-gradient(to bottom, rgba(89,91,212, 0.5), rgba(111,131,249,0.5)),
+    url('{{ site.baseurl }}/img/process/Follow-up.jpg')
     no-repeat center center;
 }
 
 .Step .StepPicture {
-    background-color: var(--light-gray);
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 4;
+
     border-radius: 25px;
 
     overflow: hidden;
@@ -1451,57 +1498,6 @@ h1.Title {
 
 .StepPicture:hover i {
     opacity: 1;
-}
-
-.StepPicture--primary {
-    background-color: var(--primary-color);
-}
-
-.StepPicture--topLeft {
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 1;
-    grid-row-end: 2;
-
-    margin-bottom: 5px;
-    margin-right: 5px;
-}
-.StepPicture--topRight {
-    grid-column-start: 3;
-    grid-column-end: 4;
-    grid-row-start: 1;
-    grid-row-end: 2;
-
-    margin-bottom: 5px;
-    margin-left: 5px;
-}
-.StepPicture--bottom {
-    grid-column-start: 1;
-    grid-column-end: 4;
-    grid-row-start: 2;
-    grid-row-end: 4;
-
-    margin-top: 5px;
-}
-
-.Step__Text {
-    grid-column-start: 1;
-    grid-column-end: 4;
-    grid-row-start: 4;
-    grid-row-end: 5;
-
-    letter-spacing: 0.25px;
-    line-height: 1.45;
-
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    justify-content: flex-end;
-}
-
-.Step__Text--highlight {
-    color: var(--primary-color);
-    font-weight: 700;
 }
 
 /* Tablet */

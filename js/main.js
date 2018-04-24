@@ -104,11 +104,11 @@ $(document).ready(function() {
                 }
             }
         },
-        onLeave: function(index, nextIndex, direction) {
-            console.log(index, nextIndex, direction);
-            console.log(nextIndex === 7 && index !== 6);
-            if(nextIndex === 7 && index !== 6) return false;
-        },
+        // onLeave: function(index, nextIndex, direction) {
+        //     console.log(index, nextIndex, direction);
+        //     console.log(nextIndex === 7 && index !== 6);
+        //     if(nextIndex === 7 && index !== 6) return false;
+        // },
     });
 
     $('.TotalPages--process').text('/' + $('.Process .slide').length);
