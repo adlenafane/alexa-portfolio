@@ -497,7 +497,7 @@ header nav {
     }
 
     #menuIconCheckbox ~ #menu {
-        display: none;
+        visibility: hidden;
     }
 
     #menuIconCheckbox:checked ~ #menu {
@@ -505,7 +505,9 @@ header nav {
         height: 100vh;
         background-color: var(--primary-color);
 
-        display: flex
+        display: flex;
+        visibility: visible;
+        transition: .5s ease-in-out;
     }
 
     .Link__internal + .Link__internal {

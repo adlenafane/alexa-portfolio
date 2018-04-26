@@ -84,7 +84,6 @@ $(document).ready(function() {
                     clearInterval(window.homeInterval);
                 }
             });
-
         },
         onSlideLeave: function( anchorLink, index, slideIndex, direction, nextSlideIndex) {
             $(`.CurrentPage--${anchorLink}`).text(nextSlideIndex + 1);
@@ -246,14 +245,10 @@ $(document).ready(function() {
               'value': isMenuOpen
             });
 
-            // $('.MenuButton i').toggleClass('hide');
+            var checkBoxe = $("#menuIconCheckbox");
+            checkBoxe.prop("checked", !checkBoxe.prop("checked"));
 
-            // if(isMenuOpen) {
-            //     $('.Icon:not(.MenuButton)').css('display', 'flex');
-            //     $('#menu').addClass('fullscreen');
-            // } else {
-
-            // }
+            return false; // Prevent propagation to fullpage
         });
     }
 });
