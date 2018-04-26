@@ -19,6 +19,7 @@ title: HTML page
 
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.6/jquery.fullpage.min.css" />
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/simplebar@2.6.0/dist/simplebar.css"/>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css" integrity="sha384-OHBBOqpYHNsIqQy8hL1U+8OXf9hH6QRxi0+EODezv82DfnZoV7qoHAZDwMwEJvSw" crossorigin="anonymous">
 
@@ -355,6 +356,17 @@ title: HTML page
                                 >
                                     <i class="mdi mdi-magnify-plus-outline"></i>
                                 </div>
+                                <div class="StepTitle__wrapper MobileOnly">
+                                    <i class="StepIcon mdi mdi-stethoscope"></i>
+                                    <div class="StepText">
+                                        <div class="StepTitle">
+                                            Auscultation
+                                        </div>
+                                        <div>
+                                            Understand and validate the problem. Set all the expectations.
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div data-slick-index="1">
@@ -365,6 +377,17 @@ title: HTML page
                                     data-fancybox="step-2"
                                 >
                                     <i class="mdi mdi-magnify-plus-outline"></i>
+                                </div>
+                                <div class="StepTitle__wrapper MobileOnly">
+                                    <i class="StepIcon mdi mdi-test-tube"></i>
+                                    <div class="StepText">
+                                        <div class="StepTitle">
+                                            Analysis w/ empathy
+                                        </div>
+                                        <div>
+                                            Master the business. Know the users. Bring insights.
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -377,6 +400,17 @@ title: HTML page
                                 >
                                     <i class="mdi mdi-magnify-plus-outline"></i>
                                 </div>
+                                <div class="StepTitle__wrapper MobileOnly">
+                                    <i class="StepIcon mdi mdi-clipboard-pulse-outline"></i>
+                                    <div class="StepText">
+                                        <div class="StepTitle">
+                                            Diagnostic
+                                        </div>
+                                        <div>
+                                            Recap the research results. Brainstorm. Test with users.
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div data-slick-index="3">
@@ -388,6 +422,17 @@ title: HTML page
                                 >
                                     <i class="mdi mdi-magnify-plus-outline"></i>
                                 </div>
+                                <div class="StepTitle__wrapper MobileOnly">
+                                    <i class="StepIcon mdi mdi-pill"></i>
+                                    <div class="StepText">
+                                        <div class="StepTitle">
+                                            Treatment
+                                        </div>
+                                        <div>
+                                            Make improvements. Build an MVP. Implement the solution.
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div data-slick-index="4">
@@ -398,6 +443,17 @@ title: HTML page
                                     data-fancybox="step-5"
                                 >
                                     <i class="mdi mdi-magnify-plus-outline"></i>
+                                </div>
+                                <div class="StepTitle__wrapper MobileOnly">
+                                    <i class="StepIcon mdi mdi-finance"></i>
+                                    <div class="StepText">
+                                        <div class="StepTitle">
+                                            Follow up
+                                        </div>
+                                        <div>
+                                            Track your KPIs. Do a retrospective. Grow.
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -419,16 +475,19 @@ title: HTML page
                     </h3>
 
                     <div class="ArticlesWrapper">
-                        <div class="Article Article--1">
-                            <div class="Article__picture">
-                                <img class="Article__picture--logo" src="{{ site.baseurl }}/img/Monogram.png">
-                            </div>
-                            <a class="Article__title" target="_blank" href="https://medium.com/@alexa.gueguen/why-working-remotely-is-a-good-idea-474ae570b958">
+                        <a
+                            class="Article Article--1"
+                            target="_blank"
+                            href="https://medium.com/@alexa.gueguen/why-working-remotely-is-a-good-idea-474ae570b958">
+                            <div class="Article__picture"></div>
+                            <div class="Article__title" target="_blank" href="https://medium.com/@alexa.gueguen/why-working-remotely-is-a-good-idea-474ae570b958">
                                 <span>Why working remotely is a good idea?</span>
                                 <span class="Text--subtle">(Open in a new tab)</span>
-                            </a>
-                            <div class="Article__category">Work, Remote</div>
-                        </div>
+                            </div>
+                            <div class="Article__category">
+                                <i class="mdi mdi-tag-multiple"></i> Work, Remote
+                            </div>
+                        </a>
 
                         <!-- <div class="Article Article--2">
                             <div class="Article__picture Article__picture--empty">
@@ -614,7 +673,7 @@ title: HTML page
                             <h3 class="QuestionTitle"><span class="Text--highlight">What is UX Design?</span></h3>
 
                             <div class="QuestionContent" data-simplebar>
-                                <p>
+                                <p class="QuestionContent--padding">
                                     First of all, what is not Design? :) Design is everywhere and everything has been designed, from the way we wake up to the way we work or even communicate with others or with tools. So UX Design or User Experience Design is how we build all those interactions for a product or a service, and how we make it the more valuable, smooth and aesthetic for users as possible. So as UX Designer our goal is to understand what people think wanted, and how to give them not what they’re asking for, but what they really need.
                                 </p>
                             </div>
@@ -623,12 +682,53 @@ title: HTML page
 
                     <div class="slide">
                         <div class="QuestionGrid">
-                            <h3 class="QuestionTitle">Question number 2</h3>
+                            <h3 class="QuestionTitle"><span class="Text--highlight">Why does it matter?</span></h3>
 
                             <div class="QuestionContent" data-simplebar>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                <p class="QuestionContent--padding">
+                                    UX Design matters because it’s about all the experiences that we deliver with empathy to improve people’s life. It’s about resolving strategic problems and make sure that users of our solution are happy(-ier) without thinking about how we did it. User experience never ends. All that we designed need to be improved. It needs to be more effective for all stakeholders, users and business. That’s why it’s so crucial to stay motivated and carry out iteratively. In the end, it’s bringing value to what we produce, it’s about giving a sense to our work intentionally. Briefly, UX Design is about what matters in general.
                                 </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="slide">
+                        <div class="QuestionGrid">
+                            <h3 class="QuestionTitle"><span class="Text--highlight">How would you explain the UX design process?</span></h3>
+
+                            <div class="QuestionContent" data-simplebar>
+                                <p class="QuestionContent--padding">
+                                    User experience, or any name that we could give to it (that’s crazy right?), is a process that people follow when they want to solve effectively a problem that they’re facing. This process mainly covers User Research, Usability, Information Architecture, User Interface Design, Interaction Design, and in mature businesses Experience Strategy.
+                                    <br>
+                                    By focusing on human, UX Design allows answering to the business expectations without forgetting the user needs. Because in the end, it is them that will pay -or not- for the product or the service you made. This empathy can be built thanks to face-to-face interviews, surveys, heuristic evaluation, card sorting or any study that gives a voice to users.
+                                    <br>
+                                    The idea behind UX design process is to make the experience easy-to-learn, easy-to-use, easy-to-remember. The person wants to benefit from a smooth and delightful solution that will simplify his/her life. So, with all those qualitative and quantitative data, the designer can make objective decisions to reach this goal. After thinking to the main user flows and interactions, the designer can prototype and test with real users. It's also the key to success.
+
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="slide">
+                        <div class="QuestionGrid">
+                            <h3 class="QuestionTitle"><span class="Text--highlight">What tools do you use? Why have you chosen them over their alternatives?</span></h3>
+
+                            <div class="QuestionContent" data-simplebar>
+                                <div class="QuestionContent--padding">
+                                    I don’t think that tools do the designer. But of course, I have a huge set of tools that help me daily, especially as a remote UX designer and freelancer.
+                                    <br>
+                                    <ul>
+                                        <li>My favourite: pencil & paper! Yes, it is. To take notes, share ideas, test and iterate faster.</li>
+                                        <li>Google suite with Doc, Sheet, Slides and Form for research, documentation and communication.</li>
+                                        <li>Join.me for remote moderated field study.</li>
+                                        <li>Sketch for wireframing, prototyping, creating design system and visual design.</li>
+                                        <li>Invision or Marvel App for prototyping.</li>
+                                        <li>Anima or Invision Studio for creating animations.</li>
+                                        <li>Zeplin for sharing my design with the tech team.</li>
+                                        <li>Google Analytics for collecting and analyzing user behaviour, acquisition and conversion.</li>
+                                        <li>Other tools I occasionally use: Note.ly for post-it board & brainstorming. Pixton for sharing insights through storyboard. Trello for easily following progress. Mind42 for making mental model like mind map. SurveyMonkey for quantitative surveys. Segment.io for collecting the data. Mixpanel for tracking adoption/retention. Google Data Studio for making updated data reports.</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>

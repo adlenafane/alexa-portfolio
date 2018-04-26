@@ -122,16 +122,41 @@ $(document).ready(function() {
       slidesToScroll: 1,
       arrows: false,
       fade: true,
-      asNavFor: '.Steps'
+      dots: false,
+      asNavFor: '.Steps',
+      responsive: [
+        {
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 1,
+                arrows: false,
+                fade: true,
+                dots: true,
+                fade: true,
+                asNavFor: '.Steps',
+            }
+        }
+      ],
     });
     $('.Steps').slick({
       slidesToShow: 5,
-      slidesToScroll: 1,
       asNavFor: '.Steps__Content',
       dots: false,
       centerMode: true,
       focusOnSelect: true,
       arrows: false,
+      responsive: [
+        {
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                asNavFor: '.Steps__Content',
+                dots: false,
+                arrows: false,
+            }
+        }
+      ]
     });
 });
 $(document).ready(function() {
