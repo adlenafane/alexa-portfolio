@@ -46,25 +46,9 @@ $(document).ready(function() {
             window.gtag('config', window.googleAnalyticsUA, {'page_path': '/' + anchorLink});
         },
         afterRender: function() {
-            var height = window.innerHeight;
-            var a = setInterval(function() {
-                $(window).scrollTop(-1);
-                resize();
-            }, 500); // Don't lower more than 500ms, otherwise there will be animation-problems with the  Safari toolbar
-
-            $(window).on('resize', function() {
-                resize();
-            });
-
-            var resize = function() {
-                if(window.innerHeight != height) {
-                    height = window.innerHeight;
-                    $('.section').css('height', height + 'px');
-                }
-            };
             $('.Loader').addClass('slideAndHide');
 
-            var fadeInUpSelectors = '.Title, .Subtitle, .Description, .ResumeWrapper, .ArticlesTitle, .Article, .QuestionTitle, .QuestionContent, .WhyShouldYouContactMe, .ContactDetails__TitleWrapper, .ContactDetails';
+            var fadeInUpSelectors = '.Title, .Subtitle, .Description, .ResumeWrapper, .ArticlesTitle, .Article, .QuestionTitle, .QuestionContent, .WhyShouldYouContactMe, .WhyShouldYouContactMe__content, .ContactDetails__TitleWrapper, .ContactDetails, .StepTitle__wrapper';
             var fadeInRightSelectors = '.About__background, .About .EmptySpace, .StepPicture';
             var fadeInSelectors = '.Pagination, .Page, .Arrow';
 
@@ -141,7 +125,7 @@ $(document).ready(function() {
       asNavFor: '.Steps',
       responsive: [
         {
-            breakpoint: 768,
+            breakpoint: 992,
             settings: {
                 slidesToShow: 1,
                 arrows: false,
@@ -162,7 +146,7 @@ $(document).ready(function() {
       arrows: false,
       responsive: [
         {
-            breakpoint: 768,
+            breakpoint: 992,
             settings: {
                 slidesToShow: 1,
                 slidesToScroll: 1,
