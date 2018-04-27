@@ -416,7 +416,7 @@ header nav {
 
 .Link__internal {
     font-family: Lato, sans-serif;
-    font-size: 20px;
+    font-size: calc( 10px + (20 - 10)*(100vw - 320px)/(1920 - 320) );
     color: var(--dark-gray);
     text-decoration: none;
     padding: 3vh 0;
@@ -563,7 +563,7 @@ header nav {
     border-radius: 50%;
 
     color: var(--dark-gray);
-    font-size: calc( 20px + (30 - 20)*(100vw - 320px)/(1920 - 320) );
+    font-size: calc( 10px + (30 - 10)*(100vw - 320px)/(1920 - 320) );
     text-decoration: none;
 
     display: flex;
@@ -646,6 +646,7 @@ h1.Title {
     }
 
     .Icon {
+        font-size: calc( 20px + (30 - 20)*(100vw - 320px)/(1920 - 320) );
         pointer-events: all;
     }
 
