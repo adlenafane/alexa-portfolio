@@ -1295,7 +1295,7 @@ h1.Title {
 
 .Steps {
     grid-column-start: 2;
-    grid-column-end: 7;
+    grid-column-end: 6;
     grid-row-start: 2;
     grid-row-end: 5;
 
@@ -1340,11 +1340,13 @@ h1.Title {
     justify-content: space-between;
     text-align: center;
     height: 100%;
-    width: 100% !important;
+    /*width: 100% !important;*/
 }
 
 .StepTitle__wrapper {
-    padding: 25px calc(var(--margin-screen-horizontal) / 2);
+    padding: 25px;
+    padding-left: calc(var(--margin-screen-horizontal) / 2);
+    margin-right: calc(var(--margin-screen-horizontal) / 2);
     width: calc(4 * var(--column-width) - var(--margin-screen-horizontal)) !important;
 
     display: flex !important;
@@ -1401,14 +1403,17 @@ h1.Title {
     grid-row-end: 5;
 
     margin-right: var(--margin-screen-horizontal);
+    margin-left: var(--margin-screen-horizontal);
 }
 
 .Step {
     display: grid;
     grid-template-columns: repeat(1, calc(
-        3 * var(--column-width) - var(--margin-screen-vertical)
+        3 * var(--column-width) - 2 * var(--margin-screen-vertical)
     ));
     grid-template-rows: var(--row-2-height) var(--row-3-height) var(--row-4-height);
+    border-radius: 25px;
+    overflow: hidden;
 }
 
 .StepPicture--1 {
