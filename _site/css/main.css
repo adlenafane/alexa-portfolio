@@ -559,7 +559,7 @@ header nav {
     border-radius: 50%;
 
     color: var(--dark-gray);
-    font-size: 30px;
+    font-size: calc( 20px + (30 - 20)*(100vw - 320px)/(1920 - 320) );
     text-decoration: none;
 
     display: flex;
@@ -734,11 +734,11 @@ h1.Title {
 }
 
 /* Mobile */
-@media (max-width: 767.98px) {
+/*@media (max-width: 767.98px) {
     .Icon {
         font-size: 20px;
     }
-}
+}*/
 
 
 /*
