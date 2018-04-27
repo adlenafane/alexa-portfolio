@@ -46,10 +46,26 @@ $(document).ready(function() {
             window.gtag('config', window.googleAnalyticsUA, {'page_path': '/' + anchorLink});
         },
         afterRender: function() {
+            var height = window.innerHeight;
+            var a = setInterval(function() {
+                $(window).scrollTop(-1);
+                resize();
+            }, 500); // Don't lower more than 500ms, otherwise there will be animation-problems with the  Safari toolbar
+
+            $(window).on('resize', function() {
+                resize();
+            });
+
+            var resize = function() {
+                if(window.innerHeight != height) {
+                    height = window.innerHeight;
+                    $('.section').css('height', height + 'px');
+                }
+            };
             $('.Loader').addClass('slideAndHide');
 
             var fadeInUpSelectors = '.Title, .Subtitle, .Description, .ResumeWrapper, .ArticlesTitle, .Article, .QuestionTitle, .QuestionContent, .WhyShouldYouContactMe, .ContactDetails__TitleWrapper, .ContactDetails';
-            var fadeInRightSelectors = '.About__background, .About .EmptySpace';
+            var fadeInRightSelectors = '.About__background, .About .EmptySpace, .StepPicture';
             var fadeInSelectors = '.Pagination, .Page, .Arrow';
 
             $(fadeInUpSelectors).addClass('opacity-0');
