@@ -1735,7 +1735,8 @@ h1.Title {
     background-color: transparent;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: center;
+    margin-top: var(--margin-screen-vertical);
 }
 
 .Testimonials .Quote {
