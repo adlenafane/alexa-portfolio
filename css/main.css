@@ -599,7 +599,7 @@ h2 {
     font-weight: 300;
 
     font-size: calc( 32px + (72 - 32)*(100vw - 320px)/(1920 - 320) );
-    letter-spacing: 2.4px;
+    /*letter-spacing: 2.4px;*/
 }
 
 h3 {
