@@ -20,101 +20,6 @@
   };
 }(jQuery, window));
 
-// Slide page per page
-$(document).ready(function() {
-    window.isMobile = window.innerWidth < 768;
-    window.isMobileOrTablet = window.innerWidth < 992;
-
-    if(window.isMobile) {
-        var aboutMobileSection = $("#About--mobileInvisible").clone();
-
-        aboutMobileSection.attr("id", "About--mobile")
-        .insertBefore('#About')
-        .attr('data-anchor', 'fullpage-picture')
-        .addClass('section')
-        .addClass('Fullscreen')
-        .show();
-    }
-
-    $('#fullpage').fullpage({
-        menu: '#menu',
-        scrollBar: true,
-        fixedElements: '.Header, .Links',
-        slidesNavigation: true,
-        normalScrollElements: '.QuestionContent',
-        responsiveWidth: 768,
-        afterLoad: function(anchorLink, index) {
-            window.gtag('config', window.googleAnalyticsUA, {'page_path': '/' + anchorLink});
-        },
-        afterRender: function() {
-            $('.Loader').addClass('slideAndHide');
-
-            var fadeInUpSelectors = '.Title, .Subtitle, .Description, .ResumeWrapper, .ArticlesTitle, .Article, .QuestionTitle, .QuestionContent, .WhyShouldYouContactMe, .WhyShouldYouContactMe__content, .ContactDetails__TitleWrapper, .ContactDetails, .StepTitle__wrapper';
-            var fadeInRightSelectors = '.About__background, .About .EmptySpace, .StepPicture, .ArticlesWrapper';
-            var fadeInSelectors = '.Pagination, .Page, .Arrow, .ArrowRepeat__wrapper';
-
-            $(fadeInUpSelectors).addClass('opacity-0');
-            $(fadeInRightSelectors).addClass('opacity-0');
-            $(fadeInSelectors).addClass('opacity-0');
-
-            window.setTimeout(function() {
-                $('.Credentials__Portfolio, .Credentials__Name').inViewport(function (px) {
-                    if(px) $(this).addClass('animated fadeInDown') ;
-                });
-                $(fadeInUpSelectors).inViewport(function (px) {
-                    if(px) $(this).addClass('animated fadeInUp') ;
-                });
-                $(fadeInRightSelectors).inViewport(function (px) {
-                    if(px) $(this).addClass('animated fadeInRight') ;
-                });
-                $(fadeInSelectors).inViewport(function (px) {
-                    if(px) {
-                        $(this).addClass('animated fadeIn');
-                    } ;
-                });
-            }, 1700);
-
-            $('.Home').inViewport(function (px) {
-                if(px === window.innerHeight) {
-                    $('.Project__loaderBarBg').addClass('animate');
-                    window.homeInterval = window.setInterval(function() {
-                        $.fn.fullpage.moveSlideRight();
-                    }, 8000);
-                } else {
-                    $('.Project__loaderBarBg').removeClass('animate');
-                    clearInterval(window.homeInterval);
-                }
-            });
-        },
-        onSlideLeave: function( anchorLink, index, slideIndex, direction, nextSlideIndex) {
-            $(`.CurrentPage--${anchorLink}`).text(nextSlideIndex + 1);
-
-            if(anchorLink === 'process') {
-                if(direction == 'right') {
-                    if(nextSlideIndex === 0) {
-                        $('.SmallPictureSlick').slick('slickPrev');
-                        $('.LargePictureSlick').slick('slickPrev');
-                    } else {
-                        $('.SmallPictureSlick').slick('slickNext');
-                        $('.LargePictureSlick').slick('slickNext');
-                    }
-                } else {
-                    $('.SmallPictureSlick').slick('slickPrev');
-                    $('.LargePictureSlick').slick('slickPrev');
-                }
-            }
-        },
-        // onLeave: function(index, nextIndex, direction) {
-        //     console.log(index, nextIndex, direction);
-        //     console.log(nextIndex === 7 && index !== 6);
-        //     if(nextIndex === 7 && index !== 6) return false;
-        // },
-    });
-
-    $('.TotalPages--process').text('/' + $('.Process .slide').length);
-    $('.TotalPages--faq').text('/' + $('.Faq .slide').length);
-});
-
 // Slick
 $(document).ready(function() {
     $('.Steps__Content').slick({
@@ -252,6 +157,101 @@ $(document).ready(function() {
             return false; // Prevent propagation to fullpage
         });
     }
+});
+
+// Slide page per page
+$(document).ready(function() {
+    window.isMobile = window.innerWidth < 768;
+    window.isMobileOrTablet = window.innerWidth < 992;
+
+    if(window.isMobile) {
+        var aboutMobileSection = $("#About--mobileInvisible").clone();
+
+        aboutMobileSection.attr("id", "About--mobile")
+        .insertBefore('#About')
+        .attr('data-anchor', 'fullpage-picture')
+        .addClass('section')
+        .addClass('Fullscreen')
+        .show();
+    }
+
+    $('#fullpage').fullpage({
+        menu: '#menu',
+        scrollBar: true,
+        fixedElements: '.Header, .Links',
+        slidesNavigation: true,
+        normalScrollElements: '.QuestionContent',
+        responsiveWidth: 768,
+        afterLoad: function(anchorLink, index) {
+            window.gtag('config', window.googleAnalyticsUA, {'page_path': '/' + anchorLink});
+        },
+        afterRender: function() {
+            $('.Loader').addClass('slideAndHide');
+
+            var fadeInUpSelectors = '.Title, .Subtitle, .Description, .ResumeWrapper, .ArticlesTitle, .Article, .QuestionTitle, .QuestionContent, .WhyShouldYouContactMe, .WhyShouldYouContactMe__content, .ContactDetails__TitleWrapper, .ContactDetails, .StepTitle__wrapper';
+            var fadeInRightSelectors = '.About__background, .About .EmptySpace, .StepPicture, .ArticlesWrapper';
+            var fadeInSelectors = '.Pagination, .Page, .Arrow, .ArrowRepeat__wrapper';
+
+            $(fadeInUpSelectors).addClass('opacity-0');
+            $(fadeInRightSelectors).addClass('opacity-0');
+            $(fadeInSelectors).addClass('opacity-0');
+
+            window.setTimeout(function() {
+                $('.Credentials__Portfolio, .Credentials__Name').inViewport(function (px) {
+                    if(px) $(this).addClass('animated fadeInDown') ;
+                });
+                $(fadeInUpSelectors).inViewport(function (px) {
+                    if(px) $(this).addClass('animated fadeInUp') ;
+                });
+                $(fadeInRightSelectors).inViewport(function (px) {
+                    if(px) $(this).addClass('animated fadeInRight') ;
+                });
+                $(fadeInSelectors).inViewport(function (px) {
+                    if(px) {
+                        $(this).addClass('animated fadeIn');
+                    } ;
+                });
+            }, 1700);
+
+            $('.Home').inViewport(function (px) {
+                if(px === window.innerHeight) {
+                    $('.Project__loaderBarBg').addClass('animate');
+                    window.homeInterval = window.setInterval(function() {
+                        $.fn.fullpage.moveSlideRight();
+                    }, 8000);
+                } else {
+                    $('.Project__loaderBarBg').removeClass('animate');
+                    clearInterval(window.homeInterval);
+                }
+            });
+        },
+        onSlideLeave: function( anchorLink, index, slideIndex, direction, nextSlideIndex) {
+            $(`.CurrentPage--${anchorLink}`).text(nextSlideIndex + 1);
+
+            if(anchorLink === 'process') {
+                if(direction == 'right') {
+                    if(nextSlideIndex === 0) {
+                        $('.SmallPictureSlick').slick('slickPrev');
+                        $('.LargePictureSlick').slick('slickPrev');
+                    } else {
+                        $('.SmallPictureSlick').slick('slickNext');
+                        $('.LargePictureSlick').slick('slickNext');
+                    }
+                } else {
+                    $('.SmallPictureSlick').slick('slickPrev');
+                    $('.LargePictureSlick').slick('slickPrev');
+                }
+            }
+        },
+        // onLeave: function(index, nextIndex, direction) {
+        //     console.log(index, nextIndex, direction);
+        //     console.log(nextIndex === 7 && index !== 6);
+        //     if(nextIndex === 7 && index !== 6) return false;
+        // },
+    });
+
+    $('.TotalPages--process').text('/' + $('.Process .slide').length);
+    $('.TotalPages--faq').text('/' + $('.Faq .slide').length);
 });
 
 // Hide Header on on scroll down
