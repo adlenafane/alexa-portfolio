@@ -1,10 +1,9 @@
 :root {
     /*--primary-color: #5A71FF;*/
     --primary-color: #595BD4;
-    --secondary-color: #E5EAEB;
+    --secondary-color: #f6f7fd;
     --dark-gray: #4a4a4a;
     --medium-gray: #9B9B9B;
-    --light-gray: #f6f7fd;
     --highlight-color: #fff463;
 
     --column-width: 12.5vw;
@@ -912,7 +911,7 @@ h1.Title {
     justify-content: space-around;
 
     padding: var(--margin-screen-vertical) var(--margin-screen-horizontal);
-    background-color: var(--light-gray);
+    background-color: var(--secondary-color);
     text-align: left;
     color: var(--dark-gray);
 
@@ -1185,8 +1184,7 @@ h1.Title {
 .Resume span {
     position: relative;
     font-size: var(--font-size);
-    line-height: calc(var(--font-size));
-    vertical-align: middle;
+    line-height: var(--font-size);
     padding-left: 1px;
 }
 
@@ -1194,7 +1192,7 @@ h1.Title {
     --size: calc( 18px + (36 - 18)*(100vw - 320px)/(1920 - 432) );;
     position: relative;
     align-self: flex-start;
-    margin-right: 1.6vw;
+    margin-right: 2.2vw;
 
     font-size: var(--size);
     line-height: var(--font-size);
@@ -1293,7 +1291,7 @@ h1.Title {
     grid-column-start: 2;
     grid-column-end: 6;
     grid-row-start: 2;
-    grid-row-end: 5;
+    grid-row-end: 6;
 
     display: flex;
     flex-direction: column;
@@ -1308,7 +1306,7 @@ h1.Title {
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 2;
-    grid-row-end: 5;
+    grid-row-end: 6;
 
     display: flex;
     align-items: center;
@@ -1317,7 +1315,7 @@ h1.Title {
 
 .ArrowRepeat {
     height: calc(
-        0.9 * (var(--row-2-height) + var(--row-3-height) + var(--row-4-height) - 4 * var(--margin--step))
+        0.9 * (var(--row-2-height) + var(--row-3-height) + var(--row-4-height) + var(--row-5-height) - 4 * var(--margin--step))
     ) !important;
 }
 
@@ -1389,7 +1387,7 @@ h1.Title {
 
 .StepTitle__wrapper.slick-current {
     border-radius: 8px;
-    background-color: var(--light-gray);
+    background-color: var(--secondary-color);
 }
 
 .Steps__Content {
@@ -1408,7 +1406,7 @@ h1.Title {
         3 * var(--column-width) - 2 * var(--margin-screen-vertical)
     ));
     grid-template-rows: var(--row-2-height) var(--row-3-height) var(--row-4-height);
-    border-radius: 25px;
+    border-radius: 8px;
     overflow: hidden;
 }
 
@@ -1473,7 +1471,7 @@ h1.Title {
     grid-row-start: 1;
     grid-row-end: 4;
 
-    border-radius: 25px;
+    border-radius: 8px;
 
     overflow: hidden;
 
@@ -1670,7 +1668,7 @@ h1.Title {
     align-items: center;
     justify-content: flex-start;
 
-    background-color: var(--light-gray);
+    background-color: var(--secondary-color);
     padding-left: calc( 10px + (20 - 10)*(100vw - 320px)/(1920 - 320) );
     padding-right: calc( 10px + (20 - 10)*(100vw - 320px)/(1920 - 320) );
 }
@@ -1729,7 +1727,7 @@ h1.Title {
     grid-row-start: 1;
     grid-row-end: 5;
 
-    background-color: var(--light-gray);
+    background-color: var(--secondary-color);
 }
 
 .TestimonialQuote {
@@ -2018,7 +2016,7 @@ h1.Title {
     grid-row-start: 4;
     grid-row-end: 5;
 
-    background-color: var(--light-gray);
+    background-color: var(--secondary-color);
     margin-top: 1.5vh;
 
     display: flex;
@@ -2032,7 +2030,7 @@ h1.Title {
     grid-row-start: 3;
     grid-row-end: 4;
 
-    background-color: var(--light-gray);
+    background-color: var(--secondary-color);
     margin-top: 1.5vh;
 
     display: flex;
