@@ -50,8 +50,8 @@ $(document).ready(function() {
             $('.Loader').addClass('slideAndHide');
 
             var fadeInUpSelectors = '.Title, .Subtitle, .Description, .ResumeWrapper, .ArticlesTitle, .Article, .QuestionTitle, .QuestionContent, .WhyShouldYouContactMe, .WhyShouldYouContactMe__content, .ContactDetails__TitleWrapper, .ContactDetails, .StepTitle__wrapper';
-            var fadeInRightSelectors = '.About__background, .About .EmptySpace, .StepPicture';
-            var fadeInSelectors = '.Pagination, .Page, .Arrow';
+            var fadeInRightSelectors = '.About__background, .About .EmptySpace, .StepPicture, .ArticlesWrapper';
+            var fadeInSelectors = '.Pagination, .Page, .Arrow, .ArrowRepeat__wrapper';
 
             $(fadeInUpSelectors).addClass('opacity-0');
             $(fadeInRightSelectors).addClass('opacity-0');
