@@ -47,12 +47,9 @@ $(document).ready(function() {
             window.gtag('config', window.googleAnalyticsUA, {'page_path': '/' + anchorLink});
         },
         afterRender: function() {
-            // Display index for project on Home
-            $('.Home .fp-slidesNav ul li a span').text((index) => {
-                return (index + 1);
-            });
-
-            $('.Loader').addClass('slideAndHide');
+            $('.fp-prev').addClass('mdi mdi-chevron-left');
+            $('.fp-next').addClass('mdi mdi-chevron-right');
+            // $('.Loader').addClass('slideAndHide');
 
 
             var fadeInUpSelectors = '.Title, .Subtitle, .Description, .ResumeWrapper, .ArticlesTitle, .Article, .QuestionTitle, .QuestionContent, .WhyShouldYouContactMe, .WhyShouldYouContactMe__content, .ContactDetails__TitleWrapper, .ContactDetails, .StepTitle__wrapper';
@@ -85,7 +82,7 @@ $(document).ready(function() {
                     $('.Project__loaderBarBg').addClass('animate');
                     window.homeInterval = window.setInterval(function() {
                         $.fn.fullpage.moveSlideRight();
-                    }, 8000);
+                    }, 8000000);
                 } else {
                     $('.Project__loaderBarBg').removeClass('animate');
                     clearInterval(window.homeInterval);
@@ -93,22 +90,22 @@ $(document).ready(function() {
             });
         },
         onSlideLeave: function( anchorLink, index, slideIndex, direction, nextSlideIndex) {
-            $(`.CurrentPage--${anchorLink}`).text(nextSlideIndex + 1);
+            // $(`.CurrentPage--${anchorLink}`).text(nextSlideIndex + 1);
 
-            if(anchorLink === 'process') {
-                if(direction == 'right') {
-                    if(nextSlideIndex === 0) {
-                        $('.SmallPictureSlick').slick('slickPrev');
-                        $('.LargePictureSlick').slick('slickPrev');
-                    } else {
-                        $('.SmallPictureSlick').slick('slickNext');
-                        $('.LargePictureSlick').slick('slickNext');
-                    }
-                } else {
-                    $('.SmallPictureSlick').slick('slickPrev');
-                    $('.LargePictureSlick').slick('slickPrev');
-                }
-            }
+            // if(anchorLink === 'process') {
+            //     if(direction == 'right') {
+            //         if(nextSlideIndex === 0) {
+            //             $('.SmallPictureSlick').slick('slickPrev');
+            //             $('.LargePictureSlick').slick('slickPrev');
+            //         } else {
+            //             $('.SmallPictureSlick').slick('slickNext');
+            //             $('.LargePictureSlick').slick('slickNext');
+            //         }
+            //     } else {
+            //         $('.SmallPictureSlick').slick('slickPrev');
+            //         $('.LargePictureSlick').slick('slickPrev');
+            //     }
+            // }
         },
         // onLeave: function(index, nextIndex, direction) {
         //     console.log(index, nextIndex, direction);
@@ -117,7 +114,7 @@ $(document).ready(function() {
         // },
     });
 
-    $('.TotalPages--process').text('/' + $('.Process .slide').length);
+    // $('.TotalPages--process').text('/' + $('.Process .slide').length);
     $('.TotalPages--faq').text('/' + $('.Faq .slide').length);
 });
 
@@ -129,7 +126,7 @@ $(document).ready(function() {
       slidesToScroll: 1,
       arrows: false,
       fade: true,
-      dots: false,
+      dots: true,
       asNavFor: '.Steps',
       responsive: [
         {
