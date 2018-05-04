@@ -164,6 +164,49 @@ $(document).ready(function() {
     });
 });
 $(document).ready(function() {
+    $('.Answers').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: false,
+      fade: true,
+      dots: false,
+      asNavFor: '.Questions',
+      responsive: [
+        {
+            breakpoint: 992,
+            settings: {
+                slidesToShow: 1,
+                arrows: false,
+                fade: true,
+                dots: true,
+                fade: true,
+                asNavFor: '.Questions',
+            }
+        }
+      ],
+    });
+    $('.Questions').slick({
+      slidesToShow: 4,
+      asNavFor: '.Answers',
+      dots: false,
+      centerMode: true,
+      focusOnSelect: true,
+      arrows: false,
+      responsive: [
+        {
+            breakpoint: 992,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                asNavFor: '.Answers',
+                dots: false,
+                arrows: false,
+            }
+        }
+      ]
+    });
+});
+$(document).ready(function() {
     $('.TestimonialsSlider__Content').slick({
       slidesToShow: 1,
       slidesToScroll: 1,

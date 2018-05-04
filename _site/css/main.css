@@ -1394,7 +1394,7 @@ h1.Title {
     --margin--step: 1vh;
 }
 
-.Steps {
+.Steps, .Questions {
     grid-column-start: 2;
     grid-column-end: 5;
     grid-row-start: 2;
@@ -1434,7 +1434,10 @@ h1.Title {
     marker-end: url(#markerArrow)
 }
 
-.Steps .slick-list, .Steps .slick-track {
+.Steps .slick-list,
+.Steps .slick-track,
+.Questions .slick-list,
+.Questions .slick-track {
     display: flex;
     flex-direction: column;
     align-items: stretch;
@@ -1447,7 +1450,7 @@ h1.Title {
     padding: 0 !important;
 }
 
-.StepTitle__wrapper {
+.StepTitle__wrapper, .Questions__wrapper {
     padding: 1em;
     width: calc(3 * var(--column-width)) !important;
     height: calc((var(--row-2-height) + var(--row-3-height) + var(--row-4-height) + var(--row-5-height) - 4 * var(--margin--step)) / 5) !important;
@@ -1482,24 +1485,25 @@ h1.Title {
     align-items: flex-start;
 }
 
-.StepTitle {
+.StepTitle, .QuestionBold {
     font-size: calc( 16px + (24 - 16)*(100vw - 320px)/(1920 - 320) );
     /*color: var(--primary-color);*/
     font-weight: 700;
 }
 
-.StepDescription {
+.StepDescription, .QuestionDescription {
     text-align: left;
     display: flex;
 }
 
-.StepTitle__wrapper.slick-current {
+.StepTitle__wrapper.slick-current,
+.Questions__wrapper.slick-current {
     background-color: var(--primary-color);
     box-shadow: 2px 2px 10px 2px rgba(89, 91, 212, 0.6);
     color: white;
 }
 
-.Steps__Content {
+.Steps__Content, .Answers {
     grid-column-start: 5;
     grid-column-end: 9;
     grid-row-start: 2;
@@ -2115,7 +2119,7 @@ h1.Title {
 /*
     Faq
 */
-.Arrow {
+/*.Arrow {
     cursor: pointer;
     font-size: calc( 36px + (72 - 36)*(100vw - 320px)/(1920 - 320) );
 
@@ -2153,9 +2157,9 @@ h1.Title {
     display: flex;
     justify-content: center;
     align-items: center;
-}
+}*/
 
-.Questions {
+/*.Questions {
     grid-column-start: 3;
     grid-column-end: 9;
     grid-row-start: 1;
@@ -2173,13 +2177,64 @@ h1.Title {
     grid-column-end: 5;
     grid-row-start: 2;
     grid-row-end: 3;
+}*/
+
+.Questions {
+    grid-column-start: 1;
+    grid-column-end: 4;
+
+    margin-left: var(--margin-screen-horizontal);
+}
+
+
+.Questions__wrapper, .Question {
+    width: calc(2.5 * var(--column-width));
+    text-align: left;
+    overflow: hidden;
+}
+
+.Questions__wrapper {
+    height: calc(
+        (
+            var(--row-2-height) + var(--row-3-height) + var(--row-4-height) + var(--row-5-height)
+            - 3 * var(--margin--step)
+        ) / 4
+    ) !important
+}
+
+.QuestionDescription {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+    width: calc(2.5 * var(--column-width) - 2em)
+}
+
+.Answers {
+    grid-column-start: 4;
+    grid-column-end: 9;
+    grid-row-start: 2;
+    grid-row-end: 6;
+}
+
+.Answer {
+    display: grid;
+    grid-template-columns: repeat(1, calc(4 * var(--column-width)));
+    grid-template-rows: var(--row-2-height) var(--row-2-height) var(--row-3-height) var(--row-4-height) var(--row-5-height);
+}
+
+.QuestionTitle {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
 }
 
 .QuestionContent {
     grid-column-start: 1;
-    grid-column-end: 6;
-    grid-row-start: 3;
-    grid-row-end: 7;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 6;
 
     overflow-y: scroll;
     font-size: calc( 16px + (24 - 16)*(100vw - 320px)/(1920 - 320) );
