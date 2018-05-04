@@ -41,7 +41,7 @@ $(document).ready(function() {
         scrollBar: true,
         fixedElements: '.Header, .Links',
         slidesNavigation: true,
-        normalScrollElements: '.QuestionContent',
+        normalScrollElements: '.QuestionContent, .ScrollDownIndication',
         responsiveWidth: 768,
         afterLoad: function(anchorLink, index) {
             window.gtag('config', window.googleAnalyticsUA, {'page_path': '/' + anchorLink});
