@@ -420,6 +420,7 @@ header .Name {
     top: var(--margin-screen-vertical);
 
     padding: 0;
+    color: var(--dark-gray) !important;
 }
 
 header nav {
@@ -435,7 +436,6 @@ header nav {
 }
 
 .Link__internal {
-    font-family: Lato, sans-serif;
     font-size: var(--font-size-h5);
     color: var(--dark-gray);
     text-decoration: none;
@@ -1577,6 +1577,10 @@ h1.Title {
 
 /* Tablet & Mobile */
 @media (max-width: 991.98px) {
+    .StepTitle__wrapper, .Questions__wrapper {
+        background-color: transparent;
+    }
+
     .slick-arrow {
         font-size: var(--font-size-h1);
     }
@@ -2212,7 +2216,7 @@ input:focus, textarea:focus {
 
 /* Tablet */
 @media (min-width: 768px) and (max-width: 991.98px) {
-    .ContactForm {
+    .ContactForm, .SendMessage {
         grid-column-start: 4;
         margin-left: var(--margin-screen-horizontal);
     }
