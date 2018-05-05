@@ -49,10 +49,8 @@ $(document).ready(function() {
         afterRender: function() {
             $('.fp-prev').addClass('mdi mdi-chevron-left');
             $('.fp-next').addClass('mdi mdi-chevron-right');
-            // $('.Loader').addClass('slideAndHide');
 
-
-            var fadeInUpSelectors = '.Title, .Subtitle, .Description, .ResumeWrapper, .ArticlesTitle, .Article, .QuestionTitle, .QuestionContent, .WhyShouldYouContactMe, .WhyShouldYouContactMe__content, .ContactDetails__TitleWrapper, .ContactDetails, .StepTitle__wrapper';
+            var fadeInUpSelectors = '.Title, .Subtitle, .Description, .ResumeWrapper, .ArticlesTitle, .Article, .QuestionTitle, .QuestionContent, .WhyShouldYouContactMe, .WhyShouldYouContactMe__content, .ContactDetails__TitleWrapper, .ContactDetails, .StepTitle__wrapper, .ExternalLink';
             var fadeInRightSelectors = '.About__background, .About .EmptySpace, .StepPicture, .ArticlesWrapper';
             var fadeInSelectors = '.Pagination, .Page, .Arrow, .ArrowRepeat__wrapper';
 
@@ -133,7 +131,7 @@ $(document).ready(function() {
             breakpoint: 992,
             settings: {
                 slidesToShow: 1,
-                arrows: false,
+                arrows: true,
                 fade: true,
                 dots: true,
                 fade: true,
@@ -162,6 +160,9 @@ $(document).ready(function() {
         }
       ]
     });
+
+    $('.slick-prev.slick-arrow').addClass('mdi mdi-chevron-left').text('');
+    $('.slick-next').addClass('mdi mdi-chevron-right').text('');
 });
 $(document).ready(function() {
     $('.Answers').slick({
@@ -176,7 +177,7 @@ $(document).ready(function() {
             breakpoint: 992,
             settings: {
                 slidesToShow: 1,
-                arrows: false,
+                arrows: true,
                 fade: true,
                 dots: true,
                 fade: true,
@@ -205,25 +206,28 @@ $(document).ready(function() {
         }
       ]
     });
+
+    $('.slick-prev.slick-arrow').addClass('mdi mdi-chevron-left').text('');
+    $('.slick-next').addClass('mdi mdi-chevron-right').text('');
 });
-$(document).ready(function() {
-    $('.TestimonialsSlider__Content').slick({
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      arrows: false,
-      fade: true,
-      asNavFor: '.TestimonialsSlider'
-    });
-    $('.TestimonialsSlider').slick({
-      slidesToShow: 4,
-      slidesToScroll: 1,
-      asNavFor: '.TestimonialsSlider__Content',
-      dots: false,
-      centerMode: true,
-      focusOnSelect: true,
-      arrows: false,
-    });
-});
+// $(document).ready(function() {
+//     $('.TestimonialsSlider__Content').slick({
+//       slidesToShow: 1,
+//       slidesToScroll: 1,
+//       arrows: false,
+//       fade: true,
+//       asNavFor: '.TestimonialsSlider'
+//     });
+//     $('.TestimonialsSlider').slick({
+//       slidesToShow: 4,
+//       slidesToScroll: 1,
+//       asNavFor: '.TestimonialsSlider__Content',
+//       dots: false,
+//       centerMode: true,
+//       focusOnSelect: true,
+//       arrows: false,
+//     });
+// });
 
 // Copy page URL
 $(document).ready(function() {
