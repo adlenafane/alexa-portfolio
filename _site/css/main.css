@@ -605,6 +605,10 @@ header nav {
     grid-template-rows: var(--row-1-height) var(--row-2-height) var(--row-3-height) var(--row-4-height) var(--row-5-height) var(--row-6-height);
 }
 
+.Project .slide {
+    overflow: hidden;
+}
+
 
 h1 {
     font-size: var(--font-size-h1);
@@ -751,6 +755,10 @@ h1.Title {
     @-webkit-keyframes slide-out {
         0% { -webkit-transform: translateX(0%); }
         100% { -webkit-transform: translateX(200%); }
+    }
+
+    .Project .slide {
+        overflow: visible;
     }
 }
 
@@ -2050,31 +2058,6 @@ h1.Title {
     .Faq .ScrollDownIndication {
         display: none;
     }
-/*    .Questions {
-        grid-column-start: 3;
-        grid-column-end: 9;
-        grid-row-start: 1;
-        grid-row-end: 6;
-    }
-
-    .QuestionTitle {
-        grid-column-end: 6;
-    }
-
-    .QuestionContent {
-        grid-column-end: 6;
-        grid-row-end: 6;
-
-        line-height: 1.8;
-    }
-
-    .QuestionContent--padding {
-        padding-bottom: var(--margin-screen-vertical);
-    }
-
-    .QuestionContent:after {
-        height: var(--margin-screen-vertical);
-    }*/
 }
 
 /*
@@ -2120,17 +2103,39 @@ h1.Title {
     line-height: 3;
 }
 
-.ContactForm {
+form.Contact {
     grid-column-start: 5;
     grid-column-end: 9;
     grid-row-start: 2;
-    grid-row-end: 5;
+    grid-row-end: 6;
+
+    display: grid;
+    grid-template-columns: repeat(4, var(--column-width));
+    grid-template-rows: var(--row-2-height) var(--row-3-height) var(--row-4-height) var(--row-5-height);
+
+}
+
+.ContactForm {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 4;
 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 
     margin-right: var(--margin-screen-horizontal);
+}
+
+button, input[type="submit"], input[type="reset"] {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
 }
 
 .ContactForm .row {
@@ -2203,18 +2208,30 @@ input:focus, textarea:focus {
 }
 
 .SendMessage {
-    grid-column-start: 5;
-    grid-column-end: 9;
-    grid-row-start: 5;
-    grid-row-end: 6;
-
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 4;
+    grid-row-end: 5;
 }
 
 /* Tablet */
 @media (min-width: 768px) and (max-width: 991.98px) {
-    .ContactForm, .SendMessage {
+    form.Contact {
+        grid-column-start: 4;
+        grid-column-end: 9;
+        grid-row-start: 2;
+        grid-row-end: 6;
+
+        display: grid;
+        grid-template-columns: repeat(4, var(--column-width));
+        grid-template-rows: var(--row-2-height) var(--row-3-height) var(--row-4-height) var(--row-5-height);
+
         grid-column-start: 4;
         margin-left: var(--margin-screen-horizontal);
+    }
+
+    .ContactForm, .SendMessage {
+        margin-right: 0;
     }
     .ContactForm .row {
         flex: 2;
@@ -2247,8 +2264,82 @@ input:focus, textarea:focus {
 
 /* Mobile */
 @media (max-width: 767.98px) {
+    .Screen.Contact {
+        grid-template-rows: var(--row-1-height) var(--row-2-height) var(--row-3-height) var(--row-4-height) var(--row-5-height) var(--row-6-height) var(--row-1-height) var(--row-2-height) var(--row-3-height) var(--row-4-height) var(--row-5-height) var(--row-6-height);
+    }
 
+    .ContactInformation {
+        grid-column-start: 1;
+        grid-column-end: 9;
+        grid-row-start: 2;
+        grid-row-end: 7;
+
+        margin-right: var(--margin-screen-horizontal);
+        margin-bottom: var(--margin-screen-vertical);
+    }
+
+    form.Contact {
+        grid-column-start: 1;
+        grid-column-end: 9;
+        grid-row-start: 7;
+        grid-row-end: 14;
+
+        display: grid;
+        grid-template-columns: repeat(4, calc(var(--column-width) * 7 / 4) );
+        grid-template-rows: var(--row-1-height) var(--row-2-height) var(--row-3-height) var(--row-4-height) var(--row-5-height) var(--row-6-height);
+
+        margin-left: var(--margin-screen-horizontal);
+        margin-right: var(--margin-screen-horizontal);
+    }
+
+    .ContactForm {
+        grid-column-start: 1;
+        grid-column-end: 5;
+        grid-row-start: 1;
+        grid-row-end: 6;
+    }
+
+    .SendMessage {
+        grid-row-start: 6;
+        grid-row-end: 7;
+
+        align-items: center;
+    }
+
+    .ContactForm, .SendMessage {
+        margin-right: 0;
+    }
+    .ContactForm .row {
+        flex: 2;
+
+        display: flex;
+        flex-direction: column;
+    }
+
+    .ContactForm .row--small {
+        margin-top: 1em;
+        flex: 1;
+    }
+
+    .ContactForm .row--large {
+        flex: 4;
+    }
+
+    .ContactForm .row.row--name {
+        flex: 4;
+    }
+
+    .ContactForm .half:first-of-type {
+        margin-right: 0;
+    }
+
+    .ContactForm .half:last-of-type {
+        margin-left: 0;
+    }
 }
+
+
+
 
 /* NOT Mobile */
 @media (min-width: 767.98px) {
