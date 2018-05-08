@@ -80,7 +80,7 @@ $(document).ready(function() {
                     $('.Project__loaderBarBg').addClass('animate');
                     window.homeInterval = window.setInterval(function() {
                         $.fn.fullpage.moveSlideRight();
-                    }, 8000);
+                    }, 8000000);
                 } else {
                     $('.Project__loaderBarBg').removeClass('animate');
                     clearInterval(window.homeInterval);
@@ -130,12 +130,13 @@ $(document).ready(function() {
         {
             breakpoint: 992,
             settings: {
-                slidesToShow: 1,
+                slidesToShow: 5,
                 arrows: true,
                 fade: true,
                 dots: true,
                 fade: true,
                 asNavFor: '.Steps',
+                infinite: false,
             }
         }
       ],
@@ -156,6 +157,7 @@ $(document).ready(function() {
                 asNavFor: '.Steps__Content',
                 dots: false,
                 arrows: false,
+                infinite: false,
             }
         }
       ]
@@ -163,6 +165,12 @@ $(document).ready(function() {
 
     $('.slick-prev.slick-arrow').addClass('mdi mdi-chevron-left').text('');
     $('.slick-next').addClass('mdi mdi-chevron-right').text('');
+
+    if(window.isMobileOrTablet) {
+        $('.Questions__wrapper .Question').each(function(index, obj) {
+            $(this).text(index);
+        });
+    }
 });
 $(document).ready(function() {
     $('.Answers').slick({
@@ -177,7 +185,7 @@ $(document).ready(function() {
             breakpoint: 992,
             settings: {
                 slidesToShow: 1,
-                arrows: true,
+                arrows: false,
                 fade: true,
                 dots: true,
                 fade: true,
@@ -197,7 +205,7 @@ $(document).ready(function() {
         {
             breakpoint: 992,
             settings: {
-                slidesToShow: 1,
+                slidesToShow: 4,
                 slidesToScroll: 1,
                 asNavFor: '.Answers',
                 dots: false,
