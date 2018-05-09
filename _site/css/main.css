@@ -59,12 +59,12 @@
 
 @media (max-width: 767.98px) {
     :root {
-        --row-1-height: 15vh;
+        --row-1-height: 18vh;
         --row-2-height: 15.3vh;
-        --row-3-height: 16.7vh;
+        --row-3-height: 17.7vh;
         --row-4-height: var(--row-3-height);
         --row-5-height: var(--row-2-height);
-        --row-6-height: 15vh; /*var(--row-1-height);*/
+        --row-6-height: var(--row-1-height);
 
         --dots-nav-width: 9vw;
         --dots-nav-height: calc(var(--dots-nav-width) / 7);
@@ -601,9 +601,16 @@ header nav {
     margin-top: var(--icon-margin-in-between);
 }
 
-.Fullscreen {
+#fullpage .fp-section.Fullscreen {
+    height: calc(
+        var(--row-1-height) +
+        var(--row-2-height) +
+        var(--row-3-height) +
+        var(--row-4-height) +
+        var(--row-5-height) +
+        var(--row-6-height)
+    ) !important;
     width: 100vw;
-    height: 100vh;
 
     overflow: hidden;
 }
@@ -1339,7 +1346,7 @@ h1.Title {
     align-self: flex-start;
     margin-right: calc(1.5 * var(--local-padding-vertical));
 
-    padding-left: calc(var(--font-size-h3) / 6);
+    /*padding-left: calc(var(--font-size-h3) / 6);*/
     font-size: var(--font-size-h3);
     width: var(--font-size-h3);
 
