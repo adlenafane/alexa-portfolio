@@ -489,6 +489,7 @@ header nav {
         color: var(--primary-color);
         height: 20px;
         width: calc(var(--column-width) / 2);
+        max-width: 30px;
         z-index: 11;
     }
 
@@ -1291,6 +1292,15 @@ h1.Title {
 
     text-decoration: none;
     color: var(--dark-gray);
+    text-align: center;
+}
+
+/* Mobile */
+@media (max-width: 767.98px) {
+    .ActionButton {
+        --font-size: var(--font-size-default);
+        --local-padding-vertical: calc(1 * var(--font-size-h3));
+    }
 }
 
 .ActionButton:before {
@@ -1307,6 +1317,10 @@ h1.Title {
     border: 1px solid var(--primary-color-70);
     transition: all .3s ease;
     box-sizing: border-box;
+
+    font-size: var(--font-size-h3) !important;
+    line-height: var(--size) !important;
+    color: var(--primary-color) !important;
 }
 
 .ActionButton:hover:before, .ActionButton:active:before {
