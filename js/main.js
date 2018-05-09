@@ -134,7 +134,6 @@ $(document).ready(function() {
                 arrows: true,
                 fade: true,
                 dots: true,
-                fade: true,
                 asNavFor: '.Steps',
                 infinite: false,
             }

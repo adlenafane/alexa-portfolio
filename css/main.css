@@ -28,23 +28,23 @@ title: CSS stylesheet
 
 :root {
     --font-size-h1: 2rem;
-    --font-size-h2: 1.333rem;
-    --font-size-h3: 1.111rem;
+    --font-size-h2: 1.66rem;
+    --font-size-h3: 1.5rem;
     --font-size-h4: 1rem;
     --font-size-h5: 1rem;
-    --font-size-default: 0.8333rem;
-    --font-size-legend: 0.8333rem;
+    --font-size-default: 0.75rem;
+    --font-size-legend: 0.666rem;
     --font-size-header-max: 2.2rem;
 }
 @media (min-width: 768px) and (max-width: 1920px){
   :root {
     --font-size-h1: calc( 2rem + (2.889 - 2) *( (100vw - 17.78rem) / ( 106.7 - 17.78) ));
-    --font-size-h2: calc( 1.333rem + (2.667 - 1.333) *( (100vw - 17.78rem) / ( 106.7 - 17.78) ));
-    --font-size-h3: calc( 1.111rem + (2 - 1.1) *( (100vw - 17.78rem) / ( 106.7 - 17.78) ));
+    --font-size-h2: calc( 1.66rem + (2.667 - 1.66) *( (100vw - 17.78rem) / ( 106.7 - 17.78) ));
+    --font-size-h3: calc( 1.5rem + (2 - 1.5) *( (100vw - 17.78rem) / ( 106.7 - 17.78) ));
     --font-size-h4: calc( 1rem + (1.333 - 1) *( (100vw - 17.78rem) / ( 106.7 - 17.78) ));
     --font-size-h5: calc( 1rem + (1.111 - 1) *( (100vw - 17.78rem) / ( 106.7 - 17.78) ));
-    --font-size-default: calc( 0.8333rem + (1 - 0.8333) *( (100vw - 17.78rem) / ( 106.7 - 17.78) ));
-    --font-size-legend: calc( 0.8333rem + (0.8333 - 0.8333) *( (100vw - 17.78rem) / ( 106.7 - 17.78) ));
+    --font-size-default: calc( 0.75rem + (1 - 0.75) *( (100vw - 17.78rem) / ( 106.7 - 17.78) ));
+    --font-size-legend: calc( 0.666rem + (0.8333 - 0.666) *( (100vw - 17.78rem) / ( 106.7 - 17.78) ));
     --font-size-header-max: calc( 2.2rem + (7.222 - 2.2) * ( (100vw - 17.78rem) / ( 106.7 - 17.78) ));
   }
 }
@@ -70,7 +70,7 @@ title: CSS stylesheet
         --row-5-height: var(--row-2-height);
         --row-6-height: var(--row-1-height);
 
-        --dots-nav-width: 8vw;
+        --dots-nav-width: 9vw;
         --dots-nav-height: calc(var(--dots-nav-width) / 7);
     };
 }
@@ -91,7 +91,6 @@ title: CSS stylesheet
 html {
     color: #222;
     font-size: var(--font-size-default);
-    /*font-size: 18px;*/
     font-family: 'Lato', sans-serif;
     font-weight: 400;
     line-height: 1.5;
@@ -947,8 +946,8 @@ h1.Title {
 }
 
 .fp-slidesNav, .slick-dots {
-    --dots-nav-width: 3.6vw;
-    --dots-nav-height: calc(var(--dots-nav-width) / 7);
+    /*--dots-nav-width: 3.6vw;
+    --dots-nav-height: calc(var(--dots-nav-width) / 7);*/
 }
 
 .Home .fp-slidesNav, .Testimonials .fp-slidesNav {
@@ -976,8 +975,6 @@ h1.Title {
         grid-row-end: 7;
     }
     .fp-slidesNav, .slick-dots {
-        --dots-nav-width: 8vw;
-        --dots-nav-height: calc(var(--dots-nav-width) / 7);
         margin: 0;
     }
 
@@ -1109,10 +1106,10 @@ h1.Title {
         background-position: center center;
         background-attachment: inherit;
 
-        -webkit-background-size: contain;
-        -moz-background-size: contain;
-        -o-background-size: contain;
-        background-size: contain;
+        -webkit-background-size: auto 100%;
+        -moz-background-size: auto 100%;
+        -o-background-size: auto 100%;
+        background-size: auto 100%;
     }
 
     .Project__picture--nokia {
@@ -1549,7 +1546,16 @@ h1.Title {
 
 .StepIcon {
     --step-icon-size: var(--font-size-h3);
+}
 
+/* Mobile */
+@media (max-width: 767.98px) {
+    .StepIcon {
+        --step-icon-size: var(--font-size-h2);
+    }
+}
+
+.StepIcon {
     padding-right: var(--padding-box);
 
     height: var(--step-icon-size);
@@ -2046,7 +2052,7 @@ h1.Title {
 }
 
 .Quote {
-    font-size: var(--font-size-h3);
+    /*font-size: var(--font-size-h3);*/
     font-weight: 300;
 }
 
