@@ -70,6 +70,8 @@ title: CSS stylesheet
         --row-5-height: var(--row-2-height);
         --row-6-height: var(--row-1-height);
 
+        --margin-screen-vertical: calc(var(--row-1-height) / 2);
+
         --dots-nav-width: 9vw;
         --dots-nav-height: calc(var(--dots-nav-width) / 7);
     };
@@ -462,6 +464,14 @@ header nav {
 
 /* NOT Desktop */
 @media (max-width: 991.98px) {
+    header {
+        --menu-button-height: 20px;
+    }
+    header .Name {
+        top: calc(var(--margin-screen-vertical) / 2);
+        line-height: var(--menu-button-height);
+    }
+
     header nav#menu {
         position: fixed;
         opacity: 0;
@@ -482,14 +492,17 @@ header nav {
 
     .MenuButton {
         position: fixed;
-        top: var(--margin-screen-vertical);
+        top: calc(var(--margin-screen-vertical) / 2);
         right: var(--margin-screen-horizontal);
 
         color: var(--primary-color);
-        height: 20px;
+        height: var(--menu-button-height);
         width: calc(var(--column-width) / 2);
         max-width: 30px;
         z-index: 11;
+
+        padding: 0;
+        line-height: var(--dots-nav-height);
     }
 
     #menuIconCheckbox {
