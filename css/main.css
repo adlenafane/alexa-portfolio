@@ -1268,7 +1268,7 @@ h1.Title {
 .Description__Content {
     grid-column-start: 1;
     grid-column-end: 5;
-    grid-row-start: 3;
+    grid-row-start: 2;
     grid-row-end: 6;
 
     margin-left: var(--margin-screen-horizontal);
