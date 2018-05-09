@@ -1280,6 +1280,7 @@ h1.Title {
 .ActionButton {
     --font-size: var(--font-size-default);
     --local-padding-vertical: calc(0.8 * var(--font-size-h3));
+    --size: calc(2 * var(--local-padding-vertical) + var(--font-size-h3));
 
     font-weight: 700;
     cursor: pointer;
@@ -1288,7 +1289,7 @@ h1.Title {
     transition: all .2s ease;
     position: relative;
     margin-top: var(--local-padding-vertical);
-    padding: var(--local-padding-vertical);
+    padding: var(--local-padding-vertical) calc(var(--size) / 2 - 5px);
 
     text-decoration: none;
     color: var(--dark-gray);
@@ -1297,6 +1298,10 @@ h1.Title {
 
 /* Mobile */
 @media (max-width: 767.98px) {
+    #About {
+        overflow-y: visible;
+    }
+
     .ActionButton {
         --font-size: var(--font-size-default);
         --local-padding-vertical: calc(1 * var(--font-size-h3));
@@ -1304,7 +1309,6 @@ h1.Title {
 }
 
 .ActionButton:before {
-    --size: calc(2 * var(--local-padding-vertical) + var(--font-size-h3));
     content: "";
     position: absolute;
     top: 0;
