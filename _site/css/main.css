@@ -1177,6 +1177,14 @@ h1.Title {
     }*/
 }
 
+/* Mobile */
+@media (max-width: 767.98px) {
+    .ProjectDetails {
+        grid-row-start: 2;
+        margin-top: calc(var(--row-2-height) / 2);
+    }
+}
+
 /*.animated-words .animated-word:nth-child(2) {
     -webkit-animation-delay: 3s;
     -ms-animation-delay: 3s;
@@ -2259,7 +2267,7 @@ h1.Title {
     }
 
     .Faq {
-        background-image: linear-gradient(61deg, #eaecf0, #e4e5e9);
+        /*background-image: linear-gradient(61deg, #eaecf0, #e4e5e9);*/
     }
 
     .Faq .Questions {
@@ -2315,8 +2323,8 @@ h1.Title {
         margin-bottom: 0;
 
         border-radius: 8px;
-        background-color: white;
-        box-shadow: 2px 2px 10px 2px rgba(89, 91, 212, 0.6);
+        /*background-color: white;
+        box-shadow: 2px 2px 10px 2px rgba(89, 91, 212, 0.6);*/
 
         padding: var(--margin-screen-horizontal);
         margin-right: var(--margin-screen-horizontal);
