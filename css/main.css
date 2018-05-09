@@ -1695,8 +1695,8 @@ h1.Title {
         background-color: transparent;
         height: 100% !important;
 
-        background-color: var(--primary-color);
-        color: white;
+        /*background-color: var(--primary-color);
+        color: white;*/
     }
 
     .slick-arrow {
@@ -1750,7 +1750,7 @@ h1.Title {
 
     .Steps .StepTitle__wrapper, .Questions .Questions__wrapper {
         height: calc(
-            var(--row-2-height)
+            var(--row-2-height) / 2
         ) !important;
 
         width: calc(2 * var(--column-width)) !important;
@@ -1778,10 +1778,10 @@ h1.Title {
     .Steps__Content {
         grid-column-start: 1;
         grid-column-end: 9;
-        grid-row-start: 3;
+        grid-row-start: 2;
         grid-row-end: 6;
 
-        /*margin-top: calc(var(--row-1-height) / 2);*/
+        margin-top: calc(var(--row-2-height) / 2);
         margin-right: var(--margin-screen-horizontal);
         margin-left: var(--margin-screen-horizontal);
     }
@@ -1790,7 +1790,7 @@ h1.Title {
         grid-template-columns: repeat(1, calc(
             8 * var(--column-width) - 2 * var(--margin-screen-horizontal)
         ));
-        grid-template-rows: calc(var(--row-2-height) / 2) calc(var(--row-2-height) / 2 + var(--row-3-height)) var(--row-4-height);
+        grid-template-rows: calc(var(--row-2-height)) calc(var(--row-2-height) / 2 + var(--row-3-height)) var(--row-4-height);
     }
 
     .StepTitle__wrapper {
@@ -2228,7 +2228,7 @@ h1.Title {
     left: 0;
     height: var(--row-5-height);
     width: 100%;
-    background: -webkit-linear-gradient(rgba(255, 255,255, .4), rgba(255, 255, 255, 1));
+    background: -webkit-linear-gradient(rgba(255, 255, 255, .4), rgba(255, 255, 255, 1));
 }
 
 .Faq .ScrollDownIndication {
@@ -2327,6 +2327,8 @@ h1.Title {
         margin-bottom: 0;
 
         border-radius: 8px;
+        background-color: var(--secondary-color);
+        border: solid 1px rgba(89, 91, 212, 0.2);
         /*background-color: white;
         box-shadow: 2px 2px 10px 2px rgba(89, 91, 212, 0.6);*/
 
@@ -2357,6 +2359,8 @@ h1.Title {
 
     .QuestionContent:after {
         height: calc(var(--row-5-height) / 2);
+
+        background: -webkit-linear-gradient(rgba(246,247,253, .4), rgba(246,247,253, 1));
     }
 
     .Faq .slick-dots {
@@ -2572,7 +2576,7 @@ input:focus, textarea:focus {
 /* Mobile */
 @media (max-width: 767.98px) {
     .Screen.Contact {
-        grid-template-rows: var(--row-1-height) var(--row-2-height) var(--row-3-height) var(--row-4-height) var(--row-5-height) var(--row-6-height) var(--row-1-height) var(--row-2-height) var(--row-3-height) var(--row-4-height) var(--row-5-height) var(--row-6-height);
+        grid-template-rows: var(--row-1-height) var(--row-2-height) var(--row-3-height) var(--row-4-height) var(--row-5-height) var(--row-6-height) var(--row-1-height) var(--row-2-height) var(--row-3-height) var(--row-4-height) var(--row-5-height);
     }
 
     .ContactInformation {
@@ -2593,7 +2597,7 @@ input:focus, textarea:focus {
 
         display: grid;
         grid-template-columns: repeat(4, calc(var(--column-width) * 7 / 4) );
-        grid-template-rows: var(--row-1-height) var(--row-2-height) var(--row-3-height) var(--row-4-height) var(--row-5-height) var(--row-6-height);
+        grid-template-rows: var(--row-1-height) var(--row-2-height) var(--row-3-height) var(--row-4-height) var(--row-5-height);
 
         margin-left: var(--margin-screen-horizontal);
         margin-right: var(--margin-screen-horizontal);
@@ -2603,12 +2607,12 @@ input:focus, textarea:focus {
         grid-column-start: 1;
         grid-column-end: 5;
         grid-row-start: 1;
-        grid-row-end: 6;
+        grid-row-end: 5;
     }
 
     .SendMessage {
-        grid-row-start: 6;
-        grid-row-end: 7;
+        grid-row-start: 5;
+        grid-row-end: 6;
 
         align-items: center;
     }
@@ -2629,7 +2633,7 @@ input:focus, textarea:focus {
     }
 
     .ContactForm .row--large {
-        flex: 4;
+        flex: 3;
     }
 
     .ContactForm .row.row--name {
