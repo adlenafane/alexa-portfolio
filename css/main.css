@@ -965,8 +965,9 @@ h1.Title {
     bottom: 0;
 }
 
-/* Mobile */
-@media (max-width: 767.98px) {
+/* Mobile & Tablet */
+@media (max-width: 991.98px) {
+/*@media (max-width: 767.98px) {*/
     .Home .fp-slidesNav, .Testimonials .fp-slidesNav {
         grid-column-start: 1;
         grid-column-end: 9;
@@ -1071,8 +1072,9 @@ h1.Title {
 @media (min-width: 768px) and (max-width: 991.98px) {
 }
 
-/* Mobile */
-@media (max-width: 767.98px) {
+/* Mobile & Tablet */
+@media (max-width: 991.98px) {
+/*@media (max-width: 767.98px) {*/
     .fp-slidesNav ul li a span,
     .fp-slidesNav ul li:hover a.active span,
     .fp-slidesNav ul li a.active span {
@@ -1675,17 +1677,32 @@ h1.Title {
     }
 
     .StepTitle__wrapper, .Questions__wrapper {
+        background-color: transparent;
+    }
+
+    .Step .StepTitle__wrapper {
         grid-row-start: 1;
         grid-row-end: 2;
 
         background-color: transparent;
+        height: 100% !important;
+
+        background-color: var(--primary-color);
+        color: white;
     }
 
     .slick-arrow {
         font-size: var(--font-size-h1);
     }
 
+    .slick-prev {
+        left: calc(-1 * var(--column-width) / 2);
+    }
+    .slick-next {
+        right: calc(-1 * var(--column-width) / 2);
+    }
     .slick-next, .slick-prev {
+        width: calc(var(--column-width) / 2);
         color: var(--primary-color);
     }
     .slick-next:before, .slick-prev:before {
@@ -1765,7 +1782,7 @@ h1.Title {
         grid-template-columns: repeat(1, calc(
             8 * var(--column-width) - 2 * var(--margin-screen-horizontal)
         ));
-        grid-template-rows: var(--row-2-height) var(--row-3-height) var(--row-4-height);
+        grid-template-rows: calc(var(--row-2-height) / 2) calc(var(--row-2-height) / 2 + var(--row-3-height)) var(--row-4-height);
     }
 
     .StepTitle__wrapper {
@@ -2022,8 +2039,55 @@ h1.Title {
 
 /* Tablet */
 @media (min-width: 768px) and (max-width: 991.98px) {
+    .Testimonials {
+        background-image: linear-gradient(61deg, #eaecf0, #e4e5e9);
+    }
+
+    .Testimonial {
+        grid-row-start: 2;
+    }
+
+    .Testimonial__Content {
+        margin-top: var(--row-2-height);
+    }
+
+    .Testimonial__picture {
+        grid-column-start: 3;
+        grid-column-end: 7;
+        grid-row-start: 1;
+        grid-row-end: 2;
+
+        margin-bottom: 0;
+        margin-top: calc(-1 * var(--row-3-height));
+        margin-bottom: 0;
+        width: calc(3 * var(--column-width));
+        height: calc(var(--row-2-height) + var(--row-3-height));
+    }
+
+    .Testimonial__ClientCompany {
+        grid-row-start: 1;
+        grid-row-end: 2;
+        margin-top: calc(var(--margin-screen-vertical) / 4);
+
+        text-align: center;
+    }
+
+    .TestimonialDetails {
+        grid-row-start: 2;
+        grid-row-end: 3;
+        grid-column-end: 7;
+
+        justify-content: center;
+    }
+
     .Testimonial__ClientName {
-        padding-right: var(--margin-screen-horizontal);
+        grid-column-start: 1;
+        grid-column-end: 7;
+        grid-row-start: 3;
+        grid-row-end: 4;
+
+        align-items: center;
+        padding-bottom: calc(var(--margin-screen-vertical) / 4);
     }
 }
 
@@ -2116,6 +2180,8 @@ h1.Title {
     grid-column-end: 8;
     grid-row-start: 2;
     grid-row-end: 6;
+
+    margin-right: 0;
 }
 
 .Answer {
@@ -2176,7 +2242,7 @@ h1.Title {
 
 /* Tablet */
 @media (min-width: 768px) and (max-width: 991.98px) {
-    .QuestionTitle {
+    /*.QuestionTitle {
         margin-bottom: calc(var(--margin-screen-vertical) / 4);
     }
 
@@ -2186,11 +2252,12 @@ h1.Title {
             var(--row-3-height) +
             var(--row-4-height)
         );
-    }
+    }*/
 }
 
-/* Mobile */
-@media (max-width: 767.98px) {
+/* Mobile & Tablet */
+@media (max-width: 991.98px) {
+/*@media (max-width: 767.98px) {*/
     .Faq .ScrollDownIndication {
         display: none;
     }
@@ -2200,25 +2267,26 @@ h1.Title {
     }
 
     .Faq .Questions {
-        grid-column-start: 1;
+        display: none;
+        /*grid-column-start: 1;
         grid-column-end: 9;
 
         margin-left: var(--margin-screen-horizontal);
         margin-right: var(--margin-screen-horizontal);
 
         height: calc(var(--row-3-height) + var(--row-4-height) + var(--row-5-height));
-        width: calc(7 * var(--column-width)) !important;
+        width: calc(7 * var(--column-width)) !important;*/
     }
 
     .Questions .slick-list, .Questions .slick-track {
-        height: calc(var(--row-3-height) + var(--row-4-height) + var(--row-5-height));
+        /*height: calc(var(--row-3-height) + var(--row-4-height) + var(--row-5-height));
         width: calc(7 * var(--column-width)) !important;
 
-        justify-content: space-between;
+        justify-content: space-between;*/
     }
 
     .Questions .Questions__wrapper {
-        width: calc(var(--column-width)) !important;
+        /*width: calc(var(--column-width)) !important;
         height: calc(var(--column-width)) !important;
         border-radius: 50%;
 
@@ -2227,7 +2295,7 @@ h1.Title {
 
         display: flex;
         justify-content: center;
-        align-items: center;
+        align-items: center;*/
     }
 
     .Question {
@@ -2244,8 +2312,8 @@ h1.Title {
     .Answers {
         grid-column-start: 1;
         grid-column-end: 9;
-        /*grid-row-start: 2;*/
-        grid-row-start: 3;
+        grid-row-start: 2;
+        /*grid-row-start: 3;*/
         grid-row-end: 6;
 
         margin-bottom: 0;
@@ -2275,8 +2343,8 @@ h1.Title {
     }
 
     .QuestionContent {
-        height: calc(var(--row-3-height) + var(--row-4-height));
-        padding-top: 0;
+        height: calc(var(--row-3-height) + var(--row-4-height) + var(--row-5-height));
+        /*padding-top: 0;*/
     }
 
     .QuestionContent:after {

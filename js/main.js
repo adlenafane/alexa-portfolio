@@ -113,7 +113,7 @@ $(document).ready(function() {
     });
 
     // $('.TotalPages--process').text('/' + $('.Process .slide').length);
-    $('.TotalPages--faq').text('/' + $('.Faq .slide').length);
+    // $('.TotalPages--faq').text('/' + $('.Faq .slide').length);
 });
 
 
@@ -166,11 +166,11 @@ $(document).ready(function() {
     $('.slick-prev.slick-arrow').addClass('mdi mdi-chevron-left').text('');
     $('.slick-next').addClass('mdi mdi-chevron-right').text('');
 
-    if(window.isMobileOrTablet) {
-        $('.Questions__wrapper .Question').each(function(index, obj) {
-            $(this).text(index);
-        });
-    }
+    // if(window.isMobileOrTablet) {
+    //     $('.Questions__wrapper .Question').each(function(index, obj) {
+    //         $(this).text(index);
+    //     });
+    // }
 });
 $(document).ready(function() {
     $('.Answers').slick({
@@ -185,7 +185,7 @@ $(document).ready(function() {
             breakpoint: 992,
             settings: {
                 slidesToShow: 1,
-                arrows: false,
+                arrows: true,
                 fade: true,
                 dots: true,
                 fade: true,
