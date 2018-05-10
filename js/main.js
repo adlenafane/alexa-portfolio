@@ -268,12 +268,12 @@ $(document).ready(function() {
         $.ajax({
             url: 'https://ff1zun6a9g.execute-api.us-east-1.amazonaws.com/production/sendEmailToAlexa',
             type: 'POST',
-            data: {
+            data: JSON.stringify({
                 firstName,
                 lastName,
                 fromEmail,
                 message,
-            },
+            }),
             cache:false,
             success: function (html) {
                alert('Data Send');
