@@ -1135,7 +1135,7 @@ h1.Title {
     .Project__picture--nokia {
         background-image:
         linear-gradient(to bottom, rgba(89, 91, 212, 0.7), rgba(89, 91, 212, 0.7)),
-        url('{{ site.baseurl }}/img/Projects/HeroPicture--Nokia.png');
+        url('img/Projects/HeroPicture--Nokia.png');
     }
 
     .Project__picture {
@@ -1252,7 +1252,7 @@ h1.Title {
 
     margin-right: var(--margin-screen-horizontal);
 
-    background-image: url('{{ site.baseurl }}/img/Profile__Photo--Alexa.png');
+    background-image: url('img/Profile__Photo--Alexa.png');
     animation-delay: .1s;
 }
 
@@ -1630,35 +1630,35 @@ h1.Title {
 .StepPicture--1 {
     background:
     linear-gradient(to bottom, rgba(89,91,212, 0.7), rgba(111,131,249, 0.7)),
-    url('{{ site.baseurl }}/img/process/Auscultation.png')
+    url('img/process/Auscultation.png')
     no-repeat center center;
 }
 
 .StepPicture--2 {
     background:
     linear-gradient(to bottom, rgba(89,91,212, 0.7), rgba(111,131,249, 0.7)),
-    url('{{ site.baseurl }}/img/process/Analysis-w-empathy.jpg')
+    url('img/process/Analysis-w-empathy.jpg')
     no-repeat center center;
 }
 
 .StepPicture--3 {
     background:
     linear-gradient(to bottom, rgba(89,91,212, 0.7), rgba(111,131,249, 0.7)),
-    url('{{ site.baseurl }}/img/process/Diagnostic.png')
+    url('img/process/Diagnostic.png')
     no-repeat center center;
 }
 
 .StepPicture--4 {
     background:
     linear-gradient(to bottom, rgba(89,91,212, 0.7), rgba(111,131,249, 0.7)),
-    url('{{ site.baseurl }}/img/process/Treatment.png')
+    url('img/process/Treatment.png')
     no-repeat center center;
 }
 
 .StepPicture--5 {
     background:
     linear-gradient(to bottom, rgba(89,91,212, 0.7), rgba(111,131,249, 0.7)),
-    url('{{ site.baseurl }}/img/process/Follow-up.jpg')
+    url('img/process/Follow-up.jpg')
     no-repeat center center;
 }
 
@@ -1946,7 +1946,7 @@ h1.Title {
     flex: 35;
     overflow: hidden;
 
-    background: url('{{ site.baseurl }}/img/Article__picture.jpg') no-repeat center center;
+    background: url('img/Article__picture.jpg') no-repeat center center;
 
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -2057,19 +2057,19 @@ h1.Title {
 }
 
 .Testimonial__picture--Nicolas {
-    background-image: url('{{ site.baseurl }}/img/testimonials/Photo-Nicolas.png');
+    background-image: url('img/testimonials/Photo-Nicolas.png');
 }
 
 .Testimonial__picture--Victor {
-    background-image: url('{{ site.baseurl }}/img/testimonials/Photo-Victor.png');
+    background-image: url('img/testimonials/Photo-Victor.png');
 }
 
 .Testimonial__picture--Jeremy {
-    background-image: url('{{ site.baseurl }}/img/testimonials/Photo-Jeremy.png');
+    background-image: url('img/testimonials/Photo-Jeremy.png');
 }
 
 .Testimonial__picture--Adlen {
-    background-image: url('{{ site.baseurl }}/img/testimonials/Photo-Adlen.png');
+    background-image: url('img/testimonials/Photo-Adlen.png');
 }
 
 .Quote {
