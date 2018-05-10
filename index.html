@@ -737,20 +737,20 @@ title: HTML page
                         </div>
                     </div>
 
-                    <form class="Contact" action="https://formspree.io/alexa.gueguen@gmail.com" method="POST">
+                    <form class="Contact">
                         <div class="ContactForm">
                             <div class="row row--name">
                                 <div class="half">
                                     <label for="contact-firstname">
                                         Name
                                     </label>
-                                    <input id="contact-firstname" type="text" name="firstname" placeholder="Ex: John">
+                                    <input id="contact-firstname" type="text" name="firstName" placeholder="Ex: John">
                                 </div>
                                 <div class="half">
                                     <label for="contact-lastname">
                                         Surname
                                     </label>
-                                    <input id="contact-lastname" type="text" name="lastname" placeholder="Ex: Doe">
+                                    <input id="contact-lastname" type="text" name="lastName" placeholder="Ex: Doe">
                                 </div>
                             </div>
                             <div class="row">
@@ -758,7 +758,7 @@ title: HTML page
                                     <label for="contact-email">
                                         Email
                                     </label>
-                                    <input id="contact-email" type="email" name="email" placeholder="Ex: john.doe@google.com">
+                                    <input id="contact-email" type="email" name="fromEmail" placeholder="Ex: john.doe@google.com">
                                 </div>
                             </div>
                             <div class="row row--large">
@@ -766,12 +766,12 @@ title: HTML page
                                     <label for="contact-message">
                                         Your message
                                     </label>
-                                    <textarea id="contact-message" placeholder="Ex: Are you available this week to discuss about an amazing project around a chai latte with soy milk?"></textarea>
+                                    <textarea id="contact-message" name="message" placeholder="Ex: Are you available this week to discuss about an amazing project around a chai latte with soy milk?"></textarea>
                                 </div>
                             </div>
                         </div>
                         <div class="SendMessage">
-                            <button type="submit" class="ActionButton" onclick="gtag('event', 'download_resume');" href="https://drive.google.com/uc?authuser=0&id=1_Oi5XyhqXjwKSNSkBWq5hJqjlAaZ1KbR&export=download">
+                            <button id="submit" class="ActionButton" onclick="gtag('event', 'download_resume');" href="https://drive.google.com/uc?authuser=0&id=1_Oi5XyhqXjwKSNSkBWq5hJqjlAaZ1KbR&export=download">
                                 <span><i class="mdi mdi-send"></i> Send message</span>
                             </button>
                         </div>
