@@ -5,9 +5,10 @@ Portfolio
 Start the project
 -----------------
 
-Open terminal
+Open terminal to retrieve and run the server
 ```
 	cd /Users/alexagueguen/Documents/Portfolio
+  git pull --rebase origin master
 	npm start
 ```
 
