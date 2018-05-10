@@ -258,32 +258,32 @@ $(document).ready(function() {
     });
 
 });
-// $(document).ready(function() {
-//     $('#submit').click(function() {
-//         var firstName = document.getElementById('contact-firstname').value;
-//         var lastName = document.getElementById('contact-lastname').value;
-//         var fromEmail = document.getElementById('contact-email').value;
-//         var message = document.getElementById('contact-message').value;
+$(document).ready(function() {
+    $('#submit').click(function() {
+        var firstName = document.getElementById('contact-firstname').value;
+        var lastName = document.getElementById('contact-lastname').value;
+        var fromEmail = document.getElementById('contact-email').value;
+        var message = document.getElementById('contact-message').value;
 
-//         $.ajax({
-//             url: 'https://ff1zun6a9g.execute-api.us-east-1.amazonaws.com/production/sendEmailToAlexa',
-//             type: 'POST',
-//             data: {
-//                 firstName,
-//                 lastName,
-//                 fromEmail,
-//                 message,
-//             },
-//             cache:false,
-//             success: function (html) {
-//                alert('Data Send');
-//                $('#msg').html(html);
-//             }
-//         });
+        $.ajax({
+            url: 'https://ff1zun6a9g.execute-api.us-east-1.amazonaws.com/production/sendEmailToAlexa',
+            type: 'POST',
+            data: {
+                firstName,
+                lastName,
+                fromEmail,
+                message,
+            },
+            cache:false,
+            success: function (html) {
+               alert('Data Send');
+               $('#msg').html(html);
+            }
+        });
 
-//         return false;
-//     });
-// });
+        return false;
+    });
+});
 
 // Handle mobile/tablet menus
 $(document).ready(function() {
