@@ -902,7 +902,7 @@ h1.Title {
 
 .ProjectDetails, .TestimonialDetails {
     grid-column-start: 3;
-    grid-column-end: 6;
+    grid-column-end: 7;
     grid-row-start: 3;
     grid-row-end: 4;
 
@@ -924,6 +924,7 @@ h1.Title {
     color: white;
     font-size: var(--font-size-header-max);
     text-transform: uppercase;
+    white-space: nowrap;
 }
 
 .ProjectTitle {
@@ -1083,6 +1084,109 @@ h1.Title {
     width: auto;
 
     background-color: transparent;
+}
+
+.Project__background--NokiaHealth {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: inherit;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    background-image: linear-gradient(
+        to top,
+        rgba(89, 91, 212, 0.8),
+        rgba(89, 91, 212, 0.8)
+    ), url('{{ site.baseurl }}img/background/NokiaHealth.png');
+}
+
+.Project__background--Alkemics {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: inherit;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    background-image: linear-gradient(
+        to top,
+        rgba(89, 91, 212, 0.8),
+        rgba(89, 91, 212, 0.8)
+    ), url('{{ site.baseurl }}img/background/Alkemics.png');
+}
+
+.Project__background--Blackink {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: inherit;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    background-image: linear-gradient(
+        to top,
+        rgba(89, 91, 212, 0.8),
+        rgba(89, 91, 212, 0.8)
+    ), url('{{ site.baseurl }}img/background/Blackink.png');
+}
+
+.Project__background--CGT {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: inherit;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    background-image: linear-gradient(
+        to top,
+        rgba(89, 91, 212, 0.8),
+        rgba(89, 91, 212, 0.8)
+    ), url('{{ site.baseurl }}img/background/CGT.png');
+}
+
+.Project__background--Keymetrics {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: inherit;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    background-image: linear-gradient(
+        to top,
+        rgba(89, 91, 212, 0.8),
+        rgba(89, 91, 212, 0.8)
+    ), url('{{ site.baseurl }}img/background/Keymetrics.png');
+}
+
+
+.Project__background--Wisean {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: inherit;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    background-image: linear-gradient(
+        to top,
+        rgba(89, 91, 212, 0.8),
+        rgba(89, 91, 212, 0.8)
+    ), url('{{ site.baseurl }}img/background/Wisean.png');
 }
 
 
@@ -1307,7 +1411,7 @@ h1.Title {
     position: relative;
     margin-top: var(--local-padding-vertical);
     margin-bottom: var(--local-padding-vertical);
-    padding: var(--local-padding-vertical) calc(var(--size) / 2 - 5px);
+    padding: var(--local-padding-vertical);
 
     text-decoration: none;
     color: var(--dark-gray);
@@ -1330,13 +1434,13 @@ h1.Title {
     content: "";
     position: absolute;
     top: 0;
-    left: 5px;
+    left: 0;
     display: block;
     border-radius: calc(var(--size) / 2);
     background: var(--secondary-color);
     width: var(--size);
     height: var(--size);
-    border: 1px solid var(--primary-color-70);
+    /*border: 1px solid var(--primary-color-70);*/
     transition: all .3s ease;
     box-sizing: border-box;
 
@@ -2079,7 +2183,7 @@ h1.Title {
 
 .Testimonial__ClientName {
     grid-column-start: 3;
-    grid-column-end: 6;
+    grid-column-end: 7;
     grid-row-start: 4;
     grid-row-end: 5;
 
@@ -2735,4 +2839,105 @@ input[type=text], textarea {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
+}
+
+
+
+h1, .h1 {
+  font-size: 3.75em;
+  line-height: 1;
+  margin: 0;
+}
+@media screen and (min-width: 1130px) {
+  h1, .h1 {
+    font-size: 5.625em;
+  }
+}
+@media screen and (min-width: 1500px) {
+  h1, .h1 {
+    font-size: 7.5em;
+  }
+}
+
+h2, .h2 {
+  font-size: 1.875em;
+  line-height: 1.36;
+}
+@media screen and (min-width: 1130px) {
+  h2, .h2 {
+    font-size: 2.375em;
+  }
+}
+@media screen and (min-width: 1500px) {
+  h2, .h2 {
+    font-size: 3em;
+  }
+}
+
+h3, .h3 {
+  font-size: 1.375em;
+  line-height: 1.375;
+}
+@media screen and (min-width: 1130px) {
+  h3, .h3 {
+    font-size: 1.75em;
+  }
+}
+@media screen and (min-width: 1500px) {
+  h3, .h3 {
+    font-size: 2.25em;
+  }
+}
+@media screen and (min-width: 1130px) {
+  h3.smaller, .smaller.h3 {
+    font-size: 1.5em;
+  }
+}
+
+h4, .h4 {
+  font-size: 1em;
+  /*line-height: 1;*/
+}
+@media screen and (min-width: 1130px) {
+  h4, .h4 {
+    font-size: 1em;
+  }
+}
+@media screen and (min-width: 1500px) {
+  h4, .h4 {
+    font-size: 1.5em;
+  }
+}
+
+h5, .h5 {
+  font-size: 1.25em;
+  line-height: 1.5;
+}
+@media screen and (min-width: 1130px) {
+  h5, .h5 {
+    font-size: 1.5625em;
+  }
+}
+@media screen and (min-width: 1500px) {
+  h5, .h5 {
+    font-size: 1.875em;
+  }
+}
+
+h6, .h6 {
+  font-size: 0.8125em;
+  font-weight: 600;
+}
+@media screen and (min-width: 1130px) {
+  h6, .h6 {
+    font-size: 1em;
+  }
+}
+h6.larger, .larger.h6 {
+  font-size: 1em;
+}
+@media screen and (min-width: 1500px) {
+  h6.larger, .larger.h6 {
+    font-size: 1.5em;
+  }
 }
