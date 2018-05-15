@@ -2000,14 +2000,13 @@ h1.Title {
     margin-right: var(--margin-screen-horizontal);
 
     display: grid;
-    grid-template-columns: repeat(2, calc(
-        3 * var(--column-width) + var(--column-width) / 4
+    grid-template-columns: repeat(4, calc(
+        (7 * var(--column-width) - 3 * (var(--margin-screen-horizontal) / 2)) / 4
     ));
-    grid-column-gap: calc(var(--column-width) / 2);
-    grid-template-rows: repeat(3, calc(
-        calc((var(--row-3-height) + var(--row-4-height) + var(--row-5-height)) / 3)
+    grid-column-gap: calc(var(--margin-screen-horizontal) / 2);
+    grid-template-rows: repeat(1, calc(
+        calc(var(--row-3-height) + var(--row-4-height) + var(--row-5-height))
     ));
-    grid-row-gap: calc(var(--margin-screen-vertical) / 5);
 }
 
 .Article {
@@ -2047,10 +2046,11 @@ h1.Title {
 
 
 .Article__picture {
-    flex: 35;
+    /*flex: 35;*/
     overflow: hidden;
 
-    background: url('/img/Article__picture.jpg') no-repeat center center;
+    background: linear-gradient(to bottom, var(--primary-color-70), var(--primary-color-70)),
+    url('/img/Article__picture.jpg') no-repeat center center;
 
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -2061,15 +2061,30 @@ h1.Title {
 }
 
 .Article__details {
-    flex: 65;
     display: flex;
     flex-direction: column;
-    padding: 1.1vmax;
+    padding: 1.5vmax;
+    color: white;
+}
+
+.Article__source {
+    color: white;
+    text-transform: uppercase;
+    flex: 2;
+    align-items: flex-start;
 }
 
 .Article__title {
     flex: 3;
     align-items: flex-start;
+}
+
+.Article__title h3 {
+    font-weight: 700;
+}
+
+.Article__title .Text--subtle {
+    color: white;
 }
 
 .Text--subtle {
@@ -2081,8 +2096,9 @@ h1.Title {
 
     color: var(--primary-color);
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: flex-start;
+    color: white;
 }
 
 /* Tablet */
@@ -2106,7 +2122,9 @@ h1.Title {
         margin-left: var(--margin-screen-horizontal);
         margin-right: var(--margin-screen-horizontal);
 
-        grid-template-columns: calc(7 * var(--column-width));
+        grid-template-columns: repeat(4, calc(
+            (7 * var(--column-width) - 1 * (var(--margin-screen-horizontal) / 2)) / 2
+        ));
     }
 }
 
@@ -2133,7 +2151,7 @@ h1.Title {
         margin-right: var(--margin-screen-horizontal);
 
         grid-template-columns: calc(7 * var(--column-width));
-        grid-template-rows: repeat(3, calc((var(--row-3-height) + var(--row-4-height) + var(--row-5-height)) / 3));
+        grid-template-rows: repeat(1, calc((var(--row-3-height) + var(--row-4-height) + var(--row-5-height) + var(--row-6-height) / 2)));
     }
 }
 
