@@ -1577,7 +1577,7 @@ h1.Title {
 .ActionButton i {
     position: relative;
     align-self: flex-start;
-    margin-right: calc(1.5 * var(--local-padding-vertical));
+    margin-right: calc(0.5 * var(--local-padding-vertical));
 
     /*padding-left: calc(var(--font-size-h3) / 6);*/
     font-size: var(--font-size-h3);
