@@ -98,7 +98,7 @@ $(document).ready(function() {
                     $('.Project__loaderBarBg').addClass('animate');
                     window.homeInterval = window.setInterval(function() {
                         $.fn.fullpage.moveSlideRight();
-                    }, 8000000);
+                    }, 8000);
                 } else {
                     $('.Project__loaderBarBg').removeClass('animate');
                     clearInterval(window.homeInterval);

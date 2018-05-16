@@ -695,7 +695,8 @@ header nav {
 }
 
 .Project .slide {
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: visible;
 }
 
 
@@ -1131,13 +1132,19 @@ h1.Title {
 }
 
 .Project__picture {
+    --local-margin: 2em;
     position: absolute;
-    right: calc(
-        4 * var(--column-width)
-    );
+    right: calc( 4 * var(--column-width) );
 
-    height: calc(var(--row-2-height) + var(--row-3-height) + var(--row-4-height) + var(--row-5-height));
+    height: calc(
+        var(--row-2-height) + var(--row-3-height) + var(--row-4-height) + var(--row-5-height)
+        - 2 * var(--local-margin)
+    );
     width: auto;
+
+    margin-right: var(--margin-screen-vertical);
+    margin-top: var(--local-margin);
+    margin-bottom: var(--local-margin);
 
     background-color: transparent;
 }
@@ -1245,6 +1252,21 @@ h1.Title {
     ), url('/img/background/Wisean.png');
 }
 
+.Project__picture--Nokia img {
+    right: calc( 3 * var(--column-width));
+    height: calc(
+        var(--row-2-height) + var(--row-3-height) + var(--row-4-height) + var(--row-5-height)
+        + var(--row-6-height) / 2
+    );
+    margin-right: 0;
+}
+
+.Project__picture--Blackink img,
+.Project__picture--CGT img,
+.Project__picture--Keymetrics img,
+.Project__picture--Wisean img {
+
+}
 
 /* Tablet */
 @media (min-width: 768px) and (max-width: 991.98px) {
@@ -1292,10 +1314,40 @@ h1.Title {
         background-size: auto 100%;
     }
 
-    .Project__picture--nokia {
+    .Project__picture--Nokia {
         background-image:
         linear-gradient(to bottom, rgba(89, 91, 212, 0.7), rgba(89, 91, 212, 0.7)),
         url('/img/Projects/HeroPicture--Nokia.png');
+    }
+
+    .Project__picture--Alkemics {
+        background-image:
+        linear-gradient(to bottom, rgba(89, 91, 212, 0.7), rgba(89, 91, 212, 0.7)),
+        url('/img/Projects/HeroPicture--Alkemics.png');
+    }
+
+    .Project__picture--Blackink {
+        background-image:
+        linear-gradient(to bottom, rgba(89, 91, 212, 0.7), rgba(89, 91, 212, 0.7)),
+        url('/img/Projects/HeroPicture--Blackink.png');
+    }
+
+    .Project__picture--CGT {
+        background-image:
+        linear-gradient(to bottom, rgba(89, 91, 212, 0.7), rgba(89, 91, 212, 0.7)),
+        url('/img/Projects/HeroPicture--CGT.png');
+    }
+
+    .Project__picture--Keymetrics {
+        background-image:
+        linear-gradient(to bottom, rgba(89, 91, 212, 0.7), rgba(89, 91, 212, 0.7)),
+        url('/img/Projects/HeroPicture--Keymetrics.png');
+    }
+
+    .Project__picture--Wisean {
+        background-image:
+        linear-gradient(to bottom, rgba(89, 91, 212, 0.7), rgba(89, 91, 212, 0.7)),
+        url('/img/Projects/HeroPicture--Wisean.png');
     }
 
     .Project__picture {
@@ -3015,3 +3067,46 @@ h6.larger, .larger.h6 {
   }
 }
 */
+
+.Home .slide > .fp-tableCell .Project__picture {
+    transform: translateX(10000px);
+    opacity: 0;
+    transition: transform .8s cubic-bezier(0.16, 0.68, 0.43, 0.99),
+                opacity .8s ease-in-out;
+}
+
+.Home .slide.active > .fp-tableCell .Project__picture {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.Home .slide > .fp-tableCell .Project__Content {
+    transform: translateX(-10000px);
+    opacity: 0;
+    transition: transform .8s cubic-bezier(0.16, 0.68, 0.43, 0.99),
+                opacity .8s ease-in-out;
+}
+
+.Home .slide.active > .fp-tableCell .Project__Content {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.Home .slide > .fp-tableCell .ProjectTitle,
+.Home .slide > .fp-tableCell .ProjectDetails {
+    transform: translateY(-1000px);
+    opacity: 0;
+    transition: transform .8s cubic-bezier(0.16, 0.68, 0.43, 0.99),
+                opacity .8s ease-in-out;
+}
+
+.Home .slide.active > .fp-tableCell .ProjectTitle,
+.Home .slide.active > .fp-tableCell .ProjectDetails {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.Home .slide.active > .fp-tableCell .ProjectTitle,
+.Home .slide.active > .fp-tableCell .ProjectDetails {
+    transition-delay: .5s;
+}
