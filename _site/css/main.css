@@ -407,6 +407,66 @@ h1, h2, h3, h4, h5, h6 {
 /*
     Global
 */
+
+.Loader {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+}
+
+.no-js .Loader {
+    display: none;
+}
+
+.Loader--1 {
+    transition: all .7s linear .5s;
+    background-color: var(--primary-color);
+    z-index: 100000;
+    color: white;
+}
+
+/*.Loader--1 i.mdi-loading {
+    grid-column-start: 1;
+    grid-column-end: 9;
+    grid-row-start: 1;
+    grid-row-end: 7;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}*/
+
+.Loader--1 h1.Title {
+    color: white;
+}
+
+.Loader--1 .center {
+    grid-column-start: 1;
+    grid-column-end: 9;
+    grid-row-start: 1;
+    grid-row-end: 7;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slideAndHide {
+    /*-webkit-transform: translateX(100%);*/
+    /*-ms-transform: translateX(100%);*/
+    /*transform: translateX(100%);*/
+
+    opacity: 0;
+}
+
+.Loader .Titles {
+    animation-delay: .2s;
+}
+
+.Loader #typed {
+    animation-delay: 1s;
+}
+
 header nav, header .Name {
     --dots-nav-height: 40px;
     height: var(--dots-nav-height);
@@ -1445,7 +1505,7 @@ h1.Title {
     color: var(--primary-color) !important;
 }
 
-.ActionButton:hover:before, .ActionButton:active:before {
+.ActionButton:hover:before {
     width: 100%;
     background: var(--secondary-color);
 }
@@ -2856,7 +2916,7 @@ input[type=text], textarea {
 }
 
 
-
+/*
 h1, .h1 {
   font-size: 3.75em;
   line-height: 1;
@@ -2910,7 +2970,6 @@ h3, .h3 {
 
 h4, .h4 {
   font-size: 1em;
-  /*line-height: 1;*/
 }
 @media screen and (min-width: 1130px) {
   h4, .h4 {
@@ -2955,3 +3014,4 @@ h6.larger, .larger.h6 {
     font-size: 1.5em;
   }
 }
+*/

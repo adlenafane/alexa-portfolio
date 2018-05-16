@@ -47,6 +47,24 @@
         <div class="Loader Loader--2"></div>
         <div class="Loader Loader--1"></div> -->
 
+        <div class="Loader Loader--1 Fullscreen Screen">
+            <div class="Titles">
+                <h2 class="">Alexa Guéguen&nbsp;&nbsp;|&nbsp;&nbsp;Portfolio 2018</h2>
+            </div>
+            <div class="center">
+                <div id="typed-strings">
+                    <h2>Hi, I&apos;m Alexa</h2>
+                    <h2>I moved in Vancouver, BC from Paris</h2>
+                    <h2>I'm a UX Strategist.</h2>
+                    <h2>I'm a Product Designer.</h2>
+                    <h2>I'm a UXUI Designer.</h2>
+                    <h2>I'm a Foodie.</h2>
+                    <h2>Enjoy!</h2>
+                </div>
+                <h2 id="typed"></h2>
+            </div>
+        </div>
+
         <header class="Header">
             <input id="menuIconCheckbox" type="checkbox" />
 
@@ -71,7 +89,7 @@
             </nav>
         </header>
 
-        <div id="fullpage">
+        <div id="fullpage" class="opacity-0">
             <!-- Screen 1 - Home - Work -->
             <div data-anchor="work" class="Fullscreen Screen Home section fp-auto-height">
                 <div class="Project">
@@ -755,7 +773,7 @@
                                     <label for="contact-email">
                                         Email
                                     </label>
-                                    <input id="contact-email" type="email" name="fromEmail" placeholder="Ex: john.doe@google.com">
+                                    <input id="contact-email" type="email" name="fromEmail" placeholder="Ex: john.doe@email.com">
                                 </div>
                             </div>
                             <div class="row row--large">
@@ -769,7 +787,7 @@
                         </div>
                         <div class="SendMessage">
                             <button id="submit" class="ActionButton" onclick="gtag('event', 'download_resume');" href="https://drive.google.com/uc?authuser=0&id=1_Oi5XyhqXjwKSNSkBWq5hJqjlAaZ1KbR&export=download">
-                                <span><i class="mdi mdi-send"></i> Send message</span>
+                                <i class="mdi mdi-send"></i>&nbsp;<span>Send message</span>
                             </button>
                         </div>
                     </form>
@@ -796,12 +814,13 @@
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/simplebar@2.6.0/dist/simplebar.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
-        <script src="https://unpkg.com/tippy.js@2.5.0/dist/tippy.all.min.js"></script>
+        <!-- <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script> -->
+        <!-- <script src="https://unpkg.com/tippy.js@2.5.0/dist/tippy.all.min.js"></script> -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.6/typed.min.js"></script>
 
 
-        <script src="js/plugins.js"></script>
+        <!-- <script src="js/plugins.js"></script> -->
         <script src="js/main.js"></script>
     </body>
 </html>
