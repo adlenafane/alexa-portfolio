@@ -769,8 +769,8 @@ header nav {
 }
 
 .Project .slide {
-    overflow-x: hidden;
-    overflow-y: visible;
+    overflow-x: hidden !important;
+    overflow-y: visible !important;
 }
 
 
@@ -1888,7 +1888,7 @@ h1.Title {
     transition: all .2s ease;
     position: relative;
     margin-top: var(--local-padding-vertical);
-    margin-bottom: var(--local-padding-vertical);
+    /*margin-bottom: var(--local-padding-vertical);*/
     padding: var(--local-padding-vertical);
 
     text-decoration: none;
@@ -3899,11 +3899,11 @@ h6.larger, .larger.h6 {
 */
 
 .Home .slide > .fp-tableCell .Project__picture {
-    -webkit-transform: translateX(10000px);
+/*    -webkit-transform: translateX(10000px);
         -ms-transform: translateX(10000px);
-            transform: translateX(10000px);
+            transform: translateX(10000px);*/
     opacity: 0;
-    -webkit-transition: opacity .8s ease-in-out,
+    /*-webkit-transition: opacity .8s ease-in-out,
                 -webkit-transform .8s cubic-bezier(0.16, 0.68, 0.43, 0.99);
     transition: opacity .8s ease-in-out,
                 -webkit-transform .8s cubic-bezier(0.16, 0.68, 0.43, 0.99);
@@ -3913,22 +3913,22 @@ h6.larger, .larger.h6 {
                 opacity .8s ease-in-out;
     transition: transform .8s cubic-bezier(0.16, 0.68, 0.43, 0.99),
                 opacity .8s ease-in-out,
-                -webkit-transform .8s cubic-bezier(0.16, 0.68, 0.43, 0.99);
+                -webkit-transform .8s cubic-bezier(0.16, 0.68, 0.43, 0.99);*/
 }
 
 .Home .slide.active > .fp-tableCell .Project__picture {
-    -webkit-transform: translateX(0);
+/*    -webkit-transform: translateX(0);
         -ms-transform: translateX(0);
-            transform: translateX(0);
+            transform: translateX(0);*/
     opacity: 1;
 }
 
 .Home .slide > .fp-tableCell .Project__Content {
-    -webkit-transform: translateX(-10000px);
+/*    -webkit-transform: translateX(-10000px);
         -ms-transform: translateX(-10000px);
-            transform: translateX(-10000px);
+            transform: translateX(-10000px);*/
     opacity: 0;
-    -webkit-transition: opacity .8s ease-in-out,
+/*    -webkit-transition: opacity .8s ease-in-out,
                 -webkit-transform .8s cubic-bezier(0.16, 0.68, 0.43, 0.99);
     transition: opacity .8s ease-in-out,
                 -webkit-transform .8s cubic-bezier(0.16, 0.68, 0.43, 0.99);
@@ -3938,23 +3938,23 @@ h6.larger, .larger.h6 {
                 opacity .8s ease-in-out;
     transition: transform .8s cubic-bezier(0.16, 0.68, 0.43, 0.99),
                 opacity .8s ease-in-out,
-                -webkit-transform .8s cubic-bezier(0.16, 0.68, 0.43, 0.99);
+                -webkit-transform .8s cubic-bezier(0.16, 0.68, 0.43, 0.99);*/
 }
 
 .Home .slide.active > .fp-tableCell .Project__Content {
-    -webkit-transform: translateX(0);
+/*    -webkit-transform: translateX(0);
         -ms-transform: translateX(0);
-            transform: translateX(0);
+            transform: translateX(0);*/
     opacity: 1;
 }
 
 .Home .slide > .fp-tableCell .ProjectTitle,
 .Home .slide > .fp-tableCell .ProjectDetails {
-    -webkit-transform: translateY(-1000px);
+/*    -webkit-transform: translateY(-1000px);
         -ms-transform: translateY(-1000px);
-            transform: translateY(-1000px);
+            transform: translateY(-1000px);*/
     opacity: 0;
-    -webkit-transition: opacity .8s ease-in-out,
+/*    -webkit-transition: opacity .8s ease-in-out,
                 -webkit-transform .8s cubic-bezier(0.16, 0.68, 0.43, 0.99);
     transition: opacity .8s ease-in-out,
                 -webkit-transform .8s cubic-bezier(0.16, 0.68, 0.43, 0.99);
@@ -3964,20 +3964,20 @@ h6.larger, .larger.h6 {
                 opacity .8s ease-in-out;
     transition: transform .8s cubic-bezier(0.16, 0.68, 0.43, 0.99),
                 opacity .8s ease-in-out,
-                -webkit-transform .8s cubic-bezier(0.16, 0.68, 0.43, 0.99);
+                -webkit-transform .8s cubic-bezier(0.16, 0.68, 0.43, 0.99);*/
 }
 
 .Home .slide.active > .fp-tableCell .ProjectTitle,
 .Home .slide.active > .fp-tableCell .ProjectDetails {
-    -webkit-transform: translateY(0);
+/*    -webkit-transform: translateY(0);
         -ms-transform: translateY(0);
-            transform: translateY(0);
+            transform: translateY(0);*/
     opacity: 1;
 }
 
 .Home .slide.active > .fp-tableCell .ProjectTitle,
 .Home .slide.active > .fp-tableCell .ProjectDetails {
-    -webkit-transition-delay: .5s;
+/*    -webkit-transition-delay: .5s;
          -o-transition-delay: .5s;
-            transition-delay: .5s;
+            transition-delay: .5s;*/
 }

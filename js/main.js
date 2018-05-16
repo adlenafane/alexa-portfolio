@@ -95,12 +95,10 @@ $(document).ready(function() {
 
             $('.Home').inViewport(function (px) {
                 if(px === window.innerHeight) {
-                    $('.Project__loaderBarBg').addClass('animate');
                     window.homeInterval = window.setInterval(function() {
                         $.fn.fullpage.moveSlideRight();
                     }, 8000);
                 } else {
-                    $('.Project__loaderBarBg').removeClass('animate');
                     clearInterval(window.homeInterval);
                 }
             });
