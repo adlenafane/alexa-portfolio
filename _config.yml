@@ -1,2 +1,5 @@
 url: http://preview.alexa-gueguen.com
 baseurl: '/'
+sass:
+  style: compressed
+
