@@ -21,22 +21,25 @@
 }(jQuery, window));
 
 $(document).ready(function() {
-  var typed = new Typed('#typed', {
-    stringsElement: '#typed-strings',
-    smartBackspace: true,
-    typeSpeed: 50,
-    backSpeed: 30,
-    onComplete: () => {
-      $('.Loader .Titles').addClass('animated fadeOut');
-      $('.Loader #typed').addClass('animated fadeOut');
+  var typedElement = document.getElementById('typed');
+  if(typedElement) {
+    var typed = new Typed('#typed', {
+      stringsElement: '#typed-strings',
+      smartBackspace: true,
+      typeSpeed: 50,
+      backSpeed: 30,
+      onComplete: () => {
+        $('.Loader .Titles').addClass('animated fadeOut');
+        $('.Loader #typed').addClass('animated fadeOut');
 
-      window.setTimeout(function() {
-        $('#fullpage').removeClass('opacity-0');
-        $('.Loader').addClass('slideAndHide');
-        $('.Loader').css('pointer-events', 'none');
-      }, 1200);
-    },
-  });
+        window.setTimeout(function() {
+          $('#fullpage').removeClass('opacity-0');
+          $('.Loader').addClass('slideAndHide');
+          $('.Loader').css('pointer-events', 'none');
+        }, 1200);
+      },
+    });
+  }
 });
 // Slide page per page
 $(document).ready(function() {

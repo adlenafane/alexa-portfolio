@@ -4,44 +4,7 @@ title: HTML page
 
 <!doctype html>
 <html class="no-js" lang="">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Alexa GUÉGUEN - Portfolio UX Designer</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <link rel="manifest" href="site.webmanifest">
-        <link rel="apple-touch-icon" href="icon.png">
-        <!-- Place favicon.ico in the root directory -->
-
-        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
-
-        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.6/jquery.fullpage.min.css" />
-        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
-        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
-        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/simplebar@2.6.0/dist/simplebar.css"/>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css" integrity="sha384-OHBBOqpYHNsIqQy8hL1U+8OXf9hH6QRxi0+EODezv82DfnZoV7qoHAZDwMwEJvSw" crossorigin="anonymous">
-
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css" />
-
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/main.css">
-        <link href="css/materialdesignicons.min.css" media="all" rel="stylesheet" type="text/css" />
-
-
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-44855546-1"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-
-          // window.googleAnalyticsUA = window.location.hostname === 'www.alexa-gueguen.com' ? 'UA-44855546-1' : '';
-          window.googleAnalyticsUA = 'UA-44855546-1';
-          gtag('config', googleAnalyticsUA);
-        </script>
-    </head>
+    {% include head.html title="Alexa GUÉGUEN - Portfolio UX Designer" %}
     <body>
         <!--[if lte IE 9]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
@@ -807,24 +770,6 @@ title: HTML page
             </div>
         </div>
 
-
-        <script src="js/vendor/modernizr-3.5.0.min.js"></script>
-        <script
-            src="https://code.jquery.com/jquery-3.3.1.min.js"
-            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-            crossorigin="anonymous">
-        </script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.6/jquery.fullpage.min.js" type="text/javascript"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/simplebar@2.6.0/dist/simplebar.min.js"></script>
-        <!-- <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script> -->
-        <!-- <script src="https://unpkg.com/tippy.js@2.5.0/dist/tippy.all.min.js"></script> -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.6/typed.min.js"></script>
-
-
-        <!-- <script src="js/plugins.js"></script> -->
-        <script src="js/main.js"></script>
+        {% include scripts.html %}
     </body>
 </html>

@@ -760,8 +760,8 @@ header nav {
 }
 
 .Screen {
-    display: -ms-grid;
-    display: grid;
+    display: -ms-grid !important;
+    display: grid !important;
     -ms-grid-columns: (var(--column-width))[8];
         grid-template-columns: repeat(8, var(--column-width));
     -ms-grid-rows: var(--row-1-height) var(--row-2-height) var(--row-3-height) var(--row-4-height) var(--row-5-height) var(--row-6-height);
@@ -3980,4 +3980,119 @@ h6.larger, .larger.h6 {
 /*    -webkit-transition-delay: .5s;
          -o-transition-delay: .5s;
             transition-delay: .5s;*/
+}
+
+/**/
+/**/
+/**/
+/* Projects */
+/**/
+/**/
+/**/
+
+.CircleBackground:before {
+    content: '';
+    display: flex;
+    background-color: var(--secondary-color);
+    border-radius: 50%;
+    height: 80px;
+    width: 80px;
+
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.Role, .Benchmark, .Sketch {
+    background-color: var(--secondary-color);
+}
+
+.Kickoff, .Launch {
+    background-color: black;
+}
+
+.Kickoff *, .Launch * {
+    color: white;
+}
+
+.Half {
+    grid-row-start: 2;
+    grid-row-end: 5;
+}
+
+.Half--left {
+    grid-column-start: 2;
+    grid-column-end: 5;
+
+    margin-left: calc(var(--column-width) / 2);
+    margin-right: calc(var(--column-width) / 2);
+}
+
+.Half--right {
+    grid-column-start: 5;
+    grid-column-end: 7;
+}
+
+.Top {
+    grid-row-start: 2;
+    grid-row-end: 4;
+    grid-column-start: 2;
+    grid-column-end: 8;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.Bottom {
+    grid-row-start: 4;
+    grid-row-end: 6;
+    grid-column-start: 2;
+    grid-column-end: 8;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.Full-height {
+    grid-row-start: 2;
+    grid-row-end: 7;
+    grid-column-start: 2;
+    grid-column-end: 8;
+}
+
+.Full-height--narrow {
+    grid-column-start: 4;
+    grid-column-end: 6;
+}
+
+.Center {
+    text-align: center;
+}
+
+.Hero .Half--left {
+    display: flex;
+
+    flex-direction: column;
+}
+
+.Hero .Half--left .AlkemicsCustomers {
+    text-transform: uppercase;
+    margin: auto;
+    margin-left: 0;
+    margin-bottom: 0;
+}
+
+.Interview .Expectations, .Results .Results__content {
+    display: flex;
+
+    justify-content: space-between;
+}
+
+.ProjectSummary {
+    background-color: white;
+    padding: calc(var(--margin-screen-horizontal) / 2);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    color: var(--primary-color);
 }
