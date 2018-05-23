@@ -39,6 +39,8 @@ $(document).ready(function() {
         }, 1200);
       },
     });
+  } else {
+    $('#fullpage').removeClass('opacity-0');
   }
 });
 // Slide page per page
@@ -100,7 +102,7 @@ $(document).ready(function() {
                 if(px === window.innerHeight) {
                     window.homeInterval = window.setInterval(function() {
                         $.fn.fullpage.moveSlideRight();
-                    }, 8000);
+                    }, 800000);
                 } else {
                     clearInterval(window.homeInterval);
                 }
@@ -141,9 +143,9 @@ $(document).ready(function() {
     $('.Steps__Content').slick({
       slidesToShow: 1,
       slidesToScroll: 1,
-      arrows: false,
+      arrows: true,
       fade: true,
-      dots: true,
+      dots: false,
       asNavFor: '.Steps',
       responsive: [
         {
@@ -152,7 +154,7 @@ $(document).ready(function() {
                 slidesToShow: 5,
                 arrows: true,
                 fade: true,
-                dots: true,
+                dots: false,
                 asNavFor: '.Steps',
                 infinite: false,
             }
@@ -194,7 +196,7 @@ $(document).ready(function() {
     $('.Answers').slick({
       slidesToShow: 1,
       slidesToScroll: 1,
-      arrows: false,
+      arrows: true,
       fade: true,
       dots: false,
       asNavFor: '.Questions',
@@ -205,7 +207,7 @@ $(document).ready(function() {
                 slidesToShow: 1,
                 arrows: true,
                 fade: true,
-                dots: true,
+                dots: false,
                 fade: true,
                 asNavFor: '.Questions',
             }
