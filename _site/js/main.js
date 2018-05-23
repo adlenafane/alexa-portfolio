@@ -74,7 +74,7 @@ $(document).ready(function() {
             $('.fp-next').addClass('mdi mdi-chevron-right');
 
             var fadeInUpSelectors = '.Title, .Subtitle, .Description, .ResumeWrapper, .ArticlesTitle, .Article, .QuestionTitle, .QuestionContent, .WhyShouldYouContactMe, .WhyShouldYouContactMe__content, .ContactDetails__TitleWrapper, .ContactDetails, .StepTitle__wrapper, .ExternalLink';
-            var fadeInRightSelectors = '.About__background, .About .EmptySpace, .StepPicture, .ArticlesWrapper';
+            var fadeInRightSelectors = '.About__background, .About__background--2, .About .EmptySpace, .StepPicture, .ArticlesWrapper';
             var fadeInSelectors = '.Pagination, .Page, .Arrow, .ArrowRepeat__wrapper';
 
             $(fadeInUpSelectors).addClass('opacity-0');
