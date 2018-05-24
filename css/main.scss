@@ -1192,9 +1192,10 @@ h4 {
     display: -ms-grid;
     display: grid;
     grid-template-columns: repeat(8, var(--column-width));
-    grid-template-rows: var(--row-2-height) var(--row-3-height) var(--row-4-height) var(--row-5-height);
+    grid-template-rows: var(--row-2-height) var(--row-3-height) var(--row-4-height) var(--row-5-height) var(--row-6-height);
 
     overflow-x: hidden;
+    overflow-y: visible;
 }
 
 .Project__Content {
@@ -1210,8 +1211,9 @@ h4 {
     display: -ms-grid;
 
     display: grid;
-        grid-template-columns: repeat(6, var(--column-width));
-        grid-template-rows: var(--row-2-height) var(--row-3-height) var(--row-4-height) var(--row-5-height);
+
+    grid-template-columns: repeat(6, var(--column-width));
+    grid-template-rows: var(--row-2-height) var(--row-3-height) var(--row-4-height) var(--row-5-height);
 }
 
 .Project__background,
@@ -2068,11 +2070,14 @@ h4 {
 @media (min-width: 768px) and (max-width: 991.98px) {
     .Description__Content {
         grid-row-start: 2;
-        grid-row-end: 6;
+        grid-row-end: 5;
         grid-column-start: 1;
         grid-column-end: 6;
+
         margin-left: var(--margin-screen-horizontal);
         margin-right: var(--margin-screen-horizontal);
+
+        /*margin-bottom: var(--);*/
     }
 
     .Description, .ResumeWrapper {
@@ -2081,8 +2086,10 @@ h4 {
 
     .ResumeWrapper {
         -webkit-box-align: start;
-            -ms-flex-align: start;
-                align-items: flex-start;
+        -ms-flex-align: start;
+        align-items: flex-end;
+
+        margin-left: var(--margin-screen-horizontal);
     }
 
     .Resume i {
@@ -2091,6 +2098,12 @@ h4 {
 
     .About__background {
         grid-column-start: 6;
+
+        background-position: 25%;
+    }
+
+    .About__background--2 {
+        background-position: 75%;
     }
 }
 
@@ -2372,7 +2385,7 @@ h4 {
     grid-template-columns: repeat(1, calc(
         2.5 * var(--column-width)
     ));
-        grid-template-rows: var(--row-2-height) var(--row-3-height) var(--row-4-height) var(--row-5-height);
+    grid-template-rows: var(--row-2-height) var(--row-3-height) var(--row-4-height) var(--row-5-height);
 }
 
 .StepPicture--1 {
@@ -2502,6 +2515,8 @@ h4 {
         grid-column-end: 2;
         grid-row-start: 2;
         grid-row-end: 5;
+
+        margin-top: calc(var(--row-2-height) / 6);
     }
 
     .StepTitle__wrapper, .Questions__wrapper {
@@ -2601,7 +2616,7 @@ h4 {
         grid-template-columns: repeat(1, calc(
             8 * var(--column-width) - 2 * var(--margin-screen-horizontal)
         ));
-        grid-template-rows: calc(var(--row-2-height)) calc(var(--row-2-height) / 2 + var(--row-3-height)) var(--row-4-height);
+        grid-template-rows: calc(var(--row-2-height) / 2) var(--row-3-height) var(--row-4-height) var(--row-5-height);
     }
 
     .StepTitle__wrapper {
@@ -3506,19 +3521,37 @@ input:focus, textarea:focus {
 
 /* Tablet */
 @media (min-width: 768px) and (max-width: 991.98px) {
-    form.Contact {
-        grid-column-start: 4;
+    .ContactInformation {
+        grid-column-start: 1;
         grid-column-end: 9;
         grid-row-start: 2;
         grid-row-end: 6;
 
+        margin-left: var(--margin-screen-horizontal);
+        margin-right: var(--margin-screen-horizontal);
+    }
+
+    .ExternalLinks {
+        flex-direction: column;
+    }
+
+    .ExternalLink + .ExternalLink {
+        margin-left: 0;
+        margin-top: 0.5rem;
+    }
+
+    form.Contact {
+        grid-column-start: 4;
+        grid-column-end: 9;
+        grid-row-start: 3;
+        grid-row-end: 7;
+
         display: -ms-grid;
-
         display: grid;
-            grid-template-columns: repeat(4, var(--column-width));
-            grid-template-rows: var(--row-2-height) var(--row-3-height) var(--row-4-height) var(--row-5-height);
 
-    grid-column-start: 4;
+        grid-template-columns: repeat(4, var(--column-width));
+        grid-template-rows: var(--row-2-height) var(--row-3-height) var(--row-4-height) var(--row-5-height);
+
         margin-left: var(--margin-screen-horizontal);
     }
 
@@ -3566,6 +3599,14 @@ input:focus, textarea:focus {
 
     .ContactForm .half:last-of-type {
         margin-left: 0;
+    }
+
+    .SendMessage {
+        align-items: flex-start;
+    }
+
+    .ActionButton {
+        margin-top: 0.5rem;
     }
 }
 
