@@ -114,6 +114,13 @@ html {
     text-rendering: optimizeLegibility
 }
 
+@media (max-width: 767.98px) {
+    html {
+        font-size: 14px;
+    }
+}
+
+
 i {
     line-height: 1;
 }
@@ -2111,11 +2118,13 @@ h4 {
 @media (max-width: 767.98px) {
     .Description__Content {
         grid-row-start: 2;
-        grid-row-end: 6;
+        grid-row-end: 5;
         grid-column-start: 1;
-        grid-column-end: 6;
+        grid-column-end: 9;
         margin-left: var(--margin-screen-horizontal);
         margin-right: var(--margin-screen-horizontal);
+
+        z-index: 1;
     }
 
     .Description, .ResumeWrapper {
@@ -2123,9 +2132,11 @@ h4 {
     }
 
     .ResumeWrapper {
-        -webkit-box-align: start;
-            -ms-flex-align: start;
-                align-items: flex-start;
+        -webkit-box-align: end;
+        -ms-flex-align: end;
+        align-items: flex-end;
+
+        margin-left: var(--margin-screen-horizontal);
     }
 
     .Resume i {
@@ -2134,15 +2145,6 @@ h4 {
 
     .About__background {
         grid-column-start: 6;
-    }
-
-    .Description__Content {
-        grid-column-start: 1;
-        grid-column-end: 9;
-        grid-row-start: 1;
-        grid-row-end: 7;
-
-        margin-top: var(--margin-screen-vertical);
     }
 
     .About .About__background, .About .EmptySpace {
@@ -2155,6 +2157,15 @@ h4 {
         grid-row-start: 1;
         grid-row-end: 7;
         margin: 0;
+    }
+
+    .About__background--2 {
+        grid-column-start: 1;
+        grid-column-end: 9;
+        grid-row-start: 5;
+        grid-row-end: 7;
+        border-radius: 0;
+        background-image: linear-gradient( to top, rgba(0,0,0,0), rgba(0,0,0, 1) ), url(/img/Profile__Photo--Alexa--Mountains.jpg);
     }
 }
 
@@ -3153,7 +3164,7 @@ h4 {
     left: 0;
     height: var(--row-5-height);
     width: 100%;
-    background: -webkit-linear-gradient(rgba(246, 247, 253, .4), rgba(246, 247, 253, 1));
+    background: linear-gradient(rgba(246, 247, 253, .4), rgba(246, 247, 253, 1));
 }
 
 .Faq .ScrollDownIndication {
@@ -3300,7 +3311,7 @@ h4 {
     .QuestionContent:after {
         height: calc(var(--row-5-height) / 2);
 
-        background: -webkit-linear-gradient(rgba(246,247,253, .4), rgba(246,247,253, 1));
+        background: gradient(rgba(246,247,253, .4), rgba(246,247,253, 1));
     }
 
     /*.Faq .slick-dots {
