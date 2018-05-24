@@ -12,12 +12,28 @@ Open terminal to retrieve and run the server
 	npm start
 ```
 
+If you have uncommited changes, git will cry, to help it feel better, save your changes then pull again as below:
+```
+  git add --all
+  git commit -m "What you change"
+  git push origin master
+  git pull --rebase origin master
+```
 
-Save changes
-------------
+Save everything
+---------------
+
+```
+  git add --all
+  git commit -m "What you change"
+  git push origin master
+```
+
+
+Save changes detailled
+----------------------
 
 Once all files are saved
-
 
 If file does not exist
 ```
@@ -42,9 +58,3 @@ Push changes to Github
 	git push origin master
 ```
 
-
-TODO
-----
-
-[ ] Icone Loading avec vrai chargement (img)
-[ ] Changer le background image en image pour pouvoir dépasser
