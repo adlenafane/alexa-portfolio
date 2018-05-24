@@ -70,10 +70,12 @@ title: CSS stylesheet
    }
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: 991.98px) {
+/*@media (max-width: 767.98px) {*/
     :root {
-        --row-1-height: 18vh;
-        --row-2-height: 15.3vh;
+
+        --row-1-height: 15vh;
+        --row-2-height: 18.3vh;
         --row-3-height: 17.7vh;
         --row-4-height: var(--row-3-height);
         --row-5-height: var(--row-2-height);
@@ -1191,6 +1193,8 @@ h4 {
     display: grid;
     grid-template-columns: repeat(8, var(--column-width));
     grid-template-rows: var(--row-2-height) var(--row-3-height) var(--row-4-height) var(--row-5-height);
+
+    overflow-x: hidden;
 }
 
 .Project__Content {
@@ -1395,6 +1399,12 @@ h4 {
         width: 50%;
         margin-left: var(--margin-screen-horizontal);
     }*/
+
+    .Testimonials .BackgroundText--highlight {
+        grid-column-start: 1;
+        grid-column-end: 7;
+        justify-content: center;
+    }
 
     .Testimonial__ClientCompany {
         margin-left: 0;
@@ -1785,11 +1795,11 @@ h4 {
     .ProjectDetails {
         grid-column-start: 1;
         grid-column-end: 6;
-        grid-row-start: 2;
+        grid-row-start: 3;
         grid-row-end: 4;
 
-        margin-top: calc(var(--row-3-height) / 2);
-        margin-bottom: calc(var(--row-4-height) / 2);
+        /*margin-top: calc(var(--row-3-height) / 2);
+        margin-bottom: calc(var(--row-4-height) / 2);*/
     }
 /*    .Credentials {
         grid-row-end: 2;
