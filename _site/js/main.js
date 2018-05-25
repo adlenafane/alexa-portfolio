@@ -281,41 +281,51 @@ $(document).ready(function() {
 
 $(document).ready(function() {
     $('#submit').click(function() {
-        var firstName = document.getElementById('contact-firstname').value;
-        var lastName = document.getElementById('contact-lastname').value;
-        var fromEmail = document.getElementById('contact-email').value;
-        var message = document.getElementById('contact-message').value;
+        var firstName = document.getElementById('contact-firstname');
+        var lastName = document.getElementById('contact-lastname');
+        var fromEmail = document.getElementById('contact-email');
+        var message = document.getElementById('contact-message');
 
-        $.ajax({
-            url: 'https://ff1zun6a9g.execute-api.us-east-1.amazonaws.com/production/sendEmailToAlexa',
-            type: 'POST',
-            data: JSON.stringify({
-                firstName,
-                lastName,
-                fromEmail,
-                message,
-            }),
-            cache:false,
-            success: function (html) {
-              window.$('#submit i').removeClass('mdi-send');
-              window.$('#submit i').addClass('mdi-check');
-              window.$('#submit span').text('Sent');
+        var firstNameValue = document.getElementById('contact-firstname').value;
+        var lastNameValue = document.getElementById('contact-lastname').value;
+        var fromEmailValue = document.getElementById('contact-email').value;
+        var messageValue = document.getElementById('contact-message').value;
 
-              window.setTimeout(function() {
-                function resetElement(e){
-                    var $e = $(e);
-                    var $original = $e.clone();
-                    $e.replaceWith($original);
-                }
-                window.$('#submit span').text('Send message');
-                window.$('#submit i').removeClass('mdi-check');
-                window.$('#submit i').addClass('mdi-send');
-                resetElement(document.activeElement);
-              }, 1500)
-            }
-        });
+        if(
+          fromEmail.validity && fromEmail.validity.valid &&
+          message.validity && message.validity.valid
+        ) {
+          $.ajax({
+              url: 'https://ff1zun6a9g.execute-api.us-east-1.amazonaws.com/production/sendEmailToAlexa',
+              type: 'POST',
+              data: JSON.stringify({
+                  firstName: firstNameValue,
+                  lastName: lastNameValue,
+                  fromEmail: fromEmailValue,
+                  message: messageValue,
+              }),
+              cache:false,
+              success: function (html) {
+                window.$('#submit i').removeClass('mdi-send');
+                window.$('#submit i').addClass('mdi-check');
+                window.$('#submit span').text('Sent');
 
-        return false;
+                window.setTimeout(function() {
+                  function resetElement(e){
+                      var $e = $(e);
+                      var $original = $e.clone();
+                      $e.replaceWith($original);
+                  }
+                  window.$('#submit span').text('Send message');
+                  window.$('#submit i').removeClass('mdi-check');
+                  window.$('#submit i').addClass('mdi-send');
+                  resetElement(document.activeElement);
+                }, 1500)
+              }
+          });
+
+          return false;
+        }
     });
 });
 
