@@ -3107,6 +3107,10 @@ h6.larger, .larger.h6 {
     align-items: center;
 }
 
+.Top--small {
+    grid-row-end: 3;
+}
+
 .Bottom {
     grid-row-start: 4;
     grid-row-end: 6;
@@ -3115,6 +3119,10 @@ h6.larger, .larger.h6 {
 
     justify-content: center;
     align-items: center;
+}
+
+.Bottom--large {
+    grid-row-start: 3;
 }
 
 .Full-height {
@@ -3174,4 +3182,15 @@ h6.larger, .larger.h6 {
     flex-direction: column;
     justify-content: space-around;
     color: var(--primary-color);
+}
+
+.Launch .Result {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: inherit;
+    background-size: contain;
+}
+
+.Result--HPP {
+    background-image: url('/img/Projects/Alkemics-HPP/HPP_White_legends.png');
 }
