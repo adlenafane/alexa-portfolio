@@ -3051,6 +3051,34 @@ h6.larger, .larger.h6 {
     color: white;
 }
 
+/*body {
+    counter-increment: item;
+}
+
+.Kickoff ol {
+    list-style: none;
+    padding-left: 0;
+}
+
+.Kickoff ol li {
+    counter-reset: item;
+    display: inline-block;
+}
+
+.Kickoff ol li + li {
+    margin-top: 1em;
+}
+
+.Kickoff ol li:before {
+    content: counter(item);
+    border: 1px solid var(--white);
+    border-radius: 50%;
+    width: 3em;
+    height: 3em;
+    padding: 0.5em;
+    margin-right: 1em;
+}*/
+
 .Half {
     grid-row-start: 2;
     grid-row-end: 5;
@@ -3116,6 +3144,20 @@ h6.larger, .larger.h6 {
     margin: auto;
     margin-left: 0;
     margin-bottom: 0;
+}
+
+.Hero .HeroPicture__wrapper {
+    grid-row-start: 1;
+    grid-row-end: 7;
+    grid-column-end: 9;
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-attachment: inherit;
+    background-size: cover;
+}
+
+.HeroPicture--Alkemics {
+    background-image: url('/img/Projects/HeroPicture--Alkemics.png');
 }
 
 .Interview .Expectations, .Results .Results__content {
