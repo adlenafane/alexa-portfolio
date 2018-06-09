@@ -3064,6 +3064,11 @@ h6.larger, .larger.h6 {
     background-color: var(--secondary-color);
 }
 
+.Role .HighlightPicture {
+    width: calc(2 * var(--column-width));
+    height: auto;
+}
+
 .Kickoff, .Launch {
     background-color: black;
 }
@@ -3130,6 +3135,7 @@ h6.larger, .larger.h6 {
 
     justify-content: center;
     align-items: center;
+
 }
 
 .Top--left {
@@ -3143,7 +3149,10 @@ h6.larger, .larger.h6 {
 }
 
 .Top--small {
+    grid-row-start: 1;
     grid-row-end: 3;
+
+    margin-top: var(--margin-screen-vertical);
 }
 
 .Bottom {
@@ -3174,6 +3183,11 @@ h6.larger, .larger.h6 {
 
 .Center {
     text-align: center;
+}
+
+.Center--narrow {
+    grid-column-start: 4;
+    grid-column-end: 6;
 }
 
 .Hero .Half--left {
@@ -3216,6 +3230,19 @@ h6.larger, .larger.h6 {
 
 .HeroPicture--Alkemics {
     background-image: url('/img/Projects/HeroPicture--Alkemics.png');
+}
+
+.HeroPicture--DataScheme {
+    grid-column-end: 9;
+
+    margin-right: var(--margin-screen-horizontal);
+
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: inherit;
+    background-size: contain;
+
+    background-image: url('/img/Projects/Alkemics-HPP/HppDataSheme.gif');
 }
 
 .Interview .Expectations, .Results .Results__content {
@@ -3284,4 +3311,13 @@ h6.larger, .larger.h6 {
 
 .HPPFullBackground {
     background-image: url('/img/Projects/Alkemics-HPP/HPPFull.png');
+}
+
+.AlkemicsHPP .Retrospective {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: inherit;
+    background-size: cover;
+
+    background-image: linear-gradient(299deg, #000000, rgba(0, 0, 0, 0.5)), url('/img/Projects/Alkemics-HPP/HPP_Role_HighlightPicture.jpg');
 }
