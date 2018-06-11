@@ -3140,12 +3140,12 @@ h6.larger, .larger.h6 {
 
 .Top--left {
     grid-column-start: 2;
-    grid-column-end: 5;
+    grid-column-end: 6;
 }
 
 .Top--right {
-    grid-column-start: 5;
-    grid-column-end: 7;
+    grid-column-start: 6;
+    grid-column-end: 8;
 }
 
 .Top--small {
@@ -3245,6 +3245,31 @@ h6.larger, .larger.h6 {
     background-image: url('/img/Projects/Alkemics-HPP/HppDataSheme.gif');
 }
 
+.TweetImage {
+    grid-row-start: 1;
+    grid-row-end: 4;
+    grid-column-start: 3;
+    grid-column-end: 6;
+
+    margin-right: var(--margin-screen-horizontal);
+    margin-top: var(--margin-screen-vertical);
+}
+
+.TweetText {
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 5;
+    grid-column-end: 7;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+
+    margin-left: var(--margin-screen-horizontal);
+    margin-top: var(--margin-screen-vertical);
+}
+
 .Interview .Expectations, .Results .Results__content {
     display: flex;
 
@@ -3283,18 +3308,81 @@ h6.larger, .larger.h6 {
 }
 
 .BenchmarkingText {
+    grid-row-start: 5;
+    grid-row-end: 7;
     grid-column-start: 2;
     grid-column-end: 4;
+
+    margin-bottom: var(--margin-screen-vertical);
+    margin-right: var(--margin-screen-horizontal);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+    text-align: right;
 }
 
 .BenchmarkingBackground {
-    grid-column-start: 4;
+    grid-row-start: 3;
+    grid-row-end: 7;
+    grid-column-start: 3;
+    grid-column-end: 7;
+
+    margin-top: var(--margin-screen-vertical);
+    margin-bottom: var(--margin-screen-vertical);
+    margin-left: var(--margin-screen-horizontal);
+}
+
+.PostIts {
+    grid-row-start: 2;
+    grid-row-end: 6;
+    grid-column-start: 5;
     grid-column-end: 8;
+
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.PostIt {
+    background-color: #F8E71C;
+
+    width: calc(3 * var(--column-width) / 2 - var(--margin-screen-vertical) / 4);
+    height: calc(var(--row-2-height) + var(--row-3-height) - var(--margin-screen-vertical) / 4);
+}
+
+.PostIt:nth-of-type(2n) {
+    margin-left: calc(var(--margin-screen-vertical) / 2);
+}
+
+.PostIt:nth-of-type(3), .PostIt:nth-of-type(4) {
+    margin-top: calc(var(--margin-screen-vertical) / 2);
+}
+
+.PostItText, .PostItNumber {
+    padding: calc(var(--margin-screen-vertical) / 2);
+    margin: 0;
+}
+
+.PostItText {
+    font-size: var(--font-size-legend);
+
+    padding-top: 0;
+}
+
+.PostItNumber {
+    padding-bottom: calc(var(--margin-screen-vertical) / 4);
 }
 
 .TweetBackground,
 .BenchmarkingBackground,
-.HPPFullBackground {
+.HPPFullBackground,
+.AwardsBackground,
+.CardSortingImageBackgroung,
+.SketchImageBackgroung,
+.ZoningImageBackgroung,
+.PressBackground {
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: inherit;
@@ -3311,6 +3399,138 @@ h6.larger, .larger.h6 {
 
 .HPPFullBackground {
     background-image: url('/img/Projects/Alkemics-HPP/HPPFull.png');
+}
+
+.AwardsBackground {
+    background-image: url('/img/Projects/Alkemics-HPP/Award-LSA.jpeg');
+}
+
+.CardSortingImageBackgroung {
+    background-image: url('/img/Projects/Alkemics-HPP/CardSorting.png'); 
+}
+
+.SketchImageBackgroung {
+    background-image: url('/img/Projects/Alkemics-HPP/Sketch.png'); 
+}
+
+.ZoningImageBackgroung {
+    background-image: url('/img/Projects/Alkemics-HPP/Zoning.png'); 
+}
+
+.PressBackground {
+    background-image: url('/img/Projects/Alkemics-HPP/Press-LesEchos.png'); 
+}
+
+.CardSortingText {
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 4;
+    grid-column-end: 6;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    text-align: left;
+
+    margin-top: var(--margin-screen-vertical);
+}
+
+.SketchZoningText {
+    grid-row-start: 5;
+    grid-row-end: 7;
+    grid-column-start: 3;
+    grid-column-end: 5;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+
+    text-align: right;
+
+    margin-bottom: var(--margin-screen-vertical);
+    margin-right: var(--margin-screen-horizontal);
+}
+
+.CardSortingImage {
+    grid-row-start: 1;
+    grid-row-end: 5;
+    grid-column-start: 2;
+    grid-column-end: 4;
+
+    margin-top: var(--margin-screen-vertical);
+}
+
+.SketchZoningImage {
+    grid-row-start: 3;
+    grid-row-end: 7;
+    grid-column-start: 4;
+    grid-column-end: 8;
+
+    margin-bottom: var(--margin-screen-vertical);
+    margin-left: var(--margin-screen-horizontal);
+
+    display: flex;
+}
+
+.SketchImage, .ZoningImage {
+    height: 100%;
+
+    flex: 1;
+}
+
+.AwardsPicture {
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 4;
+
+    margin-top: var(--margin-screen-vertical);
+}
+
+.AwardsText {
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 4;
+    grid-column-end: 6;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    text-align: left;
+
+    margin-top: var(--margin-screen-vertical);
+}
+
+.PressLesEchosText {
+    grid-row-start: 5;
+    grid-row-end: 7;
+    grid-column-start: 3;
+    grid-column-end: 5;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+    text-align: right;
+
+    margin-bottom: var(--margin-screen-vertical);
+
+    margin-right: calc(var(--margin-screen-horizontal) / 4);
+}
+
+.PressLesEchos {
+    grid-row-start: 4;
+    grid-row-end: 7;
+    grid-column-start: 5;
+    grid-column-end: 8;
+
+    margin-bottom: var(--margin-screen-vertical);
 }
 
 .AlkemicsHPP .Retrospective {
