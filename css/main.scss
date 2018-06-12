@@ -3362,13 +3362,43 @@ h6.larger, .larger.h6 {
     background-image: url('/img/Projects/Alkemics-HPP/HPP_White_legends.png');
 }
 
-.PostIts {
+.UserJourney__User .slick-list {
+    padding: 0 !important;
+}
+
+.UserJourney__User .slick-track {
+    margin: 0 !important;
+    width: 100% !important;
+
+    transform: none !important;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.UserJourney__User .slick-track .slick-slide {
+    --internal-padding: 1em;
+    width: calc(2 * var(--column-width)) !important;
+
+    padding: var(--internal-padding);
+    cursor: pointer;
+}
+
+.UserJourney__User .slick-current {
+    border-radius: 4px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05), 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+    border: solid 1px rgba(89, 91, 212, 0.15);
+}
+
+.PostIts,
+.PostIts .slick-track,
+.PostIts.slick-initialized .slick-slide {
     grid-row-start: 2;
     grid-row-end: 6;
     grid-column-start: 5;
     grid-column-end: 8;
 
-    display: flex;
+    display: flex !important;
     flex-wrap: wrap;
 }
 
@@ -3433,19 +3463,19 @@ h6.larger, .larger.h6 {
 }
 
 .CardSortingImageBackgroung {
-    background-image: url('/img/Projects/Alkemics-HPP/CardSorting.png'); 
+    background-image: url('/img/Projects/Alkemics-HPP/CardSorting.png');
 }
 
 .SketchImageBackgroung {
-    background-image: url('/img/Projects/Alkemics-HPP/Sketch.png'); 
+    background-image: url('/img/Projects/Alkemics-HPP/Sketch.png');
 }
 
 .ZoningImageBackgroung {
-    background-image: url('/img/Projects/Alkemics-HPP/Zoning.png'); 
+    background-image: url('/img/Projects/Alkemics-HPP/Zoning.png');
 }
 
 .PressBackground {
-    background-image: url('/img/Projects/Alkemics-HPP/Press-LesEchos.png'); 
+    background-image: url('/img/Projects/Alkemics-HPP/Press-LesEchos.png');
 }
 
 .CardSortingText {

@@ -238,6 +238,53 @@ $(document).ready(function() {
     $('.slick-prev.slick-arrow').addClass('mdi mdi-chevron-left').text('');
     $('.slick-next').addClass('mdi mdi-chevron-right').text('');
 });
+
+$(document).ready(function() {
+    $('.PostIts').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: true,
+      fade: true,
+      dots: false,
+      asNavFor: '.UserJourney__User',
+      responsive: [
+        {
+            breakpoint: 992,
+            settings: {
+                slidesToShow: 1,
+                arrows: true,
+                fade: true,
+                dots: false,
+                fade: true,
+                asNavFor: '.UserJourney__User',
+            }
+        }
+      ],
+    });
+    $('.UserJourney__User').slick({
+      slidesToShow: 4,
+      asNavFor: '.PostIts',
+      dots: false,
+      centerMode: true,
+      focusOnSelect: true,
+      arrows: false,
+      responsive: [
+        {
+            breakpoint: 992,
+            settings: {
+                slidesToShow: 4,
+                slidesToScroll: 1,
+                asNavFor: '.PostIts',
+                dots: false,
+                arrows: false,
+            }
+        }
+      ]
+    });
+
+    $('.slick-prev.slick-arrow').addClass('mdi mdi-chevron-left').text('');
+    $('.slick-next').addClass('mdi mdi-chevron-right').text('');
+});
 // $(document).ready(function() {
 //     $('.TestimonialsSlider__Content').slick({
 //       slidesToShow: 1,
