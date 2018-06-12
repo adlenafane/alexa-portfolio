@@ -503,6 +503,16 @@ h1, h2, h3, h4, h5, h6 {
   color: #595bd4;
   color: var(--primary-color);
 }
+.h5-Black {
+  font-size: var(--font-size-h5);
+  color: #4a4a4a;
+  color: var(--dark-gray);
+}
+.h5-White {
+  font-size: var(--font-size-h5);
+  color: #ffffff;
+  color: var(--white);
+}
 .Paragraph-Black {
   font-size: var(--font-size-default);
   line-height: 1.5;
@@ -510,20 +520,20 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--dark-gray);
 }
 .Paragraph-Black-Bold {
-  font-size: var(--font-size-default);
+  // font-size: var(--font-size-default);
   line-height: 1.5;
   font-weight: 700;
   color: #4a4a4a;
   color: var(--dark-gray);
 }
 .Paragraph-White {
-  font-size: var(--font-size-default);
+  // font-size: var(--font-size-default);
   line-height: 1.5;
   color: #ffffff;
   color: var(--white);
 }
 .Paragraph-White-Bold {
-  font-size: var(--font-size-default);
+  // font-size: var(--font-size-default);
   line-height: 1.5;
   font-weight: 700;
   color: #ffffff;
@@ -3060,7 +3070,7 @@ h6.larger, .larger.h6 {
     z-index: -1;
 }
 
-.Role, .Benchmark, .Sketch {
+.Role, .Benchmark, .Sketch, .Awards {
     background-color: var(--secondary-color);
 }
 
@@ -3235,6 +3245,7 @@ h6.larger, .larger.h6 {
 .HeroPicture--DataScheme {
     grid-column-end: 9;
 
+    margin-left: var(--margin-screen-horizontal);
     margin-right: var(--margin-screen-horizontal);
 
     background-repeat: no-repeat;
@@ -3245,14 +3256,20 @@ h6.larger, .larger.h6 {
     background-image: url('/img/Projects/Alkemics-HPP/HppDataSheme.gif');
 }
 
+.Role .Half--left {
+  grid-column-end: 5;
+
+  margin-right: var(--margin-screen-horizontal);
+}
+
 .TweetImage {
     grid-row-start: 1;
-    grid-row-end: 4;
+    grid-row-end: 3;
     grid-column-start: 3;
     grid-column-end: 6;
 
-    margin-right: var(--margin-screen-horizontal);
     margin-top: var(--margin-screen-vertical);
+    margin-right: calc(var(--margin-screen-horizontal) + var(--margin-screen-horizontal) / 4);
 }
 
 .TweetText {
@@ -3266,9 +3283,39 @@ h6.larger, .larger.h6 {
     justify-content: flex-end;
     align-items: flex-start;
 
-    margin-left: var(--margin-screen-horizontal);
+    margin-left: calc(var(--margin-screen-horizontal) + var(--margin-screen-horizontal) / 4);
     margin-top: var(--margin-screen-vertical);
 }
+
+
+.BenchmarkingText {
+    grid-row-start: 5;
+    grid-row-end: 7;
+    grid-column-start: 2;
+    grid-column-end: 4;
+
+    margin-bottom: var(--margin-screen-vertical);
+    margin-right: calc(var(--margin-screen-horizontal) + var(--margin-screen-horizontal) / 4);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+    text-align: right;
+}
+
+.BenchmarkingBackground {
+    grid-row-start: 3;
+    grid-row-end: 7;
+    grid-column-start: 3;
+    grid-column-end: 7;
+
+    margin-top: var(--margin-screen-vertical);
+    margin-bottom: var(--margin-screen-vertical);
+    margin-left: calc(var(--margin-screen-horizontal) + var(--margin-screen-horizontal) / 4);
+}
+
 
 .Interview .Expectations, .Results .Results__content {
     display: flex;
@@ -3276,9 +3323,17 @@ h6.larger, .larger.h6 {
     justify-content: space-between;
 }
 
+.Expectations .Expectation, .Results__content .Result__content {
+    padding: calc(var(--margin-screen-horizontal) / 2);
+}
+
 .Results__content i {
     color: var(--primary-color);
-    font-size: var(--font-size-h1)
+    font-size: calc(var(--font-size-h1) * 1.333);
+}
+
+.Results__content .Result__content .CircleBackground {
+  margin-top: 0;
 }
 
 .ProjectSummary {
@@ -3305,34 +3360,6 @@ h6.larger, .larger.h6 {
 
 .Result--HPP {
     background-image: url('/img/Projects/Alkemics-HPP/HPP_White_legends.png');
-}
-
-.BenchmarkingText {
-    grid-row-start: 5;
-    grid-row-end: 7;
-    grid-column-start: 2;
-    grid-column-end: 4;
-
-    margin-bottom: var(--margin-screen-vertical);
-    margin-right: var(--margin-screen-horizontal);
-
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-end;
-
-    text-align: right;
-}
-
-.BenchmarkingBackground {
-    grid-row-start: 3;
-    grid-row-end: 7;
-    grid-column-start: 3;
-    grid-column-end: 7;
-
-    margin-top: var(--margin-screen-vertical);
-    margin-bottom: var(--margin-screen-vertical);
-    margin-left: var(--margin-screen-horizontal);
 }
 
 .PostIts {
@@ -3386,7 +3413,7 @@ h6.larger, .larger.h6 {
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: inherit;
-    background-size: contain;
+    background-size: cover;
 }
 
 .TweetBackground {
@@ -3435,6 +3462,7 @@ h6.larger, .larger.h6 {
     text-align: left;
 
     margin-top: var(--margin-screen-vertical);
+    margin-left: calc(var(--margin-screen-horizontal) / 4);
 }
 
 .SketchZoningText {
@@ -3451,7 +3479,7 @@ h6.larger, .larger.h6 {
     text-align: right;
 
     margin-bottom: var(--margin-screen-vertical);
-    margin-right: var(--margin-screen-horizontal);
+    margin-right: calc(var(--margin-screen-horizontal) + var(--margin-screen-horizontal) / 4);
 }
 
 .CardSortingImage {
@@ -3470,7 +3498,7 @@ h6.larger, .larger.h6 {
     grid-column-end: 8;
 
     margin-bottom: var(--margin-screen-vertical);
-    margin-left: var(--margin-screen-horizontal);
+    margin-left: calc(var(--margin-screen-horizontal));
 
     display: flex;
 }
@@ -3481,9 +3509,18 @@ h6.larger, .larger.h6 {
     flex: 1;
 }
 
+.SketchImage {
+    margin-right: calc(var(--margin-screen-horizontal) / 8);
+}
+
+
+.ZoningImage {
+    margin-left: calc(var(--margin-screen-horizontal) / 8);
+}
+
 .AwardsPicture {
     grid-row-start: 1;
-    grid-row-end: 3;
+    grid-row-end: 4;
     grid-column-start: 2;
     grid-column-end: 4;
 
@@ -3491,7 +3528,7 @@ h6.larger, .larger.h6 {
 }
 
 .AwardsText {
-    grid-row-start: 1;
+    grid-row-start: 2;
     grid-row-end: 3;
     grid-column-start: 4;
     grid-column-end: 6;
@@ -3503,7 +3540,7 @@ h6.larger, .larger.h6 {
 
     text-align: left;
 
-    margin-top: var(--margin-screen-vertical);
+    margin-left: calc(var(--margin-screen-horizontal) / 4);
 }
 
 .PressLesEchosText {
