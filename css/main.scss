@@ -34,7 +34,7 @@ title: CSS stylesheet
     --font-size-h4: 1rem;
     --font-size-h5: 1rem;
     --font-size-default: 0.75rem;
-    --font-size-legend: 0.666rem;
+    --font-size-legend: 0.8rem;
     /*--font-size-header-max: 2.2rem;*/
 }
 
@@ -46,7 +46,7 @@ title: CSS stylesheet
         --font-size-h4: calc( 1rem + (1.333 - 1) *( (100vw - 17.78rem) / ( 71.1 - 17.78) ));
         --font-size-h5: calc( 1rem + (1.1333 - 1) *( (100vw - 17.78rem) / ( 71.1 - 17.78) ));
         --font-size-default: calc( 0.75rem + (1 - 0.75) *( (100vw - 17.78rem) / ( 71.1 - 17.78) ));
-        --font-size-legend: calc( 0.666rem + (0.888 - 0.666) *( (100vw - 17.78rem) / ( 71.1 - 17.78) ));
+        --font-size-legend: calc( 0.6rem + (0.8 - 0.6) *( (100vw - 17.78rem) / ( 71.1 - 17.78) ));
         /*--font-size-header-max: 2.2rem;*/
     }
 }
@@ -59,7 +59,7 @@ title: CSS stylesheet
     --font-size-h4: calc( 1rem + (2 - 1.333) *( (100vw - 71.1rem) / ( 106.7 - 71.1) ));
     --font-size-h5: calc( 1rem + (1.1667 - 1.1333) *( (100vw - 71.1rem) / ( 106.7 - 71.1) ));
     --font-size-default: calc( 0.75rem + (1 - 1) *( (100vw - 71.1rem) / ( 106.7 - 71.1) ));
-    --font-size-legend: calc( 0.666rem + (0.888 - 0.888) *( (100vw - 71.1rem) / ( 106.7 - 71.1) ));
+    --font-size-legend: calc( 0.6rem + (0.8 - 0.6) *( (100vw - 71.1rem) / ( 106.7 - 71.1) ));
     /*--font-size-header-max: calc( 2.2rem + (7.222 - 2.2) * ( (100vw - 17.78rem) / ( 106.7 - 17.78) ));*/
   }
 }
@@ -79,7 +79,7 @@ title: CSS stylesheet
         --font-size-h4: 2rem;
         --font-size-h5: 1.1667rem;
         --font-size-default: 1rem;
-        --font-size-legend: 0.888rem;
+        --font-size-legend: 0.8rem;
         /*--font-size-header-max: 7.222rem;*/
    }
 }
@@ -1374,7 +1374,7 @@ header nav {
 */
 
 .About__background {
-    grid-column-start: 5;
+    grid-column-start: 6;
     grid-column-end: 8;
     grid-row-start: 2;
     grid-row-end: 5;
@@ -1399,7 +1399,7 @@ header nav {
 
 .Description__Content {
     grid-column-start: 2;
-    grid-column-end: 5;
+    grid-column-end: 6;
     grid-row-start: 2;
     grid-row-end: 6;
 
@@ -1423,16 +1423,16 @@ header nav {
 }
 
 .ResumeWrapper {
-    grid-column-start: 5;
-    grid-column-end: 7;
+    grid-column-start: 6;
+    grid-column-end: 8;
     grid-row-start: 5;
     grid-row-end: 6;
 }
 
 .ResumeWrapper, .SendMessage {
     display: flex;
-            justify-content: flex-start;
-            align-items: flex-end;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 
 .ActionButton {
@@ -2590,7 +2590,7 @@ form.Contact {
     grid-column-start: 5;
     grid-column-end: 9;
     grid-row-start: 2;
-    grid-row-end: 6;
+    grid-row-end: 7;
 
     display: -ms-grid;
 
@@ -2604,7 +2604,7 @@ form.Contact {
     grid-column-start: 1;
     grid-column-end: 5;
     grid-row-start: 1;
-    grid-row-end: 4;
+    grid-row-end: 5;
 
 
 
@@ -2703,8 +2703,8 @@ input:focus, textarea:focus {
 .SendMessage {
     grid-column-start: 1;
     grid-column-end: 5;
-    grid-row-start: 4;
-    grid-row-end: 5;
+    grid-row-start: 5;
+    grid-row-end: 6;
 }
 
 /* Tablet */
@@ -3075,8 +3075,8 @@ h6.larger, .larger.h6 {
 }
 
 .Role .HighlightPicture {
-    width: calc(2 * var(--column-width));
-    height: auto;
+    width: auto; // calc(2 * var(--column-width));
+    height: calc(var(--row-4-height) + 0.5 * var(--row-5-height));
 }
 
 .Kickoff, .Launch {
@@ -3228,6 +3228,13 @@ h6.larger, .larger.h6 {
     opacity: 0.3;
 }
 
+.AlkemicsCustomers__Background {
+    height: auto;
+    width: 100%;
+
+    margin-top: 0.5em;
+}
+
 .Hero .HeroPicture__wrapper {
     grid-row-start: 1;
     grid-row-end: 7;
@@ -3254,6 +3261,25 @@ h6.larger, .larger.h6 {
     background-size: contain;
 
     background-image: url('/img/Projects/Alkemics-HPP/HppDataSheme.gif');
+}
+
+.HeroPicture--DataScheme__legend {
+    grid-row-start: 6;
+    grid-row-end: 7;
+    grid-column-start: 5;
+    grid-column-end: 8;
+
+    text-align: center;
+}
+
+.PainPointLegend:before {
+  content: 'x';
+  color: white;
+  background-color: red;
+  padding: 0.3em;
+  height: 2em;
+  width: 2em;
+  border-radius: 1em;
 }
 
 .Role .Half--left {
@@ -3379,12 +3405,14 @@ h6.larger, .larger.h6 {
 .UserJourney__User .slick-track .slick-slide {
     --internal-padding: 1em;
     width: calc(2 * var(--column-width)) !important;
+    box-sizing: border-box;
 
     padding: var(--internal-padding);
     cursor: pointer;
 }
 
 .UserJourney__User .slick-current {
+    font-weight: 800;
     border-radius: 4px;
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05), 0 1px 3px 0 rgba(0, 0, 0, 0.1);
     border: solid 1px rgba(89, 91, 212, 0.15);
@@ -3429,6 +3457,8 @@ h6.larger, .larger.h6 {
 }
 
 .PostItNumber {
+    font-size: var(--font-size-h2);
+    font-weight: 900;
     padding-bottom: calc(var(--margin-screen-vertical) / 4);
 }
 
@@ -3571,6 +3601,25 @@ h6.larger, .larger.h6 {
     text-align: left;
 
     margin-left: calc(var(--margin-screen-horizontal) / 4);
+}
+
+.PressCoverageWrapper {
+    grid-row-start: 4;
+    grid-row-end: 5;
+    grid-column-start: 2;
+    grid-column-end: 4;
+
+    margin-top: calc(var(--row-4-height) / 2);
+    margin-left: calc(var(--column-width) / 2);
+}
+
+.PressCoverage {
+    text-transform: uppercase;
+    margin: auto;
+    margin-left: 0;
+    margin-bottom: 0;
+    font-size: var(--font-size-legend);
+    opacity: 0.3;
 }
 
 .PressLesEchosText {
